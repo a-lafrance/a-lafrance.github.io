@@ -168,8 +168,12 @@ hr {
   font-size: 10pt;
 }
 
-.skill-list {
+ul {
   list-style: none;
+  padding-left: 1vw;
+}
+
+.skill-list {
   padding-left: 0;
 }
 
