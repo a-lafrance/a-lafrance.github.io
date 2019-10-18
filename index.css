@@ -68,11 +68,13 @@ h3 {
 
 .title {
   color: rgba(0, 0, 255, 0.6);
+  font-size: 13pt;
   margin-bottom: 0;
 }
 
 .subtitle {
   margin-top: 0.5vh;
+  font-size: 11pt;
 }
 
 .section-description {
@@ -86,6 +88,7 @@ h3 {
 }
 
 .entry {  
+  width: 97%;
   padding-left: 1vw;
   padding-right: 1vw;
   padding-top: 1vh;
