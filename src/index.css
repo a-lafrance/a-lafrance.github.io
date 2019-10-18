@@ -1,0 +1,152 @@
+body {
+  margin: 0;
+  background-color: rgba(25, 25, 25, 0.05);
+}
+
+.section {
+  width: 84vw;
+
+  margin-left: 6vw;
+  margin-right: 6vw;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+
+  padding-top: 2vh;
+  padding-left: 1.5vw;
+  padding-right: 1.5vw;
+  padding-bottom: 2vh;
+
+  background-color: rgba(15, 15, 15, 0.1);
+
+  border-radius: 20px;
+
+  font-family: "Helvetica", sans-serif;
+  font-weight: 100;
+  line-height: 140%;
+}
+
+#intro {
+  display: flex;
+}
+
+#bio {
+  width: 50%;
+  padding-right: 1vw;
+}
+
+#contact {
+  padding-left: 1vw;
+  padding-top: 9%;
+}
+
+.footer {
+  font-family: "Helvetica", sans-serif;
+  font-weight: 100;
+}
+
+.copyright {
+  padding-left: 2vw;
+}
+
+h1 {
+  font-size: 30pt;
+  font-weight: normal;
+  color: rgba(0, 0, 255, 0.6);
+}
+
+h2 {
+  font-size: 20pt;
+  font-weight: normal;
+  color: rgba(0, 0, 255, 0.6);
+}
+
+h3 {
+  font-size: 16pt;
+  font-weight: 100;
+  color: rgba(0, 0, 255, 0.6);
+}
+
+.title {
+  color: rgba(0, 0, 255, 0.6);
+  margin-bottom: 0;
+}
+
+.subtitle {
+  margin-top: 0.5vh;
+}
+
+.section-description {
+  color: rgba(0, 0, 255, 0.6);
+  margin-bottom: 3vh;
+}
+
+.experience {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.entry {
+  width: 29%;
+  
+  padding-left: 1vw;
+  padding-right: 1vw;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+
+  margin-right: 1.5vw;
+  margin-bottom: 3.5vh;
+
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 3px grey;
+}
+
+.entry:last-of-type {
+  margin-right: 0;
+}
+
+.button {
+  display: inline-block;
+  width: 140px;
+  height: 30px;
+
+  border-radius: 10px;
+
+  background-color: rgba(50, 50, 50);
+  color: rgb(220, 220, 220);
+
+  text-align: center;
+
+  padding-top: 15px;
+  padding-bottom: 10px;
+
+  text-decoration: none;
+
+  margin-right: 1vw;
+  margin-bottom: 2vh;
+}
+
+.button:last-of-type {
+  margin-right: 0;
+}
+
+.button:hover {
+  text-decoration: underline;
+}
+
+#linkedin {
+  background-color: rgb(12, 94, 164);
+  color: white;
+}
+
+#github {
+  background-color: rgb(0, 0, 0);
+  color: white;
+}
+
+hr {
+  margin-left: 1vw;
+  margin-right: 1vw;
+
+  height: 0.3vh;
+  background-color: rgba(50, 50, 50);
+}
