@@ -16,7 +16,7 @@ body {
   padding-right: 1.5vw;
   padding-bottom: 2vh;
 
-  background-color: rgba(15, 15, 15, 0.1);
+  /* background-color: rgba(15, 15, 15, 0.1); */
 
   border-radius: 20px;
 
@@ -153,6 +153,11 @@ h3 {
 }
 
 hr {
+  margin-left: 3vw;
+  margin-right: 3vw;
+}
+
+.footer hr {
   margin-left: 1vw;
   margin-right: 1vw;
 
