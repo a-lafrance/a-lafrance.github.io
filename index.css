@@ -46,7 +46,7 @@ body {
 }
 
 .copyright {
-  padding-left: 2vw;
+  padding-left: 3vw;
 }
 
 h1 {
@@ -95,7 +95,7 @@ h3 {
 
   border-radius: 10px;
 
-  background-color: rgba(25, 25, 25, 0.05);
+  background-color: rgba(25, 25, 25, 0.1);
 }
 
 .fit {
@@ -110,43 +110,34 @@ h3 {
   margin-right: 0;
 }
 
+.button-group {
+  display: flex;
+}
+
 .button {
   display: inline-block;
-  width: 140px;
+  width: 100px;
   height: 30px;
 
   border-radius: 10px;
 
-  background-color: rgba(50, 50, 50);
-  color: rgb(220, 220, 220);
+  background-color: rgba(25, 25, 25, 0.1);
 
   text-align: center;
 
-  padding-top: 15px;
-  padding-bottom: 10px;
-
-  text-decoration: none;
+  padding-top: 14px;
+  padding-bottom: 20px;
 
   margin-right: 1vw;
   margin-bottom: 2vh;
 }
 
+.button:first-of-type {
+  margin-left: 2vw;
+}
+
 .button:last-of-type {
   margin-right: 0;
-}
-
-.button:hover {
-  text-decoration: underline;
-}
-
-#linkedin {
-  background-color: rgb(12, 94, 164);
-  color: white;
-}
-
-#github {
-  background-color: rgb(0, 0, 0);
-  color: white;
 }
 
 hr {
@@ -155,9 +146,6 @@ hr {
 }
 
 .footer hr {
-  margin-left: 1vw;
-  margin-right: 1vw;
-
   height: 0.3vh;
   background-color: rgb(50, 50, 50);
 }
@@ -172,7 +160,7 @@ p, li {
 
 ul {
   list-style: none;
-  padding-left: 1vw;
+  padding-left: 0.5vw;
 }
 
 .skill-list {
@@ -185,4 +173,23 @@ ul {
 
 .uci {
   color: rgb(0, 105, 255);
+}
+
+img {
+  margin-left: auto;
+  order: 2;
+}
+
+.img-header {
+  margin-top: 2vh;
+  margin-right: 1vw;
+}
+
+.img-header-low {
+  margin-top: 3vh;
+  margin-right: 1vw;
+}
+
+.row, .entry-header {
+  display: flex;
 }

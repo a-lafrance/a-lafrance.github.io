@@ -7,7 +7,7 @@
     <meta name="description" content="Arthur Lafrance's personal website" />
 
     <link rel="stylesheet" href="index.css" />
-    <link rel="icon" href="assets/icon.png" />
+    <link rel="icon" href="assets/misc/icon.png" />
 
     <link rel="manifest" href="assets/manifest.json" />
 
@@ -33,10 +33,21 @@
           <p>To learn more about me or get in touch with me, feel free to check out:</p>
 
           <div class="button-group">
-            <a class="button" href="mailto:lafrancearthur@gmail.com">Email</a>
-            <a class="button" id="github" href="https://www.github.com/arthurlafrance">Github</a>
-            <a class="button" id="linkedin" href="https://www.linkedin.com/in/arthurlafrance">LinkedIn</a>
-            <a class="button" href="assets/Arthur_Lafrance_Resume.pdf" download>Resume</a>
+            <a class="button" href="mailto:lafrancearthur@gmail.com">
+              <img id="email" src="assets/intro/mail-icon.png" width="50px" height="35px">
+            </a>
+
+            <a class="button" href="https://www.github.com/arthurlafrance">
+              <img id="github" src="assets/intro/github-logo.png" width="60px" height="60px">
+            </a>
+
+            <a class="button" href="https://www.linkedin.com/in/arthurlafrance">
+              <img id="linkedin" src="assets/intro/linkedin-logo.png" width="40px" height="40px">
+            </a>
+
+            <a class="button" href="assets/Arthur_Lafrance_Resume.pdf" download>
+              <img id="resume" src="assets/intro/file-icon.jpg" width="40px" height="40px">
+            </a>
           </div>
         </div>
       </div>
@@ -48,9 +59,16 @@
 
         <div class="entry-container">
           <div class="entry small">
-              <h4 class="title">Code Coach</h4>
-              <h5 class="subtitle">The Coder School Irvine</h5>
-              <h5 class="subtitle">September 2019 - present</h5>
+              <div class="entry-header"> 
+                <div class="entry-title">
+                  <h4 class="title">Code Coach</h4>
+                  <h5 class="subtitle">The Coder School Irvine</h5>
+                  <h5 class="subtitle">September 2019 - present</h5>
+                </div>
+
+                <img class="img-header" src="assets/experience/tcs-logo.png" width="80vh" height="80vh">
+              </div>
+            
               <p class="desctiption">Guide young students through projects in a small group setting to teach 
                 programming concepts ranging from coding fundamentals to web/mobile application or game development. 
                 Develop personal curriculum from flexible library of material to suit each student’s individual needs.
@@ -58,9 +76,16 @@
           </div>
 
           <div class="entry small">
-            <h4 class="title">Independent Developer</h4>
-            <h5 class="subtitle">eXo</h5>
-            <h5 class="subtitle">August 2019 - present</h5>
+            <div class="entry-header"> 
+              <div class="entry-title">
+                <h4 class="title">Independent Developer</h4>
+                <h5 class="subtitle">eXo</h5>
+                <h5 class="subtitle">August 2019 - present</h5>
+              </div>
+
+              <img class="img-header-low" src="assets/experience/exo-logo.png" width="90vh" height="60vh">
+            </div>
+
             <p class="description">Develop and maintain apps for tech consulting startup eXo, allowing users to start 
               new consulting projects & track the progress of existing ones. Developed core backend API using Django 
               and PostgreSQL. Used React to create frontend eXo web app. Currently developing companion iOS and 
@@ -94,14 +119,22 @@
       <div class="section" id="awards">
         <h2>Awards & Honors</h2>
 
-        <div class="entry">
-          <h4 class="title">2nd Place, Mobile App Development</h4>
-          <h5 class="subtitle">CA FBLA State Conference - April 2019</h5>
+        <div class="entry row">
+          <div class="content">
+            <h4 class="title">2nd Place, Mobile App Development</h4>
+            <h5 class="subtitle">CA FBLA State Conference - April 2019</h5>
+          </div>
+
+          <img class="img-right" src="assets/awards/ca-fbla-logo.png" width="100vh" height="100vh">
         </div>
 
-        <div class="entry">
-          <h4 class="title">Top 15 Finalist, Mobile App Development</h4>
-          <h5 class="subtitle">FBLA National Conference - June 2019</h5>
+        <div class="entry row">
+          <div class="content">
+            <h4 class="title">Top 15 Finalist, Mobile App Development</h4>
+            <h5 class="subtitle">FBLA National Conference - June 2019</h5>
+          </div>
+
+          <img class="img-right" src="assets/awards/fbla-logo.png" width="100vh" height="80vh">
         </div>
       </div>
 
@@ -115,30 +148,10 @@
               <h4 class="title skillset">General</h4>
     
               <ul>
-                <li>
-                  <h5 class="subtitle skill-cat">Advanced</h5>
-
-                  <ul class="skill-list">
-                    <li class="skill">Python</li>
-                    <li class="skill">Java</li>
-                  </ul>
-                </li>
-    
-                <li>
-                  <h5 class="subtitle skill-cat">Intermediate</h5>
-
-                  <ul class="skill-list">
-                      <li class="skill">PostgreSQL</li>
-                  </ul>
-                </li>
-    
-                <li>
-                  <h5 class="subtitle skill-cat">Proficient</h5>
-
-                  <ul class="skill-list">
-                      <li class="skill">Stripe</li>
-                  </ul>
-                </li>
+                  <li class="skill">Python</li>
+                  <li class="skill">Java</li>
+                  <li class="skill">PostgreSQL</li>
+                  <li class="skill">Stripe</li>
               </ul>
             </div>
 
@@ -146,54 +159,21 @@
               <h4 class="title skillset">Web</h4>
     
               <ul>
-                <li>
-                  <h5 class="subtitle skill-cat">Advanced</h5>
-
-                  <ul class="skill-list">
-                    <li class="skill">Django</li>
-                    <li class="skill">HTML/CSS</li>
-                    <li class="skill">JavaScript</li>
-                  </ul>
-                </li>
-    
-                <li>
-                  <h5 class="subtitle skill-cat">Intermediate</h5>
-
-                  <ul class="skill-list">
-                      <li class="skill">React</li>
-                      <li class="skill">Node.js</li>
-                  </ul>
-                </li>
-    
-                <li>
-                  <h5 class="subtitle skill-cat">Proficient</h5>
-
-                  <ul class="skill-list">
-                      <li class="skill">Sass</li>
-                  </ul>
-                </li>
+                  <li class="skill">Django</li>
+                  <li class="skill">HTML/CSS</li>
+                  <li class="skill">JavaScript</li>
+                  <li class="skill">React</li>
+                  <li class="skill">Node.js</li>
+                  <li class="skill">Sass</li>
               </ul>
             </div>
     
             <div class="entry fit">
               <h4 class="title skillset">iOS</h4>
               <ul>
-                <li>
-                  <h5 class="subtitle skill-cat">Advanced</h5>
-
-                  <ul class="skill-list">
-                      <li class="skill">Swift</li>
-                      <li class="skill">UIKit</li>
-                  </ul>
-                </li>
-    
-                <li>
-                  <h5 class="subtitle skill-cat">Intermediate</h5>
-
-                  <ul class="skill-list">
-                      <li class="skill">SpriteKit</li>
-                  </ul>
-                </li>
+                <li class="skill">Swift</li>
+                <li class="skill">UIKit</li>
+                <li class="skill">SpriteKit</li>
               </ul>
             </div>
         </div>
@@ -204,9 +184,13 @@
       <div class="section" id="education">
         <h2>Education</h2>
 
-        <div class="entry">
-          <h4 class="title uci">University of California, Irvine</h4>
-          <h5 class="subtitle">B.S. in Computer Science - expected graduation 2022</h5>
+        <div class="entry row">
+          <div class="content">
+            <h4 class="title uci">University of California, Irvine</h4>
+            <h5 class="subtitle">B.S. in Computer Science - expected graduation 2022</h5>
+          </div>  
+          
+          <img class="img-right" src="assets/education/uci-logo.png" width="90vh" height="90vh">
         </div>
       </div>
 
