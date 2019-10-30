@@ -1,0 +1,510 @@
+﻿.cardlist
+{
+	margin: 0.5rem 0;
+	width: 100%;
+}
+
+.header + .cardlist
+{
+	margin-top: 0;
+}
+
+.card
+{
+	display: inline-block;
+	line-height: 1.25rem;
+	margin: 0.25rem 0.5%;
+	min-height: 6rem;
+	padding: 0.5rem;
+	position: relative;
+	vertical-align: top;
+	width: 99%;
+}
+
+.card.withButton
+{
+	padding-bottom: 3rem;
+}
+
+.cardlist.shortcards > .card
+{
+	min-height: 5rem;
+}
+
+.cardlist.column_1 > .card
+{
+	/* *amk 02/17 401371 - Add spacing to card columns */
+	margin: 0.25rem 0;
+	width: 100%;
+}
+
+.cardlist.column_2 > .card
+{
+	width: 49.5%;
+}
+
+.cardlist.column_2 > .card:nth-of-type(odd)
+{
+	margin-left: 0;
+}
+
+.cardlist.column_2 > .card:nth-of-type(even)
+{
+	margin-right: 0;
+}
+
+.cardlist.column_3 > .card
+{
+	width: 32.66%;
+}
+
+.cardlist.column_3 > .card:nth-of-type(3n + 1)
+{
+	margin-left: 0;
+}
+
+.cardlist.column_3 > .card:nth-of-type(3n)
+{
+	margin-right: 0;
+}
+
+.cardlist.column_4 > .card
+{
+	width: 24.25%;
+}
+
+.cardlist.column_4 > .card:nth-of-type(4n + 1)
+{
+	margin-left: 0;
+}
+
+.cardlist.column_4 > .card:nth-of-type(4n)
+{
+	margin-right: 0;
+}
+
+/* Inner-Cards */
+.innercard
+{
+	border-color: transparent #EAEAEA;
+	border-style: none solid;
+	border-width: 0 1px;
+	display: inline-block;
+	margin-right: -1px;
+	padding: 0.25rem 0.5rem;
+	position: relative;
+	vertical-align: top;
+	width: 100%;
+}
+
+.innercard:first-of-type
+{
+	left: 0;
+}
+
+.cardlist.noBorder > .innercard
+{
+	border-color: transparent;
+}
+
+.cardlist.column_1 > .innercard
+{
+	border: none;
+	width: 100%;
+}
+
+.cardlist.column_2 > .innercard
+{
+	width: calc(50% + 1px);
+}
+
+.cardlist.column_2 > .innercard:nth-of-type(odd)
+{
+	border-left: none;
+}
+
+.cardlist.column_2 > .innercard:nth-of-type(even)
+{
+	border-right: none;
+}
+
+.cardlist.column_2 > .innercard.double
+{
+	border: none;
+	width: 100%;
+}
+
+.cardlist.column_3 > .innercard
+{
+	width: calc(33.33% + 1px);
+}
+
+.cardlist.column_3 > .innercard:nth-of-type(3n + 1)
+{
+	border-left: none;
+}
+
+.cardlist.column_3 > .innercard:nth-of-type(3n),
+.cardlist.column_3 > .innercard.double:nth-of-type(3n + 2)
+{
+	border-right: none;
+}
+
+.cardlist.column_3 > .innercard.double
+{
+	width: calc(66.67% + 1px);
+}
+
+.cardlist.column_3 > .innercard.triple
+{
+	border: none;
+	width: 100%;
+}
+
+.cardlist.column_4 > .innercard
+{
+	width: calc(25% + 1px);
+}
+
+.cardlist.column_4 > .innercard:nth-of-type(4n + 1)
+{
+	border-left: none;
+}
+
+.cardlist.column_4 > .innercard:nth-of-type(4n),
+.cardlist.column_4 > .innercard.double:nth-of-type(4n + 3),
+.cardlist.column_4 > .innercard.triple:nth-of-type(4n + 2)
+{
+	border-right: none;
+}
+
+.cardlist.column_4 > .innercard.double
+{
+	width: calc(50% + 1px);
+}
+
+.cardlist.column_4 > .innercard.triple
+{
+	width: calc(75% + 1px);
+}
+
+.card .buttonList
+{
+	bottom: 0;
+	height: 3rem;
+	padding: 0.5rem;
+	position: absolute;
+	right: 0;
+}
+
+.card .buttonList .button
+{
+	opacity: 0;
+	transition: opacity 0.3s ease-in-out;
+}
+
+.card.hover .buttonList .button
+{
+	opacity: 1;
+}
+
+.card .buttonList .button:first-child
+{
+	margin-left: 0;
+}
+
+.card .buttonList .button:last-child
+{
+	margin-right: 0;
+}
+
+.card .cardline
+{
+	display: block;
+	font-size: 0.9rem;
+	line-height: 1.1rem;
+	margin: 0;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	width: 100%;
+}
+
+.card .cardline.partial
+{
+	display: inline-block;
+	vertical-align: top;
+	width: auto;
+}
+
+.card .cardline.halfwidth
+{
+	display: inline-block;
+	vertical-align: top;
+	width: 50%;
+}
+
+.card .cardline.partial.right
+{
+	position: absolute;
+	right: 0.5rem;
+}
+
+.card .cardline.withPopup
+{
+	overflow: visible;
+	text-overflow: unset;
+}
+
+.card .cardline.leaveSpace
+{
+	margin-bottom: 0.5rem;
+}
+
+.card .cardline.bottom
+{
+	position: absolute;
+	bottom: .5rem;
+}
+
+.card .cardheader
+{
+	margin: -0.5rem;
+	padding: 0.5rem 0.5rem;
+	width: calc(100% + 1rem);
+	max-width: calc(100% + 1rem);
+	background: linear-gradient(rgba(36, 111, 181, 0.15), rgba(36, 111, 181, 0.15)), #fff;  /* @color theme tint */
+}
+
+.card .name
+{
+	font-size: 1.1rem;
+	line-height: 1.25rem;
+	margin: 0;
+	padding: 0;
+}
+
+.card .name.large
+{
+	font-size: 1.25rem;
+	line-height: 1.5rem;
+}
+
+.card .name.icon,
+.card .name.icon + .cardline
+{
+	width: calc(100% - 3rem); /* 100% - ([.icon:width] + [0.5rem margin]) */
+}
+
+.card .name.icon:after,
+.card .name.icon > div.iconcontainer
+{
+	background-repeat: no-repeat;
+	background-size: cover;
+	content: "";
+	display: block;
+	height: 2.5rem;
+	margin: 0.5rem;
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 2.5rem;
+}
+
+.card .name.partial + .partial.right
+{
+	line-height: 1.375rem;
+	margin-bottom: -0.125rem;
+}
+
+.card.addItem
+{
+	background-color: rgba(175, 175, 175, 0.05);
+	border: 2px dashed #AEAEAE;
+	box-shadow: none;
+	height: 6rem; /* Match card min-height */
+	text-align: center;
+}
+
+.card.addItem.hover
+{
+	background-color: #FFF;
+	border-style: none;
+	box-shadow: 0 4px 4px -1px rgba(0, 0, 0, 0.2);
+}
+
+.card.addItem a
+{
+	display: block;
+	height: 100%;
+	position: relative;
+	text-transform: uppercase;
+	width: 100%;
+}
+
+.card.addItem .vcenter
+{
+	height: 50%;
+	left: 0;
+	line-height: 1.75rem;
+	position: absolute;
+	top: calc((100% - 1.75rem) / 2); /* 100% - [.addlabel:before's height] */
+	width: 100%;
+}
+
+.card.addItem .addlabel
+{
+	vertical-align: middle;
+}
+
+.card.addItem .addlabel:before
+{
+	content: "+";
+	display: inline-block;
+	font-size: 2.5rem;
+	margin: 0 0.25rem 0 0;
+	vertical-align: top;
+}
+
+.card.hasBadge div.badge
+{
+	width: 28%;
+	display: inline-block;
+	text-align: right;
+}
+
+.card.hasBadge div
+{
+	width: 70%;
+	display: inline-block;
+	vertical-align: top;
+}
+
+/* Selectable */
+.cardlist.selectable .card
+{
+	cursor: pointer;
+}
+
+.cardlist.selectable .card.selected:before
+{
+	background-color: #246FB5; /* @color theme */
+	content: "";
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 0.3rem;
+	z-index: 1;
+}
+
+.cardlist.selectable.selectionMade .card
+{
+	box-shadow: none;
+	opacity: 0.75;
+}
+
+.cardlist.selectable.selectionMade .card:hover,
+.cardlist.selectable.selectionMade .card:focus,
+.cardlist.selectable.selectionMade .card.selected
+{
+	box-shadow: 0 4px 4px -1px rgba(0, 0, 0, 0.2);
+	opacity: 1;
+}
+
+/* Button-style */
+.cardlist.buttonCards .card
+{
+	font-weight: bold;
+	margin: 0 0.5% 0.5rem;
+	min-height: 2.5rem;
+	min-width: 9rem;
+	text-align: center;
+	width: auto;
+}
+
+/* Table-layout */
+.card.tableLayout > div
+{
+	display: table-cell;
+	vertical-align: top;
+}
+
+/* Receipt-Style */
+.receipt .titlebar
+{
+	background: #246FB5 none; /* @color theme */
+	color: #FFF;
+	left: -0.5rem;
+	max-width: none;
+	padding: 0.5rem;
+	position: relative;
+	top: -0.5rem;
+	width: calc(100% + 1rem);
+}
+
+.receipt .receiptsection
+{
+	box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2);
+	padding: 0 0 0.5rem;
+	margin: 0 0 0.5rem;
+}
+
+.receipt .receiptsection:last-child
+{
+	box-shadow: none;
+	margin: 0;
+}
+
+.receipt .receiptsection .receiptline
+{
+	font-size: 0.8rem;
+	line-height: 1rem;
+	margin: 0 0 0.25rem;
+}
+
+.receipt .receiptsection .receiptline.name
+{
+	color: #246FB5; /* @color theme */
+	font-size: 1rem;
+	margin: 0 0 0.5rem;
+}
+
+.receipt .receiptsection .receiptline:last-child
+{
+	margin: 0;
+}
+
+.receipt .receiptsection .receiptline .item
+{
+	display: inline-block;
+	vertical-align: top;
+	width: 60%;
+}
+
+.receipt .receiptsection .receiptline .value
+{
+	display: inline-block;
+	font-weight: bold;
+	text-align: right;
+	vertical-align: top;
+	width: 40%;
+}
+
+.receipt .receiptsection .receiptline.name .value
+{
+	color: #363636;
+}
+
+/* Help tip style */
+.card.helptip
+{
+	box-shadow: none;
+	border: 1px solid rgba(0,0,0,0.15);
+	border-radius: 0.3rem;
+	padding: 1rem 1rem 1rem 3.2rem;
+	background: url("../images/info.png") no-repeat scroll 0.7rem center #FEFDE5;
+	background-size: 2rem 2rem;
+	/* auto works for IE Edge only. Initial works for all other browsers */
+	min-height: auto;
+	min-height: initial;
+}

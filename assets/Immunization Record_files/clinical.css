@@ -1,0 +1,865 @@
+﻿/* Cards */
+div.cardlist {
+	margin-top: 1rem;
+}
+
+/* Common for Meds, Probs and Allergy */
+
+.medicationcontainer .nodata,
+.healthissuecontainer .nodata,
+.allergycontainer .nodata {
+	margin-top: 0.5rem;
+}
+
+/* Allergies */
+#allergies .component > .content {
+	overflow: visible;
+}
+
+span.allergyreactions {
+	display: block;
+	margin-bottom: 0.25rem;
+	font-size: 0.9em;
+	margin-top: -0.5rem;
+}
+
+/* Medications */
+.medicationcontainer .addItem {
+	height: 6rem; /* Workaround */
+}
+
+.card .cardline.sig,
+.medcard .cardline.sig {
+	margin: 0.5rem 0 0;
+	font-size: 1em;
+}
+
+.card .cardline.pharmacyname,
+.card .cardline.shippedto {
+	margin-top: 1em;
+}
+
+.cardline .popupiconcontainer .popupinstructionsicon > img {
+    margin-left: 0.5rem;
+}
+
+.externalcontainer {
+	width: 2.5rem;
+	height: 2.5rem;
+	position: absolute;
+	bottom: 0;
+	padding: 0.5rem 0;
+}
+
+.card .externalcontainer + .buttonList {
+	width: calc(100% - 3rem);
+}
+
+.medicationsdetails.component > .content {
+	overflow: visible;
+}
+
+.card.medcard {
+	padding-left: 3.5rem;
+	padding-bottom: 0;
+}
+
+
+.card.medcard.withButton {
+	padding-bottom: 3rem;
+}
+
+.medcard .medtop {
+	margin-bottom: 1rem;
+}
+
+.medcard .medname {
+	font-size: 1.25rem;
+   	margin: -0.5rem 0 0;
+   	padding: 0 0 0.25rem;
+}
+
+.card .medmessage,
+.card .medwarning,
+.medcard .warning{
+	display: inline-block;
+	padding: 0.3rem 0.5rem 0.3rem 1.5rem;
+	font-size: 1em;
+	box-shadow: 0 1px 3px -2px rgba(0,0,0,0.7);
+	width: auto;
+	margin: 0.9rem 0 0 -3.7rem;
+	background-color: #FCFCFC;
+}
+
+.medcard div.secondWarning{
+	margin-top: 0.5rem;
+}
+
+
+.medcard .commonname + .warning {
+	margin-top: 0.7rem;
+}
+.commonname {
+	margin-right: 0.4rem;
+}
+
+.card .medwarning,
+.medcard .medwarning {
+	background-color: #ffffa1;
+}
+
+.medmessage {
+	border-color: black;
+}
+
+.medmessage img,
+.medwarning img {
+	margin: 0 1.25rem -0.1rem 0;
+	opacity: 0.4;
+	height: 1rem;
+	width: 1rem;
+	vertical-align: top;
+}
+
+.medwarning  img.info{
+	margin-left: 0.25rem;
+	margin-right: 0rem;
+}
+
+img.info {
+	opacity: 1;
+}
+
+.medcard .warning .popupiconcontainer {
+	margin-left: 0.4rem;
+}
+
+div.medbottom {
+	background-color: #fcfcfc;
+	width: calc(100% + 4rem);
+	max-width: calc(100% + 4rem);
+	left: -3.5rem;
+	position: relative;
+	padding: 0.75rem 0.5rem 0.5rem 3.5rem;
+}
+
+span.cardicon.med {
+	display: inline-block;
+}
+
+img.medformicon {
+	width: 32px;
+	height: 32px;
+	float: left;
+	margin-left: -38px;
+	margin-top: 10px;
+}
+
+img.External {
+	display: inline-block;
+	width: 25px;
+	height: auto;
+}
+
+img.orgiconimg {
+	width: 25px;
+	height: auto;
+}
+
+img.contentimg {
+	width: 20px;
+	height: 20px;
+	margin-right: 5px;
+	vertical-align: top;
+	display: inline-block;
+}
+
+.card .contentlink a {
+	display: inline-block;
+}
+
+.orghelper {
+	margin-top: 1rem;
+}
+
+.orghelper img {
+	vertical-align: top;
+	width: 23px;
+	height: 23px;
+	margin-right: 1%;
+}
+
+.orghelper div {
+	vertical-align: middle;
+	display: inline-block;
+	width: auto;
+}
+
+table.organization th {
+	color: #737171;
+	font-size: 0.75em;
+}
+
+.medbottom div {
+	display: inline-block;
+	vertical-align: top;
+	padding: 0 0.5%;
+	-ms-word-wrap: break-word;
+	word-wrap: break-word;
+}
+
+.medbottom.buttonList{
+       z-index:98;
+}
+
+.medcard .medinfocolumn {
+	width: 34%;
+	z-index: 99;
+	position: relative;
+}
+
+.medcard a.providerlink {
+	cursor: pointer;
+}
+
+.medcard .meddata {
+	font-size: 0.8em;
+	display: inline;
+}
+
+.medcard .medlabel {
+	display: inline;
+	padding-right: 4px;
+}
+
+a.nottakingBtn,
+a.editBtn,
+a.refillBtn,
+a.refillBtn:hover {
+	text-decoration: none;
+	color: #363636;
+}
+
+div.duplicatewarningwrapper + div.cardline.medmessage{
+	margin-top: 0.5rem;
+}
+
+div.duplicatewarningwrapper div.popupiconcontainer img{
+	width: 20px;
+	height: 20px;
+}
+
+/* Pending updates */
+div.deleteitem div.pretext,
+div.additem div.pretext {
+	margin-bottom: 10px;
+}
+
+.card.medcard:before {
+	background: rgba(0, 0, 0, 0) none no-repeat scroll center center / 2rem 2rem;
+	content: "";
+	display: block;
+	height: 2rem;
+	margin: 0.25rem 0 -2rem -2.75rem;
+	position: relative;
+	vertical-align: middle;
+	width: 2rem;
+}
+
+/* Card Icon Images */
+.card .name.icon.allergy.type_1:after {
+	background-image: url("../images/clinical/Allergy_Type_1.png");
+}
+
+.card .name.icon.allergy.type_2:after {
+	background-image: url("../images/clinical/Allergy_Type_2.png");
+}
+
+.card .name.icon.allergy.type_3:after {
+	background-image: url("../images/clinical/Allergy_Type_3.png");
+}
+
+.card .name.icon.allergy.type_4:after {
+	background-image: url("../images/clinical/Allergy_Type_4.png");
+}
+
+.card .name.icon.allergy.type_5:after {
+	background-image: url("../images/clinical/Allergy_Type_5.png");
+}
+
+.card .name.icon.allergy.type_6:after {
+	background-image: url("../images/clinical/Allergy_Type_6.png");
+}
+
+.card .name.icon.allergy.type_7:after {
+	background-image: url("../images/clinical/Allergy_Type_7.png");
+}
+
+.card .name.icon.allergy.type_8:after {
+	background-image: url("../images/clinical/Allergy_Type_8.png");
+}
+
+.card .name.icon.allergy.type_9:after {
+	background-image: url("../images/clinical/Allergy_Type_9.png");
+}
+
+.card .name.icon.allergy.type_default:after {
+	background-image: url("../images/clinical/Allergy_Default.png");
+}
+
+.medcard.form_1:before {
+	background-image: url("../images/clinical/Meds_Form_1.png");
+}
+
+.medcard.form_2:before {
+	background-image: url("../images/clinical/Meds_Form_2.png");
+}
+
+.medcard.form_3:before {
+	background-image: url("../images/clinical/Meds_Form_3.png");
+}
+
+.medcard.form_7:before {
+	background-image: url("../images/clinical/Meds_Form_7.png");
+}
+
+.medcard.form_8:before {
+	background-image: url("../images/clinical/Meds_Form_8.png");
+}
+
+.medcard.form_29:before {
+	background-image: url("../images/clinical/Meds_Form_29.png");
+}
+
+.medcard.form_55:before {
+	background-image: url("../images/clinical/Meds_Form_55.png");
+}
+
+.medcard.form_100:before {
+	background-image: url("../images/clinical/Meds_Form_100.png");
+}
+
+.medcard.form_102:before {
+	background-image: url("../images/clinical/Meds_Form_102.png");
+}
+
+.medcard.form_103:before {
+	background-image: url("../images/clinical/Meds_Form_103.png");
+}
+
+.medcard.form_104:before {
+	background-image: url("../images/clinical/Meds_Form_104.png");
+}
+
+.medcard.form_105:before {
+	background-image: url("../images/clinical/Meds_Form_105.png");
+}
+
+.medcard.form_106:before {
+	background-image: url("../images/clinical/Meds_Form_106.png");
+}
+
+.medcard.form_default:before {
+	background-image: url("../images/clinical/Meds_Form_Default.png");
+}
+
+.vb_navigation {
+	transition: opacity 4s ease;
+	opacity: 0;
+}
+
+.show.vb_navigation {
+	opacity: 1;
+	margin: 0.5rem 0;
+}
+
+.personalnotes .card{
+	width: 67%;
+	margin-bottom:0;
+}
+
+.personalnotes textarea{
+	min-width: 67%;
+}
+
+div.personalnotes .card {
+	margin: 0;
+}
+
+.haspersonalnotes.hidepersonalnotes .personalnotessection.component{
+	display: none;
+}
+
+/* #region Lookup*/
+
+.lookup .beforeselection {
+	padding: 1rem 0;
+	transition: height .2s;
+}
+
+.lookup .afterselection:focus {
+	outline: none;
+}
+
+.lookup .list.hoverable a.suggestionlink,
+.lookup .list.hoverable a.suggestionlink:hover,
+.lookup .list.hoverable a.suggestionlink:focus {
+	font-style: normal;
+	cursor: pointer; 
+}
+
+.lookup .list.hoverable a.suggestionlink:hover,
+.lookup .list.hoverable .selected a.suggestionlink {
+	text-decoration: underline;
+}
+.lookup .list.hoverable a.suggestionlink:focus,
+.lookup .list.hoverable .selected a.suggestionlink {
+	outline: 1px dotted #000;
+	outline: 5px auto -webkit-focus-ring-color;
+}
+
+.lookup .searchheader {
+	font-size: 1.2rem;
+	padding-bottom: 0.5rem;
+}
+
+.lookup .custombuttons {
+	padding: 1rem 0;
+}
+
+.lookup .center .searchinputs {
+	margin: 0 auto;
+}
+
+.lookup .searchinputs {
+	position: relative;
+	width: 50%;
+}
+
+.lookup .customcontainer {
+	width: 50%;
+}
+
+.lookup .searchinputs::after {
+	background: #52CC6E;
+	border: 1px solid #49B863;
+	content: "";
+	height: calc(100% - 2px);
+	position: absolute;
+	right: 50%;
+	width: calc(2rem - 2px);
+	z-index: 9;
+}
+
+.lookup .searchinputs input::-ms-clear,
+.lookup .customcontainer input::-ms-clear {
+	display: none;
+}
+
+.lookup .searchcontainer .searchinputs::after {
+	right: 0;
+}
+
+.lookup .button.inlineaccept.custom {
+	width: 200px;
+}
+
+.lookup input[type='text'] {
+	display: inline-block;
+	margin-bottom: 0;
+	padding: 0.25rem 2rem 0.25rem 0.25rem;
+	width: 100%;
+}
+
+.lookup .resultscount {
+	display: inline-block;
+	width: 50%;
+	padding: 0.25rem 1rem;
+	color: grey;
+}
+
+.lookup a.startoveranchor {
+	margin-left: 0.2rem;
+	display: inline-block;
+	vertical-align: middle;
+	width: 20px;
+	height: 20px;
+	background-image: url('../images/edit.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.lookup img.startoverimg {
+	height: 20px;
+	cursor: pointer;
+	vertical-align: top;
+}
+
+.lookup a.startover {
+	vertical-align: top;
+	line-height: 1.7rem;
+}
+
+.lookup .searchresults:not(:empty) {
+	padding: 1rem 0;
+}
+
+.lookup .resultspretext.heading {
+	font-weight: bold;
+}
+
+.lookup .searchloading {
+	text-align: center;
+	min-height: 250px;
+	padding-top: 100px;
+}
+
+.lookup input.imgbutn {
+	background: transparent;
+	border: none;
+	line-height: 1.5rem;
+	margin: 0;
+	position: absolute;
+	right: calc(50% + 0.4rem);
+	top: 0.25rem;
+	width: 1.5rem;
+	z-index: 99;
+}
+
+.lookup .searchcontainer input.imgbutn {
+	right: 0.25rem;
+}
+
+.lookup ul.suggestions {
+	width: 50%;
+	border: 1px solid #DBDBDB;
+	border-top: 0;
+	line-height: 1.2rem;
+	position: absolute;
+	background: white;
+	cursor: pointer;
+	text-align: left;
+}
+
+.lookup .center ul.suggestions {
+	left: 25%;
+}
+
+.lookup .suggestions li {
+	padding: 0.1rem 0.25rem 0.1rem 1.5rem;
+}
+
+.lookup li.suggestionsearch::before {
+	position: absolute;
+    content: "";
+    width: 16px;
+    height: 16px;
+    background: url('../images/search_small.png') no-repeat;
+    left: 0.35rem;
+    top: 0.35rem;
+}
+
+.lookup li.suggestion span.searchkey {
+	font-weight: bold;
+}
+
+.lookup li.suggestion span.searchlabel {
+	color: grey;
+}
+
+.lookup ul.suggestions li.suggestion.selected {
+	background: rgba(36, 111, 181, 0.08); /* @color theme tint */
+}
+
+.lookup li.suggestion.infotext {
+	color: #767676;
+	text-align: center;
+	padding: 0.5rem 0.1rem 0.25rem 0.1rem;
+}
+
+.lookup li.suggestion.infotext:hover,
+.lookup li.suggestion.infotext:focus {
+	background: none;
+	cursor: default;
+	outline: none;
+}
+
+.lookupcontainer > .content {
+	background: #FDFDFD;
+}
+
+.lookup #results {
+	margin: 1rem 0;
+}
+
+.lookupcontainer .formrow {
+	margin: 0.7rem 0;
+}
+.lookupcontainer .formrow:first-child {
+	margin-top: 0;
+}
+
+.lookupcontainer .formrow .leftcol {
+	width: 15%;
+	display: inline-block;
+	text-align: right;
+	margin-right: 2%;
+	padding-top: 0.3rem;
+}
+
+.lookupcontainer .formrow .rightcol {
+	display: inline-block;
+	vertical-align: top;
+	max-width: 80%;
+}
+
+.lookupcontainer .formrow .rightcol.name {
+	padding-top: 0.3rem;
+	font-size: 1.1rem;
+}
+
+.lookup .anchorListElement.resultelement {
+	display: inline-block;
+	width: 49.5%;   /* tweak to 4.95 to support card list */
+	padding: 1rem;
+	border: 1px solid #eee;
+	background: #fff;
+	vertical-align: top;
+}
+
+.lookup .noprint.imgbutn img {
+	width: 16px;
+	height: 16px;
+}
+
+.lookup .customtext a {
+	cursor: pointer;
+}
+
+.lookup .rightcol input.selectionlabel {
+	font-size: 1.1rem;
+	display: inline-block;
+	margin: 0;
+	min-width: 50%;
+	max-width: 90%;
+}
+
+.lookup .rightcol input.selectionlabel[disabled] {
+	background-color: #EEE;
+}
+
+.lookupcontainer .formheader {
+	margin: 0.5rem 0 1rem;
+}
+
+.lookupcontainer .rightcol input,
+.lookupcontainer .rightcol select,
+.lookupcontainer .rightcol textarea {
+	font-size: 1rem;
+	margin-bottom: 0;
+}
+
+.lookupcontainer .itemdetails label.togglebutton[for] {
+	font-weight: 500;
+}
+
+.lookupcontainer .itemdetails {
+	padding-bottom: 0.5rem;
+}
+
+/* #endregion Lookup*/
+
+/* #region Pharmacy */
+
+.phrcard.card.anchorListElement {
+	padding-bottom: 2rem;
+}
+
+.phrcard.card .favoritelabel {
+	background-image: url(../images/fave-unselected.png);
+	background-repeat: no-repeat;
+	background-size: 100%;
+	border:none;
+	position: absolute;
+    top: 0.60rem;
+    right: 0.75rem;
+    height: 1.25rem;
+    width: 1.25rem;
+} 
+
+.phrcard.card .favoritelabel.favorited {
+	background-image: url(../images/fave-selected.png);
+}
+
+.phrcard.card {
+	padding-bottom: 2rem;
+}
+
+a[data-id='expandzipcodefield'] {
+	display: inline-block;
+	margin-left: 0.25rem;
+}
+
+.expanded input {
+	min-width: 0;
+}
+
+.expanded #search {
+    width: calc(64% - 2.08rem);
+    padding-right: 1%;
+}
+
+.expanded #searchnearlabel {
+    display: inline-block;
+    margin-left: 2%;
+    margin-right: 0%;
+    font-size: 1.25rem;
+    width: 9%;
+}
+
+.expanded #zipcode-expanded {
+	margin-right: 1%;
+	padding: 0.25rem 0 0.25rem 0;
+	width: 8ch;
+}
+.expanded #searchimg {
+    position: static;
+    height: 2.08rem;
+    width: 2.08rem;
+    padding: 0.5rem;
+	background: #52CC6E;
+	display: inline-block;
+}
+
+.expanded:after {
+	display:none;
+}
+
+#searchsuggestions .suggestion {
+	padding: 0.25rem 0.25rem 0.25rem 1.5rem;
+}
+
+#searchsuggestions .suggestion:not(:last-child) {
+	border-bottom: 1px solid #f3f3f3;
+}
+
+
+#searchsuggestions .suggestion .name {
+    text-align: left;
+	font-weight: bold;
+	margin-bottom: 0;
+}
+
+#searchsuggestions .suggestion .address {
+    text-align: left;
+	margin: 0;
+}
+
+.PharmacyContainer {
+    margin: 1rem 0 1rem 0;
+}
+
+#searchinputs:after {
+    top: 0;
+    height: 1.75rem;
+}
+
+#zipcodeinputs-expanded {
+    display: inline;
+    width: 11.5rem;
+    margin-right: 1rem;
+}
+
+#searchinputs.expanded {
+	width: 100%;
+}
+
+#searchinputs > * {
+    vertical-align: middle;
+}
+
+#searchinputs .alert {
+    text-align: left;
+}
+
+#searchsuggestions.suggestions-zipcode-expanded {
+    width: 100%;
+	left: 0;
+}
+
+#invalidziperrmsg.alert.helptext {
+	text-align: center;
+	margin-top: 1rem;
+}
+
+#phrcard-other .freetext-change {
+    width: 1.25rem;
+    vertical-align: middle;
+    margin-left: 0.25rem;
+}
+#phrcard-other .name {
+    display: inline;
+}
+
+.card .phrcard-additional-desc {
+    bottom: 0;
+    position: absolute;
+    background-color: rgba(242, 242, 242, 0.75);
+    left:0;
+    padding: 0.5rem;
+}
+
+.refillpickupoptions select{
+	display: inline-block;
+    margin: 0 0.25rem 0 0;
+    min-width: 0;
+}
+.refillpickupoptions #pickuptime .fieldtime label{
+	display: inline-block !important;
+    line-height: 2rem;
+    margin: 0 0.25rem 0 0;
+}
+
+#pickupoptions.refillpickupoptions > #pickuptime > legend,
+#pickupoptions.refillpickupoptions > label{
+    color: #246FB5; /* @color theme */
+	display: block;
+    font-weight: normal;
+    padding: 0.75rem 0 0.5rem;
+    width: 100%;
+    font-size: 1.5em;
+}
+
+.section .content label[for="pharmacy"] {
+	float: left;
+	margin-right: 0.25rem;
+	margin-bottom: 0.25rem;
+}
+
+.section .content select#pharmacy ~ p.helptext {
+	padding-top: 0.1rem;
+}
+
+fieldset#deliveryoptions input.radio[name="deliverymethod"],
+fieldset#deliveryoptions input.radio[name="deliverymethod"] + label ,
+fieldset#paymentoptions input.radio[name="paymentmethod"],
+fieldset#paymentoptions input.radio[name="paymentmethod"] + label,
+fieldset#addressoptions input.radio[name="address"],
+fieldset#addressoptions input.radio[name="address"] + label {
+	vertical-align: baseline;
+}
+
+#mobileonlypretext {
+	display: none;
+}
+
+#pharmacylookup div.pharmacysearchinput{
+	display:inline;
+	position: relative;
+}
+
+#pharmacylookup div.searchresults{
+	text-align: left;
+}
+
+/* #endregin Pharmacy */

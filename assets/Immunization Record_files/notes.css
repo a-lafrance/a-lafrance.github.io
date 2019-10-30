@@ -1,0 +1,80 @@
+﻿.section .Notes {
+	width: 70%;
+	margin: 20px auto;
+	padding: 0 2% 5px 2%;
+	border-style: solid;
+	border-width: 1px;
+	clear: both;
+}
+
+.section .Notes span.notesubtitle {
+	font-size: 1em;
+	font-weight: bold;
+}
+
+.section .Notes span.notetitle {
+	display: block;
+	margin-bottom: 2px;
+	border-style: solid;
+	border-width: 0 0 1px;
+	clear: left;
+	font-size: 1.3em;
+	padding: 5px 0 0;
+	position: relative;
+	width: 100%;
+	font-weight: bold;
+}
+
+.section .Notes span.notetitle label {
+	display: inline;
+	top: 0;
+}
+
+.section .Notes a {
+	width: 40%;
+	margin: 5px auto;
+	padding: 2px 0;
+	border-width: 1px;
+	border-style: solid;
+	font-size: 1.2em;
+	text-align: center;
+	text-decoration: none;
+	display: block;
+}
+
+.section .Notes pre,
+.section .Notes textarea {
+	width: 94.5%;
+	height: 100px;
+	margin: 10px 10px 0 10px;
+	font-size: 1.2em;
+	border-width: 1px;
+	border-style: solid;
+}
+
+.section .Notes pre {
+	width: 96%;
+	margin-bottom:24px;	
+	padding-right:3px;
+	overflow : auto;
+	word-wrap: break-word; /* for IE */
+	white-space: pre-wrap; /* other browsers */
+}
+
+.section .Notes pre a {
+	border: none;
+	background: transparent;
+	text-align: left;
+	display: inline;
+	font-size: inherit;
+	color: inherit;
+	word-wrap: inherit;
+	white-space: inherit;
+}
+
+.section .Notes input.button {
+	margin: 5px;
+	cursor: pointer;
+	float: none;
+	display: inline;
+}

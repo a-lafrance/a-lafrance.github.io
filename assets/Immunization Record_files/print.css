@@ -1,0 +1,1425 @@
+﻿/***FIREFOX QUIRKS***/
+/* Firefox only prints one page. This fixes that. */
+html {
+	height:auto;
+}
+#main,
+#sidebar {
+	display: block;  
+}
+
+/* Firefox is putting the printheader on a single page. This fixes that. */	
+div:not(#printbar).printheader {
+	position: absolute !important; 
+	top: 0;	
+	left: 0;
+}
+
+/* Firefox is putting the page header on a separate page. This seems to fix it. */
+div.content:not(.noprint),
+div.component:not(.hidden) {
+	display: block !important;
+}
+
+/* Keep appointments from being cropped off in Firefox */
+div.visitcomponent,
+div.patlist,
+div.listsection,
+div.infosession {
+	display: block !important;
+}
+
+/* Keep appointment details from being cropped off in Firefox */
+body.md_visitdetails_index div#main > div.title + div > div.card {
+	display: block !important;
+}
+
+
+/***GENERAL***/
+html,
+body,
+#wrap,
+#main,
+#footer {
+  min-width:0;
+  min-height:0;
+}
+body {
+	background: white;
+	font-size: 10pt;
+	padding: 20px;
+	overflow: visible !important;
+}
+
+html,
+body[class],
+body *,
+body *:before,
+body *:after {
+	box-shadow: none !important;
+}
+
+html:not(.printcolor),
+html:not(.printcolor) body[class],
+html:not(.printcolor) body *,
+html:not(.printcolor) body *:before,
+html:not(.printcolor) body *:after,
+#content:after,
+#printbar * {
+	color: black !important;
+	border-color: black !important;
+	background: none !important;
+}
+
+.noprint,
+#banner,
+#baselinks,
+#proxyTabs,
+#menu,
+.back,
+tfoot.nav,
+img,
+.button,
+#srotext,
+#loginnotice,
+td.action,
+.popupinstructionsicon,
+iframe.fileselector,
+#iframelabel {
+	width: 1pt !important;
+	display: none !important;
+}
+
+img.uploadedimage {	/* show patient upload images in E-Visit report */
+	display: block !important;
+	width: auto !important;
+	max-height: 150px;
+	max-width: 150px;
+}
+
+div.filecontainer {
+	height: auto; /* This allows evisit image boxes to resize with description text (rather than hiding the text), with the side effect that long descriptions and multiple attachments on several rows could wrap in uneven ways. */
+}
+
+.section .content h3.filedescription { 
+	min-height: 50px; /* Address issue with floating evisit images wrapping poorly when some images have short descriptions and some have no descriptions. The issue still exists when long descriptions are allowed, however. */
+}
+
+#upload {
+	page-break-before: always;
+}
+
+div.imagescontainer,div.imagecontrolcontainer {
+	height: auto;
+	width: 100%;
+}
+
+#footer,
+.patientfooter,
+.printheader,
+.printfooter {
+	margin: 0;
+	border: 0;
+	display: block !important;
+	text-align: center;
+	font-size: 10pt;
+	position: relative;
+	padding: 1px 0;
+	top: -1em;
+}
+
+#footer,
+.patientfooter,
+.printfooter {
+	top: 1em;
+}
+
+#footer.width,
+#footer div.mainStyle {
+    margin: 0.25in auto !important;
+    width: 8.5in !important;
+}	
+
+.printheader *,
+.printfooter * {
+	width: auto !important;
+	display: inline !important;
+}
+
+body.inside #footer {
+  border: 0 !important;
+}
+
+.printonly,
+img.scan,
+img.scanThumbnail,
+img.rtf,
+.section h3 img,
+.message img,
+.fmtConv img,
+#providerdetails img,
+p img,
+td img,
+td .contentlink {
+	display: inline-block !important;
+	width: auto !important;
+}
+
+.section div.graph p.noPrintWarning.printonly {
+	display: block !important;
+}
+
+*:lang(en) .printonly,
+*:lang(en) img.scan,
+*:lang(en) img.rtf,
+*:lang(en) .section .graph,
+*:lang(en) .section .graph img,
+*:lang(en) .section h3 img,
+*:lang(en) .message img,
+*:lang(en) #providerdetails img,
+*:lang(en) p img,
+*:lang(en) td img {
+	display: -moz-inline-block !important; /*firefox doesn't support inline-block*/
+}
+
+.hideonpaper {
+	display: block;
+}
+
+/* Content that should show on the print pop up, but not on the printed page or print preview */
+@media print {
+	#printbar {
+		display: none !important;
+	}
+	.hideonpaper {
+		display: none !important;
+	}	
+}
+
+#printbar {
+	display: none;	/* hidden, but revealed by javascript */
+}
+
+div#sidebar {
+	display: none !important;	
+}
+div#main {
+	width: 100% !important; /* Ensure main fills up space left by removing sidebar */
+	max-width: 8.5in !important;
+}
+
+div#content.fitme.width {
+	width: 100%;
+	min-width: 0;	
+}
+
+#wrap,
+#wrap #footer,
+#main,
+#defaultColumn,
+#defaultForm,
+.terms,
+#content {
+	background: none !important;
+	width: auto !important;
+	height: auto !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	border: 0 !important;
+	float: none !important;
+	overflow: visible !important;
+	min-height: 0 !important;
+}
+
+#wrap,
+table {
+	   -moz-box-shadow:none !important;
+	-webkit-box-shadow:none !important;
+	        box-shadow:none !important;
+}
+
+#wrap {
+	margin: 0.25in auto !important;
+	width: 8.5in !important;	/*Set display width to a reasonable letter-size*/
+	min-width: 0 !important;
+	position: static !important;
+}
+
+@media print {
+	#wrap {
+		width: auto !important;	/*But when actually printing, let it fill whatever paper is selected*/
+	}
+}
+
+/* Hide the image container on the printed page if there is a canvas (thus, IE only).  Tooltips won't work, but they don't work anyway on the print popup. */
+canvas.graphCanvas + .cgImgContainer {
+	display: none !important;
+}
+   
+/* Inline block graphs cause problems in some browsers with graphs disappearing.  Switch to block. */
+.section .graph img {
+	display: block !important;
+}
+
+/* Ensure graph images and IE graphcanvas workaround are centered on printed pages, but left aligned if there is not enough room for entire graph */
+.cgImgContainer, canvas.graphCanvas {
+	position: static !important;
+	margin: 0 auto !important;
+	display: block;	
+}
+
+/* A fixed inline height on these classes causes problems with blank pages in IE due to graphcanvas */
+.cgContainer, .cgImgContainer
+{
+	height: auto !important;
+}
+
+/*Print links, but don't make them look like links*/
+a, a:focus, a:hover {
+	cursor: text;	
+	text-decoration: none;
+}
+
+/* Print bar hyperlinks */
+div#printbar a.button{
+	cursor: pointer;
+}
+div#printbar a.button:hover, div#printbar a.button:focus {
+	text-decoration: underline;
+}
+
+.title h1,
+.title h2{
+	margin: 0;
+}
+
+.title #assistiveicons {
+	display: none;
+}
+
+label.radio,
+label.radio *,
+input,
+select,
+textarea {
+	float: none !important;
+	display: inline !important;
+}
+
+.content {
+	padding-top: 0.5em;
+}
+
+p,
+label.radio {
+	position: static !important;
+}
+
+p.WCnote {
+	position: absolute !important;
+}
+
+textarea {
+	font-size: 14pt;
+	overflow: visible;
+}
+
+col.radio {
+	width: auto !important;
+}
+
+.colorband {
+	display: none;
+}
+
+thead {
+	display: table-header-group;
+}
+
+.tableRowMessage td {
+	border-top-color: white !important;
+}
+
+.wallet a {
+	display: none;
+}
+
+.chart table tr td,
+.tallchart table tr td {
+	border-right-color: #CCCCCC !important;
+	border-right-style: solid !important;
+	border-right-width: 1px !important;
+	border-bottom-color: #CCCCCC !important;
+	border-bottom-style: solid !important;
+	border-bottom-width: 1px !important;
+}
+
+.tableOverlay {
+	display: none;
+}
+
+.section {float: none;}
+
+.section .Notes pre {
+	width: 96%;
+	border-width: 2px;
+	border-style: solid;
+	font-size : 1.3em !important;
+	height : auto !important;
+	overflow: visible;
+	word-wrap: break-word;
+}
+
+.section .Notes textarea {
+	height: auto !important;
+}
+
+.section .rxholder .rx {
+	margin: 5px;
+}
+
+.section .rxholder .rx img {
+	display: none;
+}
+
+.section .rxholder .rx h2 {
+	float: none;
+}
+
+.section .rxholder .rx .rxright {
+	height: auto;
+}
+
+.section .chart,
+.section .tallchart,
+.section .content .PEF {
+	overflow: visible !important;
+	overflow-x: visible;
+}
+
+.section .report {
+	page-break-inside: auto;
+}
+
+.section .report .rpt.Universal img:not(.rtf) {
+	display: block !important;
+	width: auto !important;
+}
+
+#dailynotes {
+	page-break-before: always;
+}
+
+div .chart {
+ display: block !important;
+}
+
+.iconcalendar table
+{
+	font-size: 10pt !important;
+}
+
+.iconcal_legend .legenditem img
+{
+	display: inline-block !important;
+	width: auto !important;
+}
+
+#topic_9 .iconcal_legend
+{
+	border-style: solid;
+	border-width: 0;
+}
+div.tabcontainer {
+	border: none;
+	margin-top: 0px;
+	box-shadow: none;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+}
+
+input.disabledfield {
+	background-color: #EEEEEE !important;
+	color: #666666 !important;
+}
+
+.content table tr.preview td {
+	border-top-color: #FFFFFF !important;
+}
+
+.lb_content {
+  position:relative !important;
+  left:0 !important;
+  width:95% !important;
+  margin:20px 0 0 0 !important;
+  padding:0px !important;
+  -webkit-box-shadow:none;
+     -moz-box-shadow:none;
+          box-shadow:none;
+}
+.lb_content .printheader {
+  display:none;
+}
+
+.terms p {
+	white-space: normal !important;
+}
+
+.large_img > img{
+Width: 100% !important;
+height: auto;
+}
+
+.patientnote {
+	border: 1px solid black;
+}
+
+.patientnote:hover,
+.patientnote:focus {
+	height: 120px !important;
+	box-shadow: none !important;
+	margin-bottom: 10px !important;
+}
+
+.patientnote:after { /* shadow */
+	width: 0px !important;
+	top: 0px !important;
+	background: none !important;
+	box-shadow: none !important;
+}
+
+.patientnote:hover:after,
+.patientnote:focus:after {
+	bottom: 0px !important;
+	background: none !important;
+	box-shadow: none !important;
+}
+
+
+.md_visitsummary #visittabs a.selectedlink:after {
+	background-color:#fff !important;
+}
+
+.shrinkReportParent {
+	height: auto !important;
+	overflow: visible !important;
+}
+
+.shrinkReport {
+	transform: none !important;
+	-ms-transform: none !important;
+	-webkit-transform: none !important;
+	filter: none !important;
+}
+
+.HPcell.pocdefault.component .printdata {
+	display: block;
+	font-weight: bold;
+	margin-top: 5px;
+}
+
+/* Don't bother showing user photos */
+.userPhoto {
+	display: none !important;
+}
+
+/***billing printouts***/
+.DetailsHidden {
+    display: table-row !important;
+}
+
+.RightArrow,.DownArrow {
+    display: none !important;
+}
+
+/* Ensure filtered messages don't take up space on printed page */
+.hidePrint {
+    display: none !important;
+}
+
+
+#Confirm-SelectedBrandLogo {
+    display: inline !important;
+    width: inherit !important;
+}
+
+.successMessage p {
+    margin: 0 !important;
+}
+
+.PaymentAmountVerify {
+    font-size: 13pt !important;
+    margin: 0 !important;
+}
+
+/* Give the payment method nickname some more room on the printout. */
+div#apSuccessPaymentMethodInfo {
+	width: 100% !important;
+	text-align: left !important;
+}
+
+/***COMMUNITY***/
+.md_manage_communitymanage div.column.logos img {
+  display: inline !important;
+  width: auto !important;
+}
+
+.md_manage_communitymanage p.button {
+  display: inline !important;
+  width: auto !important;
+  margin-left: 1rem;
+}
+
+.md_manage_communitymanage label.buttoncheck {
+  font-size: 10pt !important;
+}
+
+.md_manage_communitymanage input.buttoncheck:checked + label::before {
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfgAhgSNA8BygRKAAAAGHRFWHRTb2Z0d2FyZQBwYWludC5uZXQgNC4wLjlsM35OAAAAx0lEQVRIS+2WQQ7CMAwEc+AHwCfgyAWeA///Q9gQL4I2VhLq+IAy0sqp63hOlRomEwtijDs5+gHpMZf4yB0HKGVc5EspM1SuSRlwQLWlQXpDtWVKmSYphro+divpPZfXsioyVxSmgHYpI0tV5P2X6DOgX8rI8hXSX80zoEm6T0WLSN7Ic3E2BdSlBMPXVLSIzFZKcKkmP5X6zE9SUpNrkXvb6JWbSEmr3FRKavIhUqLJh0rJUg4uqe8C5eCcO45A6v+L+keE8AQZoGLMPCf5fAAAAABJRU5ErkJggg==") no-repeat center center / cover !important;
+}
+
+/***MESSAGING***/
+
+.md_review_index #account,
+.ReviewMessages .messagefooter a { 
+  display: none !important; 
+}
+
+.ReviewMessages li.SingleMessage {
+  border-top-width: 1px;
+}
+
+
+.ReviewMessages .messageheader .tabs {
+  border-width: 0 0 0 0 !important;
+  position: relative !important;
+  display: inline !important;
+  left: auto !important;
+}
+
+.ReviewMessages .messages {
+  margin: 0 !important;
+}
+
+.ReviewMessages .messages .SingleMessage.collapsed,
+.ReviewMessages .messages .SingleMessage .head {
+  height: auto !important;
+}
+
+.ReviewMessages .messages .SingleMessage.expanded {
+  height: auto !important;
+}
+
+.ReviewMessages .messages .SingleMessage.collapsed .MessageDetails,
+.ReviewMessages .messages .SingleMessage .ReplyButton,
+.ReviewMessages .BeforeList div.search:empty,
+.ReviewMessages .actionlinks {
+  display: none;
+}
+
+.ReviewMessages .head .photo {
+	border: none !important;
+}
+
+.ReviewMessages .content {
+  padding: 0;
+}
+
+.ReviewMessages .messageheader {
+  border-bottom: solid 1px;
+  height: auto !important;
+}
+
+.ReviewMessages .messageheader > .content {
+  height: auto;
+}
+
+.ReviewMessages .messageheader .bottom {
+  margin: 0;
+}
+
+.ReviewMessages .messageheader .tabs label {
+  border-bottom-width: 0 !important;
+  padding-right: 10px;
+}
+
+.ReviewMessages .BeforeList .top,
+.ReviewMessages .BeforeList .bottom {
+  display: inline;
+}
+
+.ReviewMessages .BeforeList div.search {
+  height: auto;
+}
+
+
+.ReviewMessages .BeforeList .tabs input + label {
+  display: none;
+}
+
+.MessageList .head > span.actionButtons,
+.ReviewMessages input.SearchList.notsearched {
+  display: none !important;
+}
+
+.ReviewMessages .messageheader input[type="checkbox"],
+.ReviewMessages .messageheader input[type="checkbox"] + label {
+  display:none !important;
+}
+
+.ReviewMessages input:checked,
+.ReviewMessages input:checked + label {
+  display: inline !important;
+}
+
+/* Ensure filtered messages don't take up space on printed page */
+div.messages ul.MessageList .SingleMessage.hidden {
+    display: none !important;
+}
+
+/* Hide task icon on print message details page */
+body.md_messages div#main div.section div.content:first-child p img {
+	display: none !important;
+}
+
+/* Hide icon circle column, and action button column, on message list and fill up the freed space */
+.ReviewMessages span.photo,
+.ReviewMessages span.actionButtons {
+	display: none !important;
+}
+.ReviewMessages span.MessageSummary {
+	width: 75% !important;
+}
+.ReviewMessages div.MessageDetails {
+	margin-left: 1% !important;
+}
+/* More room for sender name */
+.ReviewMessages .MessageList .SenderDetails {
+	width: 100%;
+}
+
+
+/***VISITS***/
+.Visits .visitcomponent,
+.visitdetails {
+    padding-right: 0rem !important;
+}
+
+
+/* Turn timeline into distinct headers instead */
+body.md_visitslist_index .timeline {
+    display: block;
+    position: static;
+    text-align: left;
+    width: 100%;
+}
+
+/* Get rid of timeline line */
+body.md_visitslist_index div#main .listsection::before,
+body.md_visitslist_index div#main .timelinecircle {
+    display: none !important;
+	visibility: hidden !important;
+}
+
+/* More room for cards */
+body.md_visitslist_index .infosession {
+	width: 100%;
+}
+
+/* More room for cards */
+body.md_visitslist_index .time {
+	padding-left: 0;
+}
+
+/*Remove hidden timeline buckets*/
+div.infosession.timeLineSection.hidden > * {
+	display: none !important;
+	visibility: hidden !important;
+}
+
+div.infosession.timeLineSection.hidden::before {
+	display: none !important;
+	visibility: hidden !important;
+}
+
+/***LETTERS***/
+body.md_letters .section.letter {
+    padding: 0;
+}
+
+/* Get rid of border on letter */
+body.md_letters .section.letter.card {
+    border: 0 !important;
+}
+
+/***FORMS***/
+/* Return the "required" triangle at the top left back to a triangle instead of a square */
+.required::before {
+    border-color: #000000 transparent transparent !important;
+}
+
+/* Toggle buttons need to look like buttons */
+label.togglebutton {
+	border: 1px solid black !important;
+}
+
+/* Apply background color to selected checkbuttons so you can tell they are selected */
+label.togglebutton.selected {
+	background-color: #BBBBBB !important;
+}
+
+/***HOME DEFAULT, PLAN OF CARE***/
+div.notificationreview {
+	display: none !important; /* Do not print notification review popup. Should probably add a noprint class to it, instead. */
+}
+
+/* Adjust height of divs in widget content to maximize use of whitespace on printed page */
+div#main div.HPtemplate div {
+	height: auto !important;
+}
+/* TODO Events */
+div.ToDoEvents  {
+	max-height: none !important;
+	min-height: 0 !important;	
+}
+
+/* Necessary to keep Firefox from hiding content on long todo lists */
+div.HPcell, div.HPcell div {
+    display: block !important;
+}
+
+/* Calendar - Hide */
+div.HPcell div.multiMonthCalendar  {
+	display: none !important;
+}
+
+div.ToDoEvents > a.viewmore  {
+	display: none !important;
+}
+/* two columns of todo events */
+div.ToDoEvents div.ToDolist, 
+div.ToDoEvents div.ToDolist .leftsection {
+    width: 100% !important;
+}
+div.ToDoEvents div.ToDolist div.rightsection {
+    display: none !important;
+}
+div.ToDoEvents div.ToDolist li.listelement ul li {
+    display: inline-block;
+    vertical-align: text-top;
+    width: 50%;
+}
+
+
+/* Restore the side bar on home page, and plan of care */
+body.md_default div#sidebar, 
+body.md_registries_index div#sidebar {
+    display: block !important;
+	width: 100%;
+	height: auto !important;
+	min-height: 0 !important;
+}
+
+/* QuickLinks - Hide  */
+body.md_default div.quickLinks {
+    display: none !important;
+}
+
+/* External Alerts - Hide  */
+body.md_default div.externalalerts {
+    display: none !important;
+}
+
+/* Side bar content, adjust height to content */
+body.md_default div#sidebar div, 
+body.md_registries_index div#sidebar div {
+    height: auto !important;
+}
+
+/* Care Team - Use white space for care team better */
+div.pocdefault ul.careteam li {
+    display: inline-block;
+    padding: 0.7rem 0;
+    width: 50%;
+}
+
+/* Hide provider photos */
+span.providerimage {
+	display: none;
+}
+
+/* Hide care team provider photos column */
+li.careteam span.col1 {
+	display: none !important;
+}
+
+
+/* Plan of Care tabs */
+.membertab.selected {
+    border-left: 1px solid !important;
+    border-right: 1px solid !important;
+}
+
+/* Get rid of unnecessary padding on sidebar when moved to center of screen on printed page */
+#header.compact:not(:empty) + #content #sidebar {
+    padding: 0 !important;
+}
+
+/***TEST RESULTS***/
+.TestResults div.BeforeTestResultsList {
+	display: none;
+}
+.TestResults .TestResultsHeader {
+    height: auto;
+}
+/* restore display of sort arrows */
+.TestResults .TestResultsHeader .descending::after, 
+.TestResults .TestResultsHeader .ascending::after {
+    border-color: black transparent !important;
+}
+
+/* Hide about this test icon, but it takes up useful space so using visibility hidden instead of display none */
+div.cptLink {
+	visibility: hidden;
+}
+
+/* Restore display of graph images */
+div.graph img {
+	display: block !important;
+	width: auto !important;
+}
+
+/***HEADER***/
+/* If you put a .NET in printmode (by making the print.css file not media=print), parts of the login banner return. This stops that. */
+div#header {
+	display: none !important;
+}
+
+
+/***CARDS***/
+/* Cards at least need a gray border to look nice, and there's less display space so do 2 per row instead of 3. */
+div.card {
+    border: 1px solid #dddddd !important;
+	min-height: 139px !important;	
+}
+div.card.selected {
+	border-left: 5px solid black !important;	
+}
+
+/* Don't show the add button on printed page */
+div.card.addItem {
+	display: none !important;
+}
+
+
+/***REGISTER FOR YOUR DELIVERY***/
+.hospitalinfo .hospitalthumbnail {
+	width: 29%;
+	height: 150px !important;
+}
+.hospitalinfo .hospitalthumbnail, div.advice {
+    border: 1px solid #dddddd !important;
+}
+.hospitalinfo .hospitalthumbnail .imagespaceholder {
+	display: none !important;
+}
+.hospitalinfo .hospitalthumbnail .hospitalimage {
+    display: none !important;
+}
+
+/***HEALTH TRENDS***/
+/* Restore display of column and row labels on printed page */
+.section .chart .tableWrapper table tr .fixed {
+	visibility: visible;
+	opacity: 1;
+}
+
+/* Restore display of graph images */
+.section .graph img {
+    display: block !important;
+}
+
+/***REFERRALS***/
+body.md_referrals div#innertabs {
+	display: none;
+}
+
+/***PERSONALIZE, FAMILY ACCESS SETTINGS***/
+/* Hide the pencil icon */
+img.photoedit {
+    display: none !important;
+}
+
+/* Get rid of photo column and use the space better */
+body.md_personalize table#mysubjects .proxyphoto {
+	display: none;
+}
+body.md_personalize table#mysubjects > thead > th, 
+body.md_personalize table#mysubjects > tbody > td, 
+body.md_personalize table#mysubjects > colgroup > col {
+	width: auto;
+}
+
+/***NOTIFICATIONS***/
+/* Hide the pencil icon */
+body.md_communications_manage a.editContactInfoButton, 
+body.md_communications_manage a.detailsButton {
+    display: none;
+}
+
+/* Always show details on printed page */
+body.md_communications_manage div.detailedList {
+	display: block !important;
+}
+
+/* Hide email, phone input boxes */
+body.md_communications_manage input.invisible {
+	display: none !important;
+}
+
+/***DIRECT SCHEDULING***/
+/* Hide the provider list box in favor of cards */
+select#schedulewith {
+	display: none !important;
+}
+
+/***APPOINTMENT DETAILS***/
+/* Move date/time header to left since icon is missing */
+body.md_visitdetails_index div.visitdetails div.visitsubtitle.time {
+	padding-left: 0;
+}
+body.md_visitdetails_index div.visitdetails div.waitlist div.waitlisticon {
+	display: none;
+}
+
+/* Since we don't show the provider photo, use up the space better */
+body.md_visitdetails_index div.visitdetails div.providerphotocontainer {
+    display: block;
+}
+body.md_visitdetails_index div.visitdetails div.providerphotocontainer div {
+    text-align: left;
+}
+
+/***SCHEDULING PREFERENCES***/
+/* Restore buttoncheck display */
+body.md_schedotherprefs p.button {
+	width: auto !important;
+	display: block !important;
+	
+}
+/* Adjust width to accommodate small space on printed page */
+body.md_schedotherprefs #schedprefs .preftimes {
+	width: 70%;
+}
+
+.section.indented > .content, 
+.section.indented > .header {
+	width: 100%;
+}
+
+body.md_schedotherprefs ul.bcList li.bcItem {
+    width: 49% !important;
+}
+/* Restore checkboxes on buttonchecks */
+input.buttoncheck:checked + label.buttoncheck::before {
+    background-color: black !important;
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4AIYEjQPAcoESgAAAKVJREFUSMft1rENgzAQQFGKbAAsEUoaZxyycYCKDWhQFoCfIk4Tgm2k8yEF//70Gp91WZZKCQRcjkBL4AHctdGOd7MK/oWigm+gnyag0EafwC2hx6J7l10KbYAWKLXR2Q71PjwGig+XQnO71L9a4aKvFzB2yIlbtBddmQD8Ko4G4osDNRKfgQuPg+7EZdFAPA7qweOiG/gI1Jq3kwEGoDrHifpXvQANql+AlGeZnQAAAABJRU5ErkJggg==") !important;
+    background-size: contain !important;
+}
+
+/***VISITS***/
+body.md_visitdetails_index #sidebar,
+body.md_visitslist_index #sidebar { 
+  display: none !important; 
+}
+
+.barcode {
+  display: inline-block !important;
+  width: auto !important;
+}
+
+/***MEDICATIONS***/
+/* Restore warning icon and background color on future med alert */
+div.cardline.medwarning,
+div.cardline.medmessage {
+    background-color: #eeeeee !important;
+}
+
+div.cardline.medwarning img {
+    display: inline-block !important;
+    width: auto !important;
+}
+
+.card.medcard {
+    padding-left: 1.5rem;
+}
+
+.medcard .medinfocolumn {
+	width: 50%;
+	position: relative;
+}
+
+div.medicationsdetails,
+div.PharmaciesList  {
+	height: auto !important;
+}
+
+.card .medmessage, 
+.card .medwarning, 
+.medcard .warning {
+	display: block !important;
+	margin: 0.7rem 0 0 -1.5rem !important;
+	width: 100%;
+}
+
+
+/***MEDREFILL***/
+/* Show the proxy selection buttons */
+body.md_medrefill li.viewer p.button {
+	display: inline-block !important;
+	width: auto !important;
+}
+/* Display selected med checkboxes */
+body.md_medrefill table#prescriptionlist td.colorband {
+	display: table-cell !important;
+}
+
+.rxReviewDetailsCardList .card {
+	background-color: #F2F2F2 !important;
+}
+
+.confirmationStep .medwarning {
+	display:none !important;
+}
+
+.confirmationStep .rxReviewCards{
+	border: 1px solid #ccc !important;
+}
+
+.confirmationStep .rxReviewCards .card, 
+.confirmationStep .rxReviewDetailsCardList .card,
+.confirmationStep .rxReviewCardList .card {
+	border: none !important;
+}
+
+
+/***AJAX COMPONENTS***/
+div.inlineloading, 
+div.Popup,
+div.Popup.container, 
+div#lightbox, 
+div#lightbox_overlay  {
+	display: none !important;
+}
+
+
+/***TABS***/
+/* NOTE: Many pages have tabs tagged with a "noprint" class, so the following is irrelevant for them */
+/* Past visit details is a page where the CSS below affects displayed tabs */
+/* Hide all unselected the tabs */
+div:not(.selected).membertab {
+	display: none;
+}
+div.selected.membertab {
+	display: block !important;	
+	max-width: 100%;
+}
+
+/* Hide the tabs line */
+div.navchild::after {
+	display: none;
+}
+
+/* Remove borders on the tabs */
+div.membertab, div.selected.membertab {
+	border: 0 !important;
+}
+
+/* Turn selected tab into a simple header */
+div.navchild {
+	width: 100%;
+}
+
+/* Style remaining tab like a header */
+div.selected.membertab a {
+	padding: 0;	
+}
+
+div.tabcontainer {
+    margin-top: 3.25rem;
+}
+
+
+/***AUTHENTICATION***/
+/* Use less space per device since UNLINK button is hidden */
+.ExternalAccounts .FlowsheetRow {
+	min-height: 0;
+	padding: 0 ;
+}
+
+
+/***RESEARCH STUDIES***/
+/* Always show full details of study */
+body.md_researchstudies_index div.research.subcard {
+	display: block !important;	
+}
+/* And hide the UI for collapsing it **/
+body.md_researchstudies_index div.research.details span.collapsedescription,
+body.md_researchstudies_index div.research.details a.moredetails {
+	display: none !important;	
+}
+/* Hide the provider photo */
+body.md_researchstudies_index div.research.subcard div.column.provider {
+	display: none !important;	
+}
+/* Adjust space for smaller width on printed page */
+body.md_researchstudies_index div.research.subcard div.staff {
+	width: 30%;
+}
+body.md_researchstudies_index div.research.subcard div.info {
+	width: 68%;
+}
+
+/****Tables*****/
+.section .content table tfoot tr.amount .grandtotal {
+	font-size: 0.8rem;
+	display: inline-block;
+	font-weight: bold;
+}
+
+div.table-pages .table-page:not(:first-child) {
+	page-break-before: always;
+}
+
+/**Billing VB pages***/
+.pmtPlan img.creditcardlogo {
+	width: 3rem !important;
+}
+
+/***PRELOGIN PAGES***/
+/* Get rid of sidebar and its login content */
+body.isPrelogin div#sidebar {
+	display: none !important;
+}
+
+/* Restore the hidden page title by undoing the "clearlabel" class effects */
+body.isPrelogin div#main a.logo {
+	background: rgba(0, 0, 0, 0) url("../images/loginlogo.png") no-repeat scroll center center !important;
+}
+
+/* Make footer content fill the page */
+body.isPrelogin div.links {
+	width: 100%;
+}
+
+/* Fix copyright width since there is no sidebar on printed page */
+body.isPrelogin div#footer div.sidebarStyle {
+	width: 100%;
+}
+
+/***LOGIN PAGE***/
+/* Get rid of extra left indent on features list items */
+body.isPrelogin ul#features li {
+	padding: 1rem;
+}
+
+
+/***CUSTOM PAGES***/
+/* Hide the return to top links. NOTE: It would be better to tag these with a noprint class. */
+body.md_stdfile a[href="#top"] {
+	display: none !important;
+}
+
+/***SELF SIGNUP PAGE***/
+/* Restore the banner logo since it has no alternate text. NOTE: It should have an <h1> inside of it like login page banners... */
+body.md_standalone_signup div#main a.logo {
+	height: 6rem !important;
+	background: rgba(0, 0, 0, 0) url("../images/loginlogo.png") no-repeat scroll center center !important;
+}
+/* Hide the captcha */
+body.md_standalone_signup form#SignupDemographic_Form > div.formsection {
+	display: none !important;
+}
+
+
+/***OPEN SCHEDULING***/
+/* Restore the banner logo since it has no alternate text. NOTE: It should have an <h1> inside of it like login page banners... */
+body.md_openscheduling_index div#main a.logo {
+	height: 6rem !important;
+	background: rgba(0, 0, 0, 0) url("../images/loginlogo.png") no-repeat scroll center center !important;
+}
+
+/*Make list of date and times visible instead of scrollable */
+body.md_openscheduling_index .stepContainer .scrollTableWrapper, body.md_openscheduling_index div.openingsData {
+	height: auto !important;
+	overflow: visible !important;
+}
+/* hide the signup popup, we won't print this just as we don't print any post login popups */
+body.md_openscheduling_index div.loginSignupContainer {
+	display: none !important;
+}
+
+/* Change cards in openscheduling to fit text content */
+body.md_openscheduling_index .card, body.md_openscheduling_index .card a {
+    height: auto !important;
+    min-height: 0 !important;
+}
+
+/***CUSTOM FORMS***/
+/* Restore alert icon display. This shows when the feature it not enabled for the form. */
+body.md_showform div#main div.alert.card img {
+	display: block !important;
+	width: auto !important;
+}
+
+/* Hide provider photos */
+body.md_openscheduling_index div.cardline.photo,
+body.md_openscheduling_index div.providerPhoto {
+    display: none;
+}
+body.md_openscheduling_index .slotDetailsContainer .hasProviderPhoto {
+    padding-left: 0;
+}
+
+/* Restore a background color to the selected slot so you can see it */
+body.md_openscheduling_index .slotslist a.selected {
+    background-color: #dddddd !important;
+}
+
+/***CUSTOM FORMS***/
+/* Restore alert icon display. This shows when the feature it not enabled for the form. */
+body.md_showform div#main div.alert.card img {
+	display: block !important;
+	width: auto !important;
+}
+
+/***INSURANCE***/
+/* There's too much information in insurance cards to try to display in three columns printed */
+div#insurance div.card {
+	width: 49%;
+}
+
+
+/***ECHECK-IN***/
+/* Show circle fills on steps */
+body.md_echeckin div.stops div.future span.trainstation {
+	background-color: #FFFFFF !important;
+}
+body.md_echeckin div.stops div.past span.trainstation,
+body.md_echeckin div.stops div.future.visited span.trainstation {
+	background-color: #AAAAAA !important;
+}
+body.md_echeckin div.stops div.now span.trainstation {
+	background-color: #000000 !important;
+}
+/* Show line on steps */
+body.md_echeckin div.line div.trainrail {
+	background-color: #000000 !important;
+}
+
+/*** PRINTING PAYMENT RECEIPTS ***/
+/* Allow display of lightbox on echeck-in and copay, Put the lightbox on top of everything lined up at the top. The makepayment page seen further below doesn't use lightboxes, just sliders, so isn't referenced here. */
+body.md_echeckin.showLightBox div#lightbox,
+body.md_echeckin.showLightBox div#lightbox div#divConfirmPayment,
+body.md_visitpayment_enteramounts.showLightBox div#lightbox,
+body.md_visitpayment_enteramounts.showLightBox div#lightbox div#divConfirmPayment {
+	position: static !important;
+	width: 100% !important;
+	margin: 0 !important;
+	display: block !important;
+}
+
+/* Hide everything except the lightbox, including the overlay. This ensures only payment related content is shown. */
+body.md_echeckin.showLightBox div#wrap > div:not(#lightbox),
+body.md_visitpayment_enteramounts.showLightBox div#wrap > div:not(#lightbox) {
+	display: none !important;
+}
+
+/* Show all the steps in these sliders on these payment pages */
+body.md_echeckin .setOfStepsContainer, 
+body.md_echeckin .setOfStepsContainer .slider,
+body.md_visitpayment_enteramounts .setOfStepsContainer,
+body.md_visitpayment_enteramounts .setOfStepsContainer .slider,
+body.md_payment_makepayment .setOfStepsContainer,
+body.md_payment_makepayment .setOfStepsContainer .slider {
+	position: static !important;	
+    display: block;
+    overflow: visible;
+    vertical-align: top;
+    width: 100%;
+	height: 100% !important;
+}
+
+/* Ensure payment related divs in the sliders are visible */
+body.md_echeckin div#PaymentEntry, 
+body.md_echeckin div#PaymentEntry #paymentInfoContainer, 
+body.md_echeckin div#DetailsVerification,
+body.md_visitpayment_enteramounts div#PaymentEntry, 
+body.md_visitpayment_enteramounts div#PaymentEntry #paymentInfoContainer, 
+body.md_visitpayment_enteramounts div#DetailsVerification,
+body.md_payment_makepayment div#PaymentEntry, 
+body.md_payment_makepayment div#PaymentEntry #paymentInfoContainer, 
+body.md_payment_makepayment div#DetailsVerification {
+	display: block !important;
+	width: 100% !important;
+	visibility: visible !important;
+	opacity: 1 !important;
+}
+
+/* Hide manually entered credit card and check info to ensure we do not accidentally print this out */
+body.md_echeckin div#divPmtMethod, 
+body.md_visitpayment_enteramounts div#divPmtMethod, 
+body.md_payment_makepayment div#divPmtMethod
+{
+	display: none !important;
+}
+
+/* Ellipsis Control */
+.ellipsisControl {
+	white-space: normal !important;
+}
+
+.ellipsisControl > span{
+	display: inline !important;
+}
+
+/*** FINANCIAL ASSISTANCE ***/
+body.md_financialassistance_index .receipt .receiptsection .receiptline.name:before {
+	display: none;
+}
+
+body.md_financialassistance_index .innercard.receipt .receiptsection .receiptline.name .item {
+	width: 60%;
+}
+
+body.md_financialassistance_index .innercard.receipt .receiptsection .receiptline.name .value {
+	width: 40%;
+}
+
+/*** ADVANCE CARE PLANNING ***/
+body.md_caredecision_index .jumbotron {
+	border: 1px solid black;
+}
+
+/*** Patient Instruction ***/
+.visitinstructionscontent .readmore {
+	display: none !important;
+}
+
+.visitdetails .visitinformation {
+	width: 100% !important;
+}
+
+.visitinstructionscontent {
+	height: 100% !important;
+}
+
+/* 2421171 */
+.printheader .DOB {
+	display:none !important;
+}
+
+.md_immunizations .printheader .DOB {
+	display:inline !important;
+}	
+/* END: 2421171 */

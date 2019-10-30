@@ -1,0 +1,1789 @@
+﻿/*
+Copyright 2018 Epic Systems Corporation
+*/
+
+/*COLOR INFORMATION*/
+/* COLORS.CSS
+ *	This file is meant to define static color choices across the site.
+ *	Regardless of which theme is chosen, prominent UI elements should always have the same colors.
+ *	This aids in branding and consistent look and feel as the user navigates the site.
+ *	This file should not be used to restyle the overall theming of the site - that's in themes.css.
+ */
+
+/****************/
+/** NEW STYLES **/
+/****************/
+html,
+.bodyTextColor {
+	color: #363636;
+}
+
+#main,
+.BeforeList input.SearchList {
+	background-color: rgba(255, 255, 255, 0.88);
+}
+
+#sidebar {
+	background-color: rgba(255, 255, 255, 0.75);
+	color: #606060;
+}
+
+body #footer,
+body #footer a,
+.datatile #wrap > .copyright a,
+body.md_showform #footer,
+body.md_showform #footer a,
+body.md_saveform #footer,
+body.md_saveform #footer a {
+	color: #555;
+}
+
+#footer.moving,
+#footer.moving a {
+	color: rgba(0, 0, 0, 0) !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+.header,
+.heading,
+.hover a.header:focus,
+.hover a.header:hover,
+.hover a.heading:focus,
+.hover a.heading:hover,
+.titlebar,
+.sectionheader,
+.formsection > legend,
+table thead tr {
+	color: #246FB5; /* @color theme */
+}
+
+.qnr-container [class*='question'] .header,
+.section.questionsContainer .questiongroup > legend.header,
+.section.questionsContainer .question > legend.header,
+#questionnaireform [class*='question'] .header {
+	color: inherit;
+}
+
+[class*='question'] .header {
+	color: inherit;
+}
+
+#divAcpQuestionnaire .qnr-container .questiongroup .group-prompt {
+	color: #246FB5;
+}
+
+.qnr-container .text-error {
+	color: red;
+}
+
+/* questionnaire overrides color for header in info popup, fix that here */
+.popupiconcontainer > .popupInstructions > span.header {
+	color: #246FB5; /* @color theme */
+}
+
+.md_mychartquestionnaire_questionnaires .qnr_list_table .assignedqnrs > tbody > tr > td > span.qnr_completed {
+	color: #363636;
+}
+
+.md_questionnairelist .header,
+.md_mychartquestionnaire_questionnaires .header {
+	color: #246FB5; /* @color theme */
+}
+
+.md_mychartquestionnaire_questionnaires .assigned_qnr_description,
+.md_mychartquestionnaire_questionnaires .optional_qnr_description {
+	color: #808080;
+}
+
+.section.questionsContainer .cardlist .card > .group-yes-no-answers > legend.heading,
+.section.questionsContainer .cardlist .card > legend.heading {
+	color: inherit;
+}
+
+.qnr-scoring-container > .qnr-scoring-numeric {
+	border-color:#EAEAEA;
+}
+
+.whiteBG {
+	background-color: #FFFFFF;
+}
+
+.lightGrayBG {
+	background-color: #EEEEEE;
+}
+
+.mediumGrayBG {
+	background-color: #999999;
+}
+
+.darkGrayBG {
+	background-color: #666666;
+	color: #FFFFFF;
+}
+
+/* Custom Form question group titles */
+body.md_showform .section .questiongroup > legend,
+body.md_saveform .section .questiongroup > legend {
+	color: #246FB5; /* @color theme */
+}
+
+.subheader {
+	color: #246FB5; /* @color theme */
+}
+
+.highlight {
+	background-color: #CC3443;
+}
+
+.formsection.withSeparator {
+	border-color: #CCC;
+}
+
+#commMethodSidebar #unsavedChangesContainer, #changesSavedContainer {
+	border-top-color: #d3d3d3;
+	background-color: #e5e5e5;
+}
+
+.settingsList .settingsGroup {
+	border-bottom-color: #f3f3f3;
+}
+
+.settingsList .settingsGroup .detailedList {
+	background-color: #fafafa;
+	color: #6e6e6e;
+}
+
+.deviceInfo {
+	color: #6e6e6e;
+}
+
+/* Hoverable Lists */
+table tr.hover,
+table tr td.selected,
+table.hoverable tr:hover,
+.section .content .hover:not(.button):not(.card),
+.list.hoverable:not(.collapsible) a:not(.button):focus,
+.list.hoverable:not(.collapsible) a:not(.button):hover,
+.list.hoverable:not(.collapsible) li:focus,
+.list.hoverable:not(.collapsible) li:hover,
+.list.hoverable.collapsible a.collapsed:focus,
+.list.hoverable.collapsible a.collapsed:hover,
+.list.hoverable.collapsible li.collapsed:focus,
+.list.hoverable.collapsible li.collapsed:focus a,
+.list.hoverable.collapsible li.collapsed:hover,
+.list.hoverable.collapsible li.collapsed:hover a,
+.list.hoverable.collapsible li.collapsed a:focus,
+.list.hoverable.collapsible li.collapsed a:hover,
+.MessageList .SingleMessage.collapsed .inlinedelete:focus,
+.SingleIndicator.collapsed.hover,
+.listHolder > .listRow.hover,
+.listHolder > .listRow.selected,
+.clickable:hover,
+.clickable:focus,
+.clickable a:focus {
+	background: linear-gradient(rgba(36, 111, 181, 0.08), rgba(36, 111, 181, 0.08)), #fff; /* @color theme tint */
+}
+
+/* Links that have other hover effects should stay text-colored, always */
+.list.hoverable:not(.collapsible) a:not(.button),
+.list.hoverable:not(.collapsible) a:not(.button):focus,
+.list.hoverable:not(.collapsible) a:not(.button):hover,
+.list.hoverable.collapsible a:not(.linkcolor).collapsed:focus,
+.list.hoverable.collapsible a:not(.linkcolor).collapsed:hover,
+.list.hoverable.collapsible li.collapsed:focus a:not(.linkcolor),
+.list.hoverable.collapsible li.collapsed:hover a:not(.linkcolor),
+.list.hoverable.collapsible li.collapsed a:not(.linkcolor):focus,
+.list.hoverable.collapsible li.collapsed a:not(.linkcolor):hover,
+	.clickable:hover,
+.clickable:hover a,
+	.clickable:focus,
+.clickable a:focus {
+	color: #363636;
+}
+
+.list.hoverable:not(.collapsible) li > a:not(.button):focus,
+.list.hoverable:not(.collapsible) li > a:not(.button):hover,
+.list.hoverable.collapsible li > a.collapsed:focus,
+.list.hoverable.collapsible li > a.collapsed:hover,
+.list.hoverable:not(.collapsible) li li:focus,
+.list.hoverable:not(.collapsible) li li:hover,
+.list.hoverable.collapsible li.collapsed li:focus,
+.list.hoverable.collapsible li.collapsed li:hover {
+	background: none; /* Don't double up */
+}
+
+.list.hoverable .nohover {
+	background: inherit !important;
+}
+
+.listRow,
+.embedded .card,
+.department_map,
+#filterControls {
+	border-color: #e0e0e0;
+}
+
+#commMethodSidebar > a {
+	background-color: #e5e5e5;
+}
+
+#commMethodSidebar > a.selected {
+	background-color: #ffffff;
+	box-shadow: -2px 4px 4px -1px rgba(0, 0, 0, 0.2); /* @color theme tint */
+}
+
+#commMethodSidebar > a.notselected:hover {
+	background-color: #cccccc;
+}
+
+/* Text Elements */
+a,
+.linkcolor,
+.subtle.linkcolor {
+	color: #00A1DB; /* @color link */
+}
+
+/* Sometimes we have links inside of a hoverable list of cards that we want
+   to keep blue (see the saved estimates workflow, screenshots in XDS 279548). */
+.linkcolorOverride, .linkcolorOverride:visited {
+	color: #00A1DB !important; /* @color link */
+}
+
+.linkcolorOverride:focus, .linkcolorOverride:hover {
+	color: #008DC9 !important; /* @color link hover */
+}
+
+a:focus,
+a:hover,
+.linkcolor:focus,
+.linkcolor:hover,
+#calendar table td.ctrl a:hover {
+	color: #008DC9; /* @color link hover */
+}
+
+.statusClosed, /* Social Care Applications statuses */
+.subtle,
+.subtlecolor {
+	color: #767676;
+}
+
+#sidebar .subtle,
+#sidebar .subtlecolor {
+	color: #606060;
+}
+
+.helptext {
+	color: #606060;
+}
+
+.messagedisplay {
+	color: #656565;
+}
+
+.emphasis {
+	color: #121212;
+}
+
+label,
+.label,
+.inlinelabel,
+.formsection fieldset legend {
+	color: #6B6B6B;
+}
+
+legend .qnr-prompt-text {
+	color: inherit;
+}
+
+.qnr-container .answers input.invalid:not(:focus),
+.qnr-container .answers textarea.invalid:not(:focus) {
+	border-color: red;
+}
+
+.ghostInput label {
+	color: #6B6B6B;
+}
+
+/* Cannot combine the following placeholder rules because browsers ignore rules with unrecognized selectors */
+input::-moz-placeholder {
+	color: #6B6B6B;
+	opacity: 1;
+}
+
+input:-ms-input-placeholder {
+	color: #6B6B6B;
+}
+
+input::-webkit-input-placeholder {
+	color: #6B6B6B;
+}
+
+input::placeholder {
+	color: #6B6B6B;
+}
+
+/* Custom Forms */
+body.md_showform .section .question > legend,
+body.md_saveform .section .question > legend {
+	color: #6B6B6B;
+}
+
+
+/* Text highlights - some themes may have to override these when hovers are involved */
+.alert,
+.alertHeader,
+.abnormal {
+	color: #DF004F;
+}
+
+.abnormal svg.icon {
+	fill: currentColor;
+}
+
+.overdue {
+	color: #DF004F;
+}
+
+.warning {
+	color: #D84000;
+}
+
+.softwarning {
+	background-color: #ffffa1;
+}
+
+.warningbgcolor {
+	background-color: #FFCECB;
+}
+
+.attention,
+ul.MessageList .actionButtons .inlinedelete span {
+	color: #D9545B;
+}
+
+.required:before {
+	border-color: #CC3443 transparent transparent;
+}
+
+.statusAuthorized, /* Social Care Applications statuses */
+.statusOpen, /* Social Care Applications statuses */
+.positiveValue {
+	color: #43A559;
+}
+
+/* No Data */
+:not(tr):not(td).nodata:not(:empty) {
+	background-color: rgba(202, 202, 202, 0.25);
+	color: #606060;
+}
+
+#sidebar .nodata:not(:empty) {
+	background-color: rgba(190, 190, 190, 0.35);
+}
+
+/* Buttons */
+.button,
+.button:focus,
+.button:hover,
+ul.MessageList.list.hoverable.collapsible .SingleMessage .ReplyButton a.button {
+	background-color: #0091EA;
+	color: #FFF;
+}
+
+.button.nextstep,
+.button.nextstep:focus,
+.button.nextstep:hover {
+	background-color: #52CC6E;
+}
+
+.button.completeworkflow,
+.button.completeworkflow:focus,
+.button.completeworkflow:hover {
+	background-color: #52CC6E;
+}
+
+.button.cancelworkflow,
+.button.cancelworkflow:focus,
+.button.cancelworkflow:hover {
+	background-color: #D9545B;
+}
+	
+	.button.cancelqnr,
+	.button.cancelqnr:focus,
+	.button.cancelqnr:hover {
+		background-color: #D9545B;
+	}
+
+.button.inlinedelete,
+.button.inlinedelete:focus,
+.button.inlinedelete:hover {
+	background-color: #D9545B;
+}
+
+.button.inlineedit,
+.button.inlineedit:focus,
+.button.inlineedit:hover {
+	background-color: #0091EA;
+}
+
+.button.inlinesave,
+.button.inlinesave:focus,
+.button.inlinesave:hover {
+	background-color: #52CC6E;
+}
+
+.button.disabled,
+.button.disabled:focus,
+.button.disabled:hover,
+	.button[disabled]:not(.omitdisablestyling),
+	.button[disabled]:focus:not(.omitdisablestyling),
+	.button[disabled]:hover:not(.omitdisablestyling) {
+	background-color: #DBDBDB;
+	color: #565656;
+}
+
+ul.MessageList.list.hoverable.collapsible .SingleMessage .ReplyButton a.button.disabled {
+	background-color: #FFF;
+	color: #000;
+	border-color: #DBDBDB;
+}
+
+.settingsList .settingsGroup .detailsButton {
+	color: #4d4d4d;
+}
+
+.killSwitchOn {
+	color: #cccccc;
+}
+
+a.link.cancel {
+	color: #D9545B;
+}
+
+/* Toggle Buttons & Buttonchecks */
+label.togglebutton[for],
+input.buttoncheck + label.buttoncheck {
+	background-color: #FFF;
+}
+
+input:checked + label.togglebutton[for],
+input.buttoncheck:checked + label.buttoncheck {
+	background-color: #BFE1FF;
+	color: #000;
+}
+
+label.buttoncheck[for]:hover,
+label.togglebutton[for]:hover,
+input:focus + label.buttoncheck,
+input:focus + label.togglebutton[for] {
+	color: #000;
+}
+
+/* Buttoncheck */
+.buttoncheck,
+.buttoncheck:focus,
+.buttoncheck:hover {
+	background: none;
+}
+
+input.prettycheck + label:before,
+input.buttoncheck + label.buttoncheck:before {
+	background-color: #FFF;
+}
+
+input.prettycheck:checked + label:before,
+input.buttoncheck:checked + label.buttoncheck:before {
+	background-color: #0091EA;
+	border-color: #0091EA;
+}
+
+input.buttoncheck:disabled + label,
+input.prettycheck:disabled + label:before,
+input.buttoncheck:disabled + label.buttoncheck:before {
+	background-color: #EAEAEA;
+	border-color: #DBDBDB;
+}
+
+input.buttoncheck:disabled:checked + label,
+input.prettycheck:disabled:checked + label:before,
+input.buttoncheck:disabled:checked + label.buttoncheck:before {
+	background-color: #F2F2F2;
+}
+
+input.buttoncheck:disabled + label {
+	color: #000;
+}
+
+/* Back Button */
+#main .back .button,
+.Popup li.previouspage .previouspage.button {
+	background-color: rgba(255, 255, 255, 0.6);
+	border-color: currentColor;
+	color: #0091EA;
+}
+
+
+#main .back .button:focus,
+#main .back .button:hover {
+	background-color: #FFF;
+}
+
+/* Form Fields */
+input,
+select,
+textarea {
+	background-color: #FFF;
+}
+
+input.readonly,
+input.disabled,
+	input[disabled]:not(.omitdisablestyling),
+select.readonly,
+select.disabled,
+select[disabled],
+textarea.readonly,
+textarea.disabled,
+textarea[disabled] {
+	background-color: #F2F2F2;
+	color: #555;
+}
+
+input.invalid:not(:focus),
+textarea.invalid:not(:focus),
+select.invalid:not(:focus) {
+	border-color: red;
+}
+
+select.selected {
+	border-left-color: #246FB5; /* @color theme */
+}
+
+/* Message Overlay */
+.messageOverlay {
+	background-color: rgba(70, 70, 70, 0.9);
+	color: #CCC;
+}
+
+	.messageOverlay .alert {
+		color: #FFF;
+	}
+
+/* Subway UI */
+.subway,
+.subway a,
+.subway a:focus,
+.subway a:hover {
+	color: #246FB5; /* @color theme */
+}
+
+.line .trainrail {
+	background-color: #246FB5; /* @color theme */
+}
+
+.line .trainrail.future:not(.visited) {
+	background-color: rgba(36, 111, 181, 0.5); /* @color theme tint */
+}
+
+.stops .future:not(.visited) {
+	color: #808080;
+}
+
+.stops .trainstation {
+	background: linear-gradient(rgba(36, 111, 181, 0.5),rgba(36, 111, 181, 0.5)), #fff; /* @color theme tint */
+	border-color: #246FB5; /* @color theme */
+}
+
+.stops .now .trainstation {
+	background-color: #246FB5; /* @color theme */
+}
+
+.stops .future:not(.visited) .trainstation {
+	background: #FFF;
+	border-color: rgba(36, 111, 181, 0.5); /* @color theme tint */
+}
+
+.subway.scrollable .nav .scrollleft,
+.subway.scrollable .nav .scrollright {
+	border-color: #E2E2E2;
+}
+
+/* Tables */
+table th a,
+table th a:focus,
+table th a:hover {
+	color: inherit;
+}
+
+/* Cards */
+.card {
+	box-shadow: 0px 4px 4px -1px rgba(0, 0, 0, 0.2);
+	background-color: #FFF;
+}
+
+	.card.popupInstructions.hover {
+		background-color: #FFF !important;
+		cursor: default !important;
+	}
+
+/* Misc */
+#calendar table,
+ul.MessageList,
+.HPcell.component > .content,
+.component.pocdefault > a.viewmore,
+.lightShadow {
+	box-shadow: 0 4px 4px -1px rgba(0, 0, 0, 0.2);
+}
+
+.Popup .card.addItem.noprint {
+	background: #fbfbfb;
+}
+
+.Popup .card.addItem.noprint.hover {
+	background: #fff;
+}
+
+.component.Popup > .titlebar {
+	background-color: rgba(255, 255, 255, 0.8);
+}
+
+.noinfo.component > .content {
+	background: transparent !important;
+	box-shadow: 0 0 0 !important;
+}
+
+.addbuttonlabel {
+	color: gray;
+}
+
+.navparent .membertab a,
+.tabcontainer .sectiontabs a,
+.externalorganizations .orgname,
+.calendar table td a,
+.calendar table td,
+.calendar table thead td[colspan="5"].hdr,
+tfoot tr.amount.header {
+	color: #363636;
+}
+
+.popupiconcontainer .popupInstructions {
+	background-color: #FFF;
+	color: #363636;
+}
+
+.list.hoverable:not(.collapsable) a.addItem,
+.list.hoverable:not(.collapsable) a.addItem:hover {
+	color: #00A1DB; /* @color link */
+}
+
+.list.hoverable:not(.collapsable) a.addItem:hover {
+	background-color: #FFF;
+}
+
+
+
+
+
+
+
+
+
+/*Old existing code - DO NOT ADD TO THIS, CLEAN IT UP INSTEAD */
+#calendar table td,
+.lb_content.template,
+.component.Popup,
+.HProw .component,
+.component > a.viewmore,
+.todotiles,
+.todotooltip .arrow:after,
+.HPcell.component > .content,
+#calendar table,
+.medicationslist.component .filteredwarningtooltip,
+.component.pocdefaultpopup.careteam ul.careteam li.listelement.careteam.selected,
+.goalslarge .goalsleft .goalslist.list .goalslistelement.selected,
+.todotooltip, #weekcalendartooltip,
+#staticeventcalendartooltip,
+.loginalert.tab > a,
+.loginalert .body,
+.component.news .newscard,
+.loginalert .contentbody .apptoffer,
+#calendar table thead td.hi,
+#calendar table td#calcancel.hi,
+.externalorganizations .badge.orglink {
+	background-color: #FFFFFF;
+}
+
+.HPcell.component.pocdefault .titlebar ul a.selected,
+.ToDoEventsPopup.container .titlebar ul.buttons li a.selected,
+.todoweekcalendarcontent .event,
+.todoweekcalendarcontent .haevent,
+.todoweekcalendarcontent .haevent a,
+.HPcell.pocdefault.component .todolistelement .rightsection .overdue.requestappointment,
+.todotiles .actionButton a.overdue.requestappointment,
+.HPcell.pocdefault.component .todolistelement .rightsection .echeckin,
+.todoweekcalendarcontent .event a,
+.goalsvb6 .buttons li.selected,
+.calendar table td.hasevents a,
+.calendar table tbody td.hi a,
+.loginalert .contentbody a,
+.externalorganizations .alertscount,
+.highlighttext,
+.highlighttext a {
+	color: #FFFFFF;
+}
+
+.goalsleft .goalslistelement,
+.component.pocdefaultpopup.careteam ul li.listelement {
+	background: rgba(255,255,255,0.6);
+}
+
+.menudetailstable.leftmenu .leftcolumn {
+	background-color: rgba(255,255,255,0.8);
+}
+
+.todotiles.appointment .eventdetails::after,
+.todotiles .providerimage,
+.visittype .providerimage,
+.fullscreen li.careteam .col1 .providerimage,
+.fullscreen.careteam div.column2 .profilephoto img {
+	background-color: #ddd;
+}
+
+.Alerts .loginalert a::after,
+.component.quickLinks.vertical a::after,
+.component ul li.listelement:after,
+.Alerts .loginalert .loginalert.tab::after,
+.Alerts .loginalert.h2gAlert::after {
+	background-color: #eee;
+}
+
+.subdued.component.quickLinks.vertical a::after,
+.subdued.component ul li.listelement:after {
+	background-color: rgba(128,128,128,0.25);
+}
+
+.subdued.component.quickLinks a:hover,
+.component.subdued ul li.listelement:hover {
+	color: initial;
+}
+
+/*THINGS THAT ARE THEME COLOR*********************/
+.calendar table td.today a {
+	border-color: #246FB5; /* @color theme */
+}
+
+.ReviewMessages .BeforeList .tabs input:checked + label {
+	border-bottom-color: #246FB5; /* @color theme */
+}
+
+#calendar table td.ctrln,
+.urgent,
+.PickOrganization .content > p {
+	color: #246FB5; /* @color theme */
+}
+
+.calendar table tbody td.hi a,
+.calendar .selectableevent,
+.fullscreen ul.careteam li.selected:before,
+.goalslarge li.goalslistelement.selected:before {
+	background-color: #246FB5; /* @color theme */
+}
+
+/*THINGS THAT ARE BLACK ****************************/
+
+.multiMonthCalendar.fullscreen .calendar table td.ctrl a,
+.todolistelement .title a,
+.todotiles .titleholder .title a,
+.todoweekcalendarcontent .nextweekbuttons li a,
+.weekcalendar table td,
+.weekcalendar table th {
+	color: #000000;
+}
+
+.Popup .titlebar .buttons a.cancelworkflow {
+	background-color: #333333;
+}
+
+.Popup.component,
+.todotiles:not(.healthadvisory) .knowmore a,
+.goalssmall .goalslist .noncompliant,
+.goalslarge .goalslist .noncompliant,
+.goalslarge .chartgraph .noncompliant,
+.goalssmall .goaltitlerow,
+.goalsleft .goaltitlerow,
+.goalsvb6 .goaltitle,
+.goalsdetails .noteslabel,
+.careteam .fullscreen .providerTitle a,
+.softwarningtext,
+.softwarningtext a {
+	color: #363636;
+}
+
+/* ----------------------------------------------- */
+
+.goalssmall .goaldatarow,
+.goalsleft .goaldatarow,
+.goalsvb6 .goalrecentvalue {
+	color: #555555;
+}
+
+#calendar table td.n,
+#calendar table td.ctrln,
+#calendar table td.wkndn,
+.calendar table td.past {
+	color: #777777;
+}
+
+.todoweekcalendarcontent .weekcalendar th {
+	background-color: #f5f5f5;
+}
+
+
+/*#region Plan of Care Widget Styles*/
+
+.HPcell.component.pocdefault ul li.listelement:after {
+	background: #EBEBEB;
+}
+
+.component.pocdefaultpopup.careteam .fullscreen ul.careteam li:hover,
+.goalslarge .goalsleft .goalslist.list .goalslistelement:hover {
+	background-color: rgba(255,255,255,0.9);
+}
+
+.component .todolistelement .echeckinstatus,
+.todotiles .echeckinstatus {
+	color: #268832;
+}
+
+.component .medicationlistelement .refilldisabledstatus {
+	color: #D84000;
+}
+
+.goalssmall .goalslist .compliant {
+	color: #00A1DB; /* @color link */
+}
+
+.goalslarge .goalslist .compliant,
+.goalslarge .chartgraph .compliant {
+	color: #0079B7;
+}
+
+.widgetInternalScroll::-webkit-scrollbar-thumb {
+	background-color: silver;
+}
+
+.medicationspopup .medcard.selected {
+	box-shadow: 0 8px 9px 1px rgba(18, 113, 8, 0.4);
+}
+
+.medicationslist.component .filteredwarningtooltip {
+	box-shadow: 0 0 4px 1px #C2C2C2;
+}
+
+ul.MessageList .MessageSummary .Preview,
+ul.MessageList .ExpandedSummary .Viewers .label,
+ul.MessageList .SenderDetails .Date {
+	color: #737171;
+}
+
+.multiMonthCalendar .calendarBtns a,
+.multiMonthCalendar .calendarBtns a:hover,
+.multiMonthCalendar .calendarBtns a:focus,
+.multiMonthCalendar li.calendarBackEventBtn:before,
+.multiMonthCalendar li.calendarNextEventBtn:after,
+.loginalert .body .apptDateDetails,
+.BeforeList .top a,
+.messagefooter .loadall,
+.calendar table td#calcancel a,
+.ToDolist li.healthadvisory a.requestappointment:not(.button) {
+	color: #00A1DB; /* @color link */
+}
+
+.ToDoEventsPopup.container .titlebar ul.buttons li a.selected,
+.goalsvb6 .buttons li.selected {
+	background: #767676;
+}
+
+.todolistspopup .todotiles {
+	box-shadow: 0 2px 5px 0 rgba(150, 145, 145, 0.84);
+}
+
+.todotiles.healthadvisory:after {
+	background-color: #C786BC;
+}
+
+.todotiles.appointment:after {
+	background-color: #1180FF;
+}
+
+.todotiles.order:after {
+	background-color: #9657FF;
+}
+
+.BeforeList select {
+	box-shadow: 0 0 1px 1px #E4E4E4;
+}
+
+.todotiles.appointment.selected {
+	box-shadow: 0 9px 18px 2px #88BEFC;
+}
+
+.todotiles.healthadvisory.selected {
+	box-shadow: 0 9px 18px 2px #ECC4E5;
+}
+
+.todotiles.order.selected {
+	box-shadow: 0 9px 18px 2px #D9C1FF;
+}
+
+.todotiles .providerimage,
+.todoweekcalendarcontent #weekcalendar tr.fullhour td,
+.todoweekcalendarcontent .weekcalendar th {
+	border-color: #ddd;
+}
+
+.ToDoEventsPopup.container .titlebar ul.buttons li a,
+.HPcell.component.pocdefault .titlebar ul a,
+.goalsvb6 .buttons li {
+	color: #767676;
+}
+
+.todoweekcalendarcontent .event.showtime,
+.todoweekcalendarcontent .event.notime .eventinner:before,
+.todoweekcalendarcontent .event.notime .eventinner {
+	background: #4e9cc8;
+}
+
+.todoweekcalendarcontent .nextweekbuttons ul li {
+	background-color: #f5f5f5;
+	background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6);
+	background-image: linear-gradient(to bottom, #ffffff, #e6e6e6);
+	background-repeat: repeat-x;
+	border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+	color: #333;
+	text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+	border-color: #e6e6e6;
+}
+
+.todoweekcalendarcontent .nextweekbuttons ul li:hover {
+	background: #f2f2f2; /* Old browsers */
+	background: -webkit-linear-gradient(top, #f2f2f2 0,#eeeeee 8%,#e6e6e6 46%,#e6e6e6 100%); /* Chrome10+,Safari5.1+ */
+	background: linear-gradient(to bottom, #f2f2f2 0,#eeeeee 8%,#e6e6e6 46%,#e6e6e6 100%); /* W3C */
+}
+
+table.weekcalendar td {
+	border-color: #e7e7e7;
+}
+
+.goalsleft .goalslistelement.selected, .goalsleft .goalslistelement.selected:hover {
+	background: #FFFFFF;
+}
+
+.arrow:after {
+	box-shadow: 6px 5px 9px -9px black, 5px 6px 9px -9px black;
+}
+
+.tooltip {
+	background: white;
+	border-color: #cccccc;
+	box-shadow: 0 4px 2px -2px #DDDDDD;
+}
+
+.todotooltip .arrow:after,
+.todotooltip, #weekcalendartooltip,
+#staticeventcalendartooltip,
+ul.MessageList > li .head img.photo,
+ul.MessageList > li .head span.photo,
+.roundedimage {
+	border-color: #ccc;
+}
+
+#todotooltip .todotiles {
+	border-bottom-color: #ddd;
+}
+
+.todotooltip, #weekcalendartooltip,
+#staticeventcalendartooltip {
+	box-shadow: 0 0 3px 1px #ECE4E4;
+}
+
+.todotooltip .more {
+	border-top-color: #ccc;
+}
+
+.goalsdetails .noteslabel:before {
+	border-top-color: #E9E9E9;
+}
+
+.patientActions a.button.message::before {
+	background-color: rgba(0, 0, 0, 0);
+}
+
+.patientActions a.button.schedule::before {
+	background-color: rgba(0, 0, 0, 0);
+}
+
+.visittypecontainer a.visitlink.request {
+	color: #5579a9;
+	background-color: white;
+}
+
+.visittype .providerimage,
+.fullscreen.careteam div.column2 .profilephoto img {
+	border-color: #e0e0e0;
+}
+
+.visittypecontainer a.visitlink {
+	box-shadow: 0 1px 5px -1px rgba(0, 0, 0, 0.7);
+}
+
+ul.careteam li.careteam .col1 .providerimage,
+.todotiles .providerimage {
+	border-color: #A7A7A7;
+}
+
+.loginalert .body .offertitle {
+	background: linear-gradient(rgba(36, 111, 181, 0.15), rgba(36, 111, 181, 0.15)), #fff; /* @color theme tint */
+}
+
+/*#endregion Plan of Care Widget Styles*/
+/*End of old existing code - DO NOT ADD TO THIS, CLEAN IT UP INSTEAD */
+
+/* #region Billing - Account Summary */
+
+/* The account card action links are large links at the bottom of each card. */
+.ba_card_actions_link {
+	color: #246FB5; /* @color theme */
+}
+
+.ba_card_actions_link,
+.ba_card_header,
+.ba_card_status {
+	border-color: #EEE;
+}
+
+	.ba_card_actions_link:hover, .ba_card_actions_link:focus, .ba_card_actions_link:active {
+		background-color: rgba(36, 111, 181, 0.1); /* @color theme tint */
+		color: #246FB5; /* @color theme */
+	}
+
+/* Paperless billing cards have a little corner set to green. */
+.ba_card_header_paperless  {
+	border-top-color: #52CC6E;
+	border-right-color: transparent;
+}
+
+.ba_card_status .ba_up_to_date,
+.ba_card_status .ba_up_to_date_until {
+	color: #43A559;
+}
+/* #endregion Billing - Account Summary */
+
+/* #region Billing - account details */
+div.ChargeGroupContainer {
+	border-left-color: #246FB5; /* @color theme */
+}
+/* #endregion Billing - account details */
+/* #region Billing - Payment Pages */
+
+.moneyColor,
+.essMoneyColor,
+.HARSAutopay {
+	color: #43A559;
+}
+
+.pmtEmphasis {
+	color: #333;
+}
+
+
+.payplanoverdue .paymentplanautocontainer .payplanamount {
+	color: #CC3443;
+}
+
+/* #endregion */
+
+/* #region Billing - Estimates */
+
+/* #region Billing - Estimates - General */
+
+/* In mobile, we want the back buttons to have the same style as desktop. */
+.mobile .essBack a.button.previousstep {
+	background-color: white;
+	border-color: #0091EA;
+	color: #0091EA;
+}
+
+/* There's a MyChart rule for link color in lists and it's breaking our buttons. */
+.essLtrBtn {
+	color: #FFF !important;
+}
+
+.essLtrBtn:not(.nextstep) {
+	background-image: none !important;
+	background-color: #0091EA !important;
+}
+
+/* #endregion */
+
+/* #region Billing - Estimates - Saved Estimates */
+div.essSuccessAlert {
+	border-left-color: #43A559;
+}
+
+div.essSuccessAlert a.essSuccessAlertClose {
+	color: #88AA88;
+}
+
+div.essEstimateCardFooter {
+	border-top-color: #EAE5E5;
+}
+
+li div.essEstimateCardFooter div:first-child + div {
+	border-top-color: #F0EAEA;
+}
+
+li.essJustSaved, li.essNew {
+	border-color: #BFE1FF;
+}
+
+/* Delete button text should turn red when hovering or selecting. */
+div.essEstimateCardButtons a:hover span, div.essEstimateCardButtons a:focus span {
+	color: #CC3443;
+}
+
+/* Selected page has similar style to the card */
+.essPageSelectorLink.selected {
+	box-shadow: 0px 4px 4px -1px rgba(0, 0, 0, 0.2);
+	background-color: #FFF;
+	color: #000;
+}
+
+.essPageSelectorLink.disabled {
+	color: #565656;
+}
+
+.essPageSelectorLink:not(.selected):not(.disabled):hover {
+	background-color: #D2EBFE;
+}
+/* #endregion */
+
+/* #region Billing - Estimates - Service Selection */
+span.essSearchHighlight {
+	background-color: #FFFF00;
+}
+
+/* The "Category:" or "Categories:" list label for a service. */
+span.essCategoryListLabel {
+	color: #888888;
+}
+
+div.essNoResults {
+	background-color: #E4E4E4;
+	color: #444444;
+	border-color: #EEEEEE;
+}
+/* #endregion */
+
+/* #region Billing - Estimates - Estimate Details */
+div.essEstimateLoader {
+	background-color: rgba(0,0,0,0.3);
+	border-left-color: rgba(0,0,0,0.35);
+	border-right-color: rgba(0,0,0,0.35);
+}
+
+div.essEstimateLoader > div {
+	background-color: rgba(0,0,0,0.35);
+}
+
+#essProgressBar {
+	border-color: #FFFFFF;
+}
+
+#essProgressBarFill {
+	background-color: #FFFFFF;
+}
+
+div.essEstimateLoader h2 {
+	color: #F0F0F0;
+	text-shadow: 1px 1px 1px #222222;
+}
+
+div.essEstimateLoader p {
+	color: #F0F0F0;
+}
+
+/* We're replicating the header colors for our list item headers. */
+.mobile #essSpecificBenefitsContainer .essBenefitLineHeader li {
+	color: #3A557B; /* @color theme shade */
+	background: #F0F4FC none repeat scroll 0 0; /* @color theme tint */
+}
+
+/* I'm not sure what's overriding this, but it looks bad with solid black lines.
+	So, !important to fix it.*/
+#essSectionContainer hr {
+	border-bottom-color: #CCCCCC !important;
+}
+
+div.essDropdown a.essCardTitle {
+	color: #363636;
+}
+
+div.essDrilldownRange {
+	border-bottom-color: #EEEEEE;
+}
+
+line.essRangeMidpoint {
+	stroke: #43A559;
+	fill: #43A559;
+}
+
+circle.essRangeEndpoint {
+	stroke: #505050;
+	fill: #505050;
+}
+
+line.essRangeLine {
+	stroke: #C8C8C8;
+}
+
+.line-label--avg {
+	color: #43A559;
+}
+
+.subtext p {
+	border-color: #E1E1E1;
+}
+
+/* A color to call out if a maximum-out-of-pocket line is being hit. */
+.essMOOPHit {
+	color: #FF7733;
+}
+
+div.essWarningCard {
+	border-left-color: #CC4433;
+}
+
+@keyframes redFlash {
+	from {
+		background-color: #CC4433;
+	}
+
+	to {
+		background-color: #FFFFFF;
+	}
+}
+
+div.essInfoCard {
+	border-left-color: #0091EA;
+}
+
+div.detailHeader {
+	border-top-color: rgba(0,0,0,0.1);
+}
+
+p.subtext {
+	border-color: #DDDDDD;
+}
+
+div.estimateFailed h2 {
+	color: #333333;
+}
+
+input.essManuallySet {
+	border-color: #4F89D6;
+	background-color: #E6F2FF;
+}
+
+input.essManuallySet:focus {
+	border-color: #4F89D6;
+}
+
+input.essInvalidEntry {
+	border-color: #FF3A35;
+	background-color: #FFCECB;
+}
+
+input.essInvalidEntry:focus {
+	border-color: #FF3A35;
+}
+
+li.essSlideshowCard div.essSlideshowCardShadow {
+	background: linear-gradient(0, rgba(0,0,0,0.6), rgba(0,0,0,0));
+}
+
+html:not(.mobile) .list.hoverable li.essSlideshowCard p.essCardTitle {
+	color: #FFFFFF;
+	text-shadow: 1px 1px 3px #222222, 1px 1px 3px #222222;
+}
+
+.list.hoverable a.essCardTitle:focus {
+	color: #FFFFFF;
+	background-color: rgba(255,255,255,0);
+}
+
+li.essSlideshowCard p.essSlideshowCardMuted {
+	background-color: #F5F5F5;
+	border-bottom-color: #DDDDDD;
+}
+
+.list.hoverable li.essSlideshowCard p.essSlideshowCardMuted a {
+	color: #0091EA;
+}
+
+/* #endregion */
+
+/*Timeline colors*/
+.timeLine:before {
+	background: #d9d9d9;
+}
+
+.timeLine .timeLineSection:before {
+	background: white;
+}
+
+
+/*Messaging*/
+
+.ReviewMessages .messageheader .filters select {
+	background-color: #FFF;
+}
+
+.ReviewMessages .messageheader .filters {
+	background-color: rgba(36, 111, 181, 0.05); /* @color theme tint */
+	border-top-color: #BFBFBF;
+}
+
+li.SingleMessage .indeterminateLinkWarning {
+	background-color: #fcfcfc;
+}
+
+/*#region BedsideMessages*/
+.messagebackgrounduser {
+	background: #D3ECAF;
+	border-color: #B8E07C;
+}
+
+.messagebackgroundprovider {
+	background: #dfdfdf;
+	border-color: #c0c0c0;
+}
+
+/*#endregion BedsideMessages*/
+
+
+/*Member tabs*/
+.membertab {
+	border-color: transparent transparent #C5C5C5;
+}
+
+.membertab.selected {
+	border-color: #246FB5 #C5C5C5 transparent; /* @color theme */
+}
+
+.membertab a {
+	color: #5B5B5B;
+}
+
+.membertab.selected a {
+	color: #363636;
+}
+
+.membertab.hover:not(.selected) {
+	border-color: #C5C5C5;
+}
+
+.membertab a img.tabimg {
+	border-color: #C5C5C5;
+}
+
+/* #region Jp Player*/
+.jplayer-controlbar,
+.jp-video,
+.jp-audio,
+.jp-jplayer {
+	background-color: #000000;
+}
+
+.jp-current-time {
+	color: #FFFFFF;
+}
+
+.jp-volume-bar {
+	background-color: #CCCCCC;
+}
+
+.jp-volume-bar-value {
+	background-color: #FFFFFF;
+}
+
+.jplayer-progress-container {
+	background-color: #333;
+}
+
+.jp-play-bar {
+	background-color: #049BE7;
+}
+/*#endregion*/
+
+/* Genomics */
+.SingleIndicator {
+	border-bottom-color: #EEE;
+}
+
+/* flyout menu - currently used in My Conditions */
+.flyout {
+	box-shadow: 0px 4px 4px -1px rgba(0, 0, 0, 0.2);
+	background-color: #FFF;
+}
+
+/*#region Scheduling */
+.button[data-type=workflow]:hover,
+.button[data-type=workflow]:focus {
+	background-color: #0778D6;
+}
+
+.slot {
+	background-color: #52CC6E;
+	color: #FFF;
+}
+
+.slot.selected,
+html:not(.mobile) .slot:hover,
+html:not(.mobile) .slot:focus {
+	background-color: #2F9D49;
+	color: #fff;
+}
+
+.slotsData.card :not(tr):not(td).nodata:not(:empty) {
+	background-color: initial;
+}
+
+html:not(.mobile) .slotpopout.active {
+	background-color: #FFF;
+}
+
+.popupBubble .slotDropdown {
+	border-color: #ccc;
+	color: transparent;
+}
+
+	.popupBubble .slotDropdown > option {
+		color: #000;
+	}
+
+.requestheader {
+	background-color: rgba(36, 111, 181, 0.05); /* @color theme tint */
+}
+
+.card .photo.nondefault {
+	background-color: white;
+}
+
+.mobile .quickschedule.loadingoverlay {
+	background-color: rgba(0,0,0,0.5);
+}
+
+.loadingoverlay .loadingmessage,
+.translucentBG {
+	background-color: rgba(255,255,255,.75);
+}
+
+.apptDeptInstructions .section.flat {
+	background-color: #EDF7FE;
+}
+
+.summary .titlebar,
+.sidebarlinks .titlebar {
+	background-color: #246FB5; /* @color theme */
+}
+
+.summary .titlebar .title,
+.sidebarlinks .titlebar .title {
+	color: #fff;
+}
+
+a.summaryInfo {
+	color: black;
+}
+
+a.summaryInfo:hover, a.summaryInfo.summaryActive {
+	background-color: rgba(36, 111, 181,0.1); /* @color theme tint */
+}
+
+.summaryInfo.summaryActive .subtle.edit, .summaryInfo.summaryComplete .subtle, .summaryInfo.summaryIncomplete .subtle {
+	color: #246FB5; /* @color theme */
+}
+
+.summaryInfo .subtle.editText {
+	color: #0091EA;
+}
+
+.summaryInfo:before {
+	background-color: #246FB5; /* @color theme */
+}
+
+.summaryInfo.summaryActive {
+	background-color: rgba(58, 155, 229,0.0);
+}
+
+.mobile .summary, .sidebarlinks {
+	background-color: rgba(255,255,255,0.5);
+}
+
+.customstep .custombody {
+	background-color: #fff;
+}
+
+.timepreferencecontainer .daytimetable thead th {
+	color: black; /* when we switch to HTML5 doctype, this should be changed to 'inherit' */
+}
+
+#scheduling-workflow .banner::before {
+	background-color: #3170aa;
+}
+
+#standardworkflowselector > .separator > p {
+	color: #246FB5; /* @color theme */
+}
+
+#standardworkflowselector > .separator > .line {
+	background-color: #ddd;
+}
+
+#scheduling-workflow .favoriteContainer {
+	background-color: rgba(235, 242, 249, 0.2);
+}
+
+.headerwrapper.selected {
+	background-color: #e6e6e6;
+}
+
+.mobile .summary.clearfix {
+	background-color: white;
+}
+
+.mobile .summaryInfo.summaryComplete:not(.summaryActive) .mobileedittext, .mobile .summaryInfo.summaryIncomplete:not(.summaryActive) .mobileedittext {
+	color: #0091EA;
+}
+
+.mobile .verificationContent {
+	background-color: transparent;
+}
+
+html:not(.mobile) .slotpopout.active {
+	box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+.slotsstep .schedulinginstructions .helptip {
+	border-color: rgba(0,0,0,0.1);
+}
+
+.summary {
+	border-top: 0.2rem solid rgba(36, 111, 181, 0.2); /* @color theme tint */
+}
+
+.summaryInfo {
+	border-top: 0px solid rgba(58, 155, 229, 1);
+}
+
+.summaryInfo.summaryActive.summaryIncomplete {
+	border-top: 0px solid rgba(58, 155, 229, 0.5);
+}
+
+.verificationContent.single_verification .card {
+	box-shadow: 0px 4px 4px -1px rgba(0, 0, 0, 0.2);
+}
+
+.mobile .summary.clearfix {
+	box-shadow: 0 1px 5px -1px rgba(0, 0, 0, 0.35);
+}
+
+.mobile #scheduling-workflow .formbuttons .button {
+	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+.mobile .slotFilterToggle h3.filtertext {
+	color: #606060;
+}
+
+html:not(.mobile) .nodays.nodata.jqHidden.request.requestheader,
+html:not(.mobile) .slotsData.card .nodays.nodata.jqHidden.expandable {
+	border-color: #DDD;
+}
+/*#endregion*/
+
+
+/*#region Self Triage*/
+#dt-container .dtbanner {
+	background-color: #FEFCD8;
+	border-color: #CCC;
+}
+/*#endregion*/
+
+/*#region On My Way*/
+#onMyWayPopup .walkInButton:hover:not([disabled]),
+#onMyWayPopup .walkInButton:focus:not([disabled]) {
+	background-color: #0778D6;
+}
+
+/*#endregion*/
+
+/*#region Self Triage*/
+.selfTriage .landingPage .inProgressStatus .status {
+	background: #FFA020;
+	color: white;
+}
+
+.selfTriage .helperSection.narrowSymptoms:after,
+.selfTriage .helperSection.nextSteps:after {
+	border-color: #97CEEA;
+}
+
+.selfTriage .actionNode .instruction.collapsed .expandInstructionLink {
+	background: white;
+	border-top-color: #ddd;
+}
+
+.selfTriage .actionNode .instruction.collapsed .expandInstructionLink::before {
+	background: linear-gradient(to bottom, rgba(255,255,255,0.2) 0%,rgba(255,255,255,0.8) 100%);
+}
+/*#endregion*/
+
+/*#region upload widget*/
+.upload--limit-reached {
+	color: #CC3443;
+}
+
+.selfTriage .actionNodeWorkflow .actionNode .successStatus .successMessage {
+	color: #438359;
+}
+
+.selfTriage .actionNodeWorkflow .actionNode .noSecurityMessage {
+	border-top-color: #ddd;
+}
+
+.selfTriage .actionNodeWorkflow .visitWorkflow {
+	border-top-color: #ccc;
+}
+
+.selfTriage .collapsableInstructionSection .expandableLinkSection:before {
+	background: linear-gradient(to bottom, rgba(255,255,255,0.2) 0%,rgba(255,255,255,0.8) 100%);
+}
+
+.selfTriage .pastTriage .date {
+	color: #41A0FF;
+}
+
+.selfTriage .actionNode.reviewMode .incomplete .nodeTitle,
+.selfTriage .actionNode.reviewMode .expiredNodeMessage {
+	color: #767676;
+}
+
+/*#endregion*/
+
+/*#region Campaigns*/
+.buttonReplacementText {
+	color: #43A559;
+}
+
+/*#endregion*/
+/*#region Medications */
+#MedicationForm .formbuttons {
+	background-color: rgba(255, 255, 255, 0.88);
+}
+
+#MedicationForm.refill-workflow .formbuttons.not-sticky,
+.mobile #MedicationForm.refill-workflow .formbuttons,
+html.datatile #MedicationForm.refill-workflow .formbuttons {
+	background-color: rgba(255, 255, 255, 0);
+}
+
+#MedicationForm .formbuttons .selected-count {
+	color: #767676;
+}
+
+.refill-workflow .medcard.refill-disabled,
+.refill-workflow .medcard.refill-disabled .medbottom {
+	background-color: rgb(230, 230, 230);
+}
+
+.refill-workflow .card.refill-disabled .medmessage {
+	background-color: #8B969D;
+	color: rgb(230, 230, 230);
+}
+
+	.refill-workflow .card.refill-disabled .medmessage span {
+		color: rgb(230, 230, 230);
+	}
+
+.refill-workflow .medcard.refill-disabled * {
+	color: #8B969D;
+}
+
+.medcard .selection-disabled .cardline.medmessage {
+	background-color: #8B969D;
+}
+
+.refill-step .prescription-list .see-more-banner .text-layer {
+	background-color: rgb(255,255,255);
+}
+
+.rxReviewCardList.cardlist {
+	background-color: #FFF;
+}
+
+.rxReviewDetailsCardList .card {
+	background-color: #F2F2F2;
+}
+
+.section .rxholder .rx .rxsig.temporary {
+	background-color: #ffffa1;
+}
+
+.medcard .selection-enabled input[type=checkbox] + label svg {
+	fill: #8B969D;
+}
+
+.medcard .med-selection-box .selection-disabled svg {
+	fill: #8B969D;
+}
+
+/*#endregion*/
+
+/*#region colors for small screens */
+@media only screen and (max-width: 768px) {
+	.smallWhiteBG.translucentBG {
+		background: rgba(255, 255, 255, 1); /* just turns alpha up to 1*/
+	}
+}
+/*#endregion*/
+
+/*#region status badge colors */
+.statusBadge.neutral{
+	background-color: #C5DDE8;
+	border-color: #246FB5;
+	color: #1B5388;
+}
+
+.statusBadge.positive{
+	background-color: #CAEAD0;
+	border-color: #52CC6E;
+	color: #317237;
+}
+
+.statusBadge.negative{
+	background-color: #E0E0E0;
+	border-color: #777777;
+	color: #363636
+}
+
+.statusBadge.pending{
+	background-color: #FFEAC2;
+	border-color: #FFA10B;
+	color: #936001;
+}
+/*#endregion*/
