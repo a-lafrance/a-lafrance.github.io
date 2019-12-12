@@ -1,5 +1,7 @@
+
 body {
   margin: 0;
+  background-color: rgb(50, 50, 50);
 }
 
 .section {
@@ -40,6 +42,10 @@ body {
   padding-top: 8%;
 }
 
+#contact p {
+  padding-left: 2vw;
+}
+
 .footer {
   font-family: "Helvetica", sans-serif;
   font-weight: 100;
@@ -47,28 +53,29 @@ body {
 
 .copyright {
   padding-left: 3vw;
+  color: rgb(200, 200, 200);
 }
 
 h1 {
   font-size: 30pt;
   font-weight: normal;
-  color: rgb(0, 105, 255);
+  color: rgb(200, 200, 200);
 }
 
 h2 {
   font-size: 20pt;
   font-weight: normal;
-  color: rgb(0, 105, 255);
+  color: rgb(200, 200, 200);
 }
 
 h3 {
   font-size: 16pt;
   font-weight: 100;
-  color: rgb(0, 105, 255);
+  color: rgb(200, 200, 200);
 }
 
 .title {
-  color: rgb(0, 105, 255);
+  color: rgb(0, 50, 95);
   font-size: 13pt;
   margin-bottom: 0;
 }
@@ -95,7 +102,7 @@ h3 {
 
   border-radius: 10px;
 
-  background-color: rgba(25, 25, 25, 0.1);
+  background-color: rgb(170, 170, 170);
 }
 
 .fit {
@@ -121,7 +128,7 @@ h3 {
 
   border-radius: 10px;
 
-  background-color: rgba(25, 25, 25, 0.1);
+  background-color: rgb(200, 200, 200);
 
   text-align: center;
 
@@ -147,15 +154,24 @@ hr {
 
 .footer hr {
   height: 0.3vh;
-  background-color: rgb(50, 50, 50);
+  background-color: rgb(200, 200, 200);
 }
 
 .skillset {
   margin-bottom: 1vh;
 }
 
-p, li {
+.section p {
+  color: rgb(200, 200, 200);
+}
+
+.entry p, li {
   font-size: 10pt;
+  color: rgb(30, 30, 30);
+}
+
+.subtitle {
+  color: rgb(30, 30, 30);
 }
 
 ul {
@@ -172,7 +188,11 @@ ul {
 }
 
 .uci {
-  color: rgb(0, 105, 255);
+  color: rgb(0, 120, 255);
+}
+
+.uci-gold {
+  color: rgb(255, 205, 10);
 }
 
 img {
@@ -192,4 +212,35 @@ img {
 
 .row, .entry-header {
   display: flex;
+}
+
+.skill {
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 15px;
+  border-color: rgb(30, 30, 30);
+
+  margin-bottom: 2vh;
+
+  padding-left: 2%;
+  padding-right: 2%;
+  padding-top: 1.5%;
+  padding-bottom: 1.5%;
+
+  text-align: center;
+  font-weight: bold;
+
+  color: rgb(0, 50, 95);
+}
+
+.rounded-img {
+  border-radius: 12px;
+}
+
+.eXo {
+  color: #8a408a;
+}
+
+.navy {
+  color: rgb(0, 50, 95);
 }
