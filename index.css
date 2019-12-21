@@ -26,6 +26,7 @@ body {
 
 #intro {
   display: flex;
+  visibility: visible;
 }
 
 #bio {
@@ -85,7 +86,9 @@ h3 {
   font-size: 11pt;
 }
 
-.entry-container {
+.section-content {
+  visibility: hidden;
+
   display: flex;
   flex-flow: row wrap;
 }

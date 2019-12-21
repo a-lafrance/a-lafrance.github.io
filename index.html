@@ -8,6 +8,8 @@
     <meta name="description" content="Arthur Lafrance's personal website" />
 
     <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="animations.css" />
+
     <link rel="icon" href="assets/misc/icon.png" />
     
     <title>Arthur Lafrance</title>
@@ -18,8 +20,8 @@
       <div class="section" id="intro">
         <div id="bio">
           <h1>Hi,</h1>
-          <h3>I'm Arthur Lafrance</h3>
-          <p>Although I'm originally from Cupertino, CA, I currently study computer science within the UC Irvine 
+          <h3 class="fade-in-staggered-one">I'm Arthur Lafrance</h3>
+          <p class="fade-in-staggered-two">Although I'm originally from Cupertino, CA, I currently study computer science within the UC Irvine 
             Donald Bren School of ICS, as a member of the class of 2022. I have experience in full-stack web and iOS 
             development, as well as strong knowledge of core computer science fundamentals. From designing elegant, 
             dynamic UIs to developing robust, powerful backend APIs, I have experience creating apps from
@@ -28,7 +30,7 @@
           </p>
         </div>
         
-        <div id="contact">
+        <div id="contact" class="fade-in-staggered-three">
           <p>To learn more about me or get in touch, feel free to check out:</p>
 
           <div class="button-group">
@@ -56,7 +58,7 @@
       <div class="section" id="experience">
         <h2>Experience</h2>
 
-        <div class="entry-container">
+        <div class="section-content">
           <div class="entry small">
               <div class="entry-header"> 
                 <div class="entry-title">
@@ -103,7 +105,7 @@
       <div class="section" id="projects">
         <h2>Projects</h2>
 
-        <div class="entry-container">
+        <div class="section-content">
           <div class="entry small">
               <h4 class="title">Trivia Trek</h4>
               <h5 class="subtitle">iOS</h5>
@@ -120,31 +122,34 @@
       <div class="section" id="awards">
         <h2>Awards & Honors</h2>
 
-        <div class="entry row">
-          <div class="content">
-            <h4 class="title">2nd Place, Mobile App Development</h4>
-            <h5 class="subtitle">CA FBLA State Conference - April 2019</h5>
+        <div class="section-content">
+          <div class="entry row">
+            <div class="content">
+              <h4 class="title">2nd Place, Mobile App Development</h4>
+              <h5 class="subtitle">CA FBLA State Conference - April 2019</h5>
+            </div>
+
+            <img class="img-right" src="assets/awards/ca-fbla-logo.png" width="100vh" height="100vh">
           </div>
 
-          <img class="img-right" src="assets/awards/ca-fbla-logo.png" width="100vh" height="100vh">
-        </div>
+          <div class="entry row">
+            <div class="content">
+              <h4 class="title">Top 15 Finalist, Mobile App Development</h4>
+              <h5 class="subtitle">FBLA National Conference - June 2019</h5>
+            </div>
 
-        <div class="entry row">
-          <div class="content">
-            <h4 class="title">Top 15 Finalist, Mobile App Development</h4>
-            <h5 class="subtitle">FBLA National Conference - June 2019</h5>
+            <img class="img-right" src="assets/awards/fbla-logo.png" width="100vh" height="80vh">
           </div>
-
-          <img class="img-right" src="assets/awards/fbla-logo.png" width="100vh" height="80vh">
         </div>
       </div>
+
 
       <hr />
 
       <div class="section" id="skills">
         <h2>Skills</h2>
 
-        <div class="entry-container">
+        <div class="section-content">
             <div class="entry fit">
               <h4 class="title skillset">General</h4>
     
@@ -189,13 +194,15 @@
       <div class="section" id="education">
         <h2>Education</h2>
 
-        <div class="entry row">
-          <div class="content">
-            <h4 class="title uci">University of California, Irvine</h4>
-            <h5 class="subtitle uci-gold">B.S. in Computer Science - expected graduation 2022</h5>
-          </div>  
-          
-          <img class="img-right" src="assets/education/uci-logo.png" width="90vh" height="90vh">
+        <div class="section-content">
+          <div class="entry row">
+            <div class="content">
+              <h4 class="title uci">University of California, Irvine</h4>
+              <h5 class="subtitle uci-gold">B.S. in Computer Science - expected graduation 2022</h5>
+            </div>  
+            
+            <img class="img-right" src="assets/education/uci-logo.png" width="90vh" height="90vh">
+          </div>
         </div>
       </div>
 
@@ -204,5 +211,38 @@
         <p class="copyright">Copyright (c) 2019 Arthur Lafrance</p>
       </div>
     </div>
+
+
+    <script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
+
+    <script>
+      function isVisible(element) {        
+        var viewportTop = $('html').scrollTop();
+        var viewportBottom = viewportTop + $(window).height();
+        
+        var elementTop = Math.round($(element).offset().top);
+        var elementBottom = elementTop + $(element).height();
+
+        return ((elementTop < viewportBottom) && (elementBottom < viewportBottom));
+      }
+
+      function triggerAnimations() {
+        var $elements = $('.section-content');
+
+        $elements.each(function(index, element) {
+          if ($(element).hasClass('fade-in')) {
+            return;
+          } 
+          else if (isVisible(element)) {
+            $(element).addClass('fade-in');
+          }
+        });
+
+      }
+
+      $(window).scroll(function(){
+        triggerAnimations();
+      });
+    </script>
   </body>
 </html>
