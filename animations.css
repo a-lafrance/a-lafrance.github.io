@@ -1,5 +1,5 @@
 
-@keyframes fade-in-animation {
+@keyframes fade-in {
     from {
         opacity: 0;
     }
@@ -11,7 +11,7 @@
 }
 
 .fade-in {
-    animation: fade-in-animation;
+    animation: fade-in;
     animation-duration: 1.5s;
     animation-fill-mode: forwards;
 }
@@ -19,7 +19,7 @@
 .fade-in-staggered-one {
     visibility: hidden;
 
-    animation: fade-in-animation;
+    animation: fade-in;
     animation-duration: 1.5s;
     animation-delay: 0.5s;
     animation-fill-mode: forwards;
@@ -28,7 +28,7 @@
 .fade-in-staggered-two {
     visibility: hidden;
 
-    animation: fade-in-animation;
+    animation: fade-in;
     animation-duration: 1.5s;
     animation-delay: 1.0s;
     animation-fill-mode: forwards;
@@ -37,8 +37,26 @@
 .fade-in-staggered-three {
     visibility: hidden;
 
-    animation: fade-in-animation;
+    animation: fade-in;
     animation-duration: 1.5s;
     animation-delay: 1.5s;
+    animation-fill-mode: forwards;
+}
+
+
+@keyframes fade-right {
+    from {
+        padding-left: 25vw;
+    }
+
+    to {
+        visibility: visible;
+        padding-left: 0vw;
+    }
+}
+
+.fade-right {
+    animation: fade-right;
+    animation-duration: 1.5s;
     animation-fill-mode: forwards;
 }

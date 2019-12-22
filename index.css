@@ -86,11 +86,19 @@ h3 {
   font-size: 11pt;
 }
 
+#education .entry .subtitle:first-of-type {
+  margin-bottom: 0.5vh;
+}
+
 .section-content {
   visibility: hidden;
 
   display: flex;
   flex-flow: row wrap;
+}
+
+.section-title {
+  visibility: hidden;
 }
 
 .entry {  
@@ -106,6 +114,52 @@ h3 {
   border-radius: 10px;
 
   background-color: rgb(170, 170, 170);
+}
+
+.entry-links {
+  display: inline-block;
+
+  margin-left: 30%;
+}
+
+.link {
+  margin-right: 2vw;
+
+  border-style: solid;
+  border-width: 2px;
+  border-color: transparent;
+  border-radius: 10px;
+
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 25px;
+  padding-bottom: 5px;
+}
+
+.github {
+  padding-top: 30px;
+  padding-bottom: 0px;
+}
+
+.github img {
+  position: relative;
+  margin-bottom: -15px;
+}
+
+@keyframes border-fade-in {
+  from {
+    border-color: transparent;
+  }
+
+  to {
+    border-color: rgb(0, 50, 95);
+  }
+}
+
+.link:hover {
+  animation: border-fade-in;
+  animation-duration: 1.0s;
+  animation-fill-mode: forwards;
 }
 
 .fit {
@@ -211,6 +265,10 @@ img {
 .img-header-low {
   margin-top: 3vh;
   margin-right: 1vw;
+}
+
+.img-low {
+  margin-top: 14px;
 }
 
 .row, .entry-header {

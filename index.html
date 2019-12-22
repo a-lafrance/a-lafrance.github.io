@@ -56,7 +56,7 @@
       <hr />
 
       <div class="section" id="experience">
-        <h2>Experience</h2>
+        <h2 class="section-title">Experience</h2>
 
         <div class="section-content">
           <div class="entry small">
@@ -77,6 +77,12 @@
                 internal gRPC server, and design and implement models, views, and 
                 controllers using Swift and UIKit.
               </p>
+
+              <div class="entry-links">
+                <a class="web link" href="http://www.zottrail.com"><img src="assets/misc/link-icon.png" title="ZotTrail Website" width="30px" height="30px" /></a>
+
+                <a class="ios link" href="https://apps.apple.com/us/app/zottrail-uci-all-in-one-app/id1464719105"><img src="assets/misc/ios-logo.png" title="App Store" width="30px" height="30px" /></a>
+              </div>
           </div>
 
           <div class="entry small">
@@ -103,7 +109,7 @@
       <hr />
 
       <div class="section" id="projects">
-        <h2>Projects</h2>
+        <h2 class="section-title">Projects</h2>
 
         <div class="section-content">
           <div class="entry small">
@@ -113,6 +119,10 @@
                 answer randomized trivia questions to progress along the game board as fast as possible. I managed Firebase 
                 and backend integration, and contributed significantly to frontend and game mechanics.
               </p>
+
+              <div class="entry-links">
+                <a class="github link" href="https://www.github.com/arthurlafrance/TriviaTrek"><img src="assets/intro/github-logo.png" title="On Github" width="50px" height="50px" /></a>
+              </div>
           </div>
         </div>
       </div>
@@ -120,7 +130,7 @@
       <hr />
 
       <div class="section" id="awards">
-        <h2>Awards & Honors</h2>
+        <h2 class="section-title">Awards & Honors</h2>
 
         <div class="section-content">
           <div class="entry row">
@@ -147,7 +157,7 @@
       <hr />
 
       <div class="section" id="skills">
-        <h2>Skills</h2>
+        <h2 class="section-title">Skills</h2>
 
         <div class="section-content">
             <div class="entry fit">
@@ -192,16 +202,17 @@
       <hr />
 
       <div class="section" id="education">
-        <h2>Education</h2>
+        <h2 class="section-title">Education</h2>
 
         <div class="section-content">
           <div class="entry row">
             <div class="content">
               <h4 class="title uci">University of California, Irvine</h4>
-              <h5 class="subtitle uci-gold">B.S. in Computer Science - expected graduation 2022</h5>
+              <h5 class="subtitle uci-gold">B.S. in Computer Science - cumulative GPA 3.93</h5>
+              <h5 class="subtitle uci-gold">2019 - 2022 (expected)</h5>
             </div>  
             
-            <img class="img-right" src="assets/education/uci-logo.png" width="90vh" height="90vh">
+            <img class="img-low" src="assets/education/uci-logo.png" width="90vh" height="90vh">
           </div>
         </div>
       </div>
@@ -227,14 +238,15 @@
       }
 
       function triggerAnimations() {
-        var $elements = $('.section-content');
+        var $elements = $('.section');
 
         $elements.each(function(index, element) {
-          if ($(element).hasClass('fade-in')) {
+          if ($(element).children('.section-content').hasClass('fade-in')) {
             return;
           } 
           else if (isVisible(element)) {
-            $(element).addClass('fade-in');
+            $(element).children('.section-title').addClass('fade-right');
+            $(element).children('.section-content').addClass('fade-in');
           }
         });
 
