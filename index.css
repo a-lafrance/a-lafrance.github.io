@@ -99,6 +99,8 @@ h3 {
 
 .section-title {
   visibility: hidden;
+
+  color: rgb(0, 150, 240);
 }
 
 .entry {  
@@ -152,7 +154,7 @@ h3 {
   }
 
   to {
-    border-color: rgb(0, 50, 95);
+    border-color: rgb(0, 150, 240);
   }
 }
 
@@ -302,6 +304,6 @@ img {
   color: #8a408a;
 }
 
-.navy {
-  color: rgb(0, 50, 95);
+.light-blue {
+  color: rgb(0, 150, 240);
 }
