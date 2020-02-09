@@ -12,6 +12,9 @@
 
     <link rel="icon" href="assets/misc/icon.png" />
     
+    <script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+    
     <title>Arthur Lafrance</title>
   </head>
 
@@ -62,6 +65,25 @@
           <div class="entry small">
               <div class="entry-header"> 
                 <div class="entry-title">
+                  <h4 class="title">Software Developer</h4>
+                  <h5 class="subtitle white">UCI Student Center</h5>
+                  <h5 class="subtitle">February 2020 - present</h5>
+                </div>
+
+                <img class="img-header rounded-img" src="assets/experience/sces-logo.png" width="80vh" height="80vh">
+              </div>
+            
+              <p class="desctiption">Develop several widely-used iOS apps as both a 
+                backend and frontend developer, tasked with both continued app maintenance 
+                and implementation of major new features. Use Python to define Chalice API 
+                endpoints, Swift to implement app frontend and local backend code, and SQL 
+                to interact with the appropriate app-specific AWS-hosted MySQL database. 
+              </p>
+          </div>
+
+          <div class="entry small">
+              <div class="entry-header"> 
+                <div class="entry-title">
                   <h4 class="title">iOS Developer</h4>
                   <h5 class="subtitle uci">ZotTrail</h5>
                   <h5 class="subtitle">November 2019 - present</h5>
@@ -77,30 +99,23 @@
                 internal gRPC server, and design and implement models, views, and 
                 controllers using Swift and UIKit.
               </p>
-
-              <div class="entry-links">
-                <a class="web link" href="http://www.zottrail.com"><img src="assets/misc/link-icon.png" title="ZotTrail Website" width="30px" height="30px" /></a>
-
-                <a class="ios link" href="https://apps.apple.com/us/app/zottrail-uci-all-in-one-app/id1464719105"><img src="assets/misc/ios-logo.png" title="App Store" width="30px" height="30px" /></a>
-              </div>
           </div>
 
           <div class="entry small">
             <div class="entry-header"> 
               <div class="entry-title">
                 <h4 class="title">Freelance Software Developer</h4>
-                <h5 class="subtitle eXo">eXo</h5>
+                <h5 class="subtitle eXo">Overdecorative</h5>
                 <h5 class="subtitle">August 2019 - January 2020</h5>
               </div>
 
-              <img class="img-header-low" src="assets/experience/exo-logo.png" width="90vh" height="60vh">
+              <img class="img-header-low rounded-img" src="assets/experience/exo-logo.png" width="90vh" height="60vh">
             </div>
 
-            <p class="description">Develop software for tech consulting group eXo on a 
-              freelance basis, allowing users to start tech consulting projects & track 
-              their progress. Core REST API written with Django and PostgreSQL. Used 
-              React to create frontend web app. Currently developing companion iOS app 
-              using Swift and core API.
+            <p class="description">Developed web app for freelance artist Overdecorative, 
+              allowing clients to commission art projects and monitor their progression to 
+              completion. Core REST API written with Django and PostgreSQL; used React to 
+              create frontend web application.
             </p>
           </div>
         </div>
@@ -119,10 +134,16 @@
                 answer randomized trivia questions to progress along the game board as fast as possible. I managed Firebase 
                 and backend integration, and contributed significantly to frontend and game mechanics.
               </p>
+          </div>
 
-              <div class="entry-links">
-                <a class="github link" href="https://www.github.com/arthurlafrance/TriviaTrek"><img src="assets/intro/github-logo.png" title="On Github" width="50px" height="50px" /></a>
-              </div>
+          <div class="entry small">
+              <h4 class="title">Tapestry</h4>
+              <h5 class="subtitle">HackUCI 2020</h5>
+              <p>Created a web-based code visualization tool at HackUCI 2020 using Python 
+                (Django) and HTML/CSS. App executes an inputted Python script and 
+                generates/renders a diagram illustrating the variables and values (linked 
+                by references) within the script’s namespace after execution.
+              </p>
           </div>
         </div>
       </div>
@@ -150,6 +171,33 @@
 
             <img class="img-right" src="assets/awards/fbla-logo.png" width="100vh" height="80vh">
           </div>
+
+          <div class="entry row">
+            <div class="content">
+              <h4 class="title">Best Entrepreneurial Hack</h4>
+              <h5 class="subtitle">HackUCI - February 2020</h5>
+            </div>
+
+            <img class="img-right" src="assets/awards/hack-uci-2020-logo.png" width="100vh" height="100vh">
+          </div>
+
+          <div class="entry row">
+            <div class="content">
+              <h4 class="title">1517 Fund Grant Award Recipient</h4>
+              <h5 class="subtitle">February 2020</h5>
+            </div>
+
+            <img class="img-low" src="assets/awards/1517-fund-logo.png" width="100vh" height="60vh">
+          </div>
+
+          <div class="entry row">
+            <div class="content">
+              <h4 class="title">UC Irvine Dean's Honor List</h4>
+              <h5 class="subtitle">Fall Quarter 2019</h5>
+            </div>
+
+            <img class="img-right" src="assets/education/uci-logo.png" width="90vh" height="90vh">
+          </div>
         </div>
       </div>
 
@@ -169,7 +217,7 @@
                   <li class="skill">Java</li>
                   <li class="skill">Git</li>
                   <li class="skill">Bash/Terminal</li>
-                  <li class="skill">Google Cloud</li>
+                  <li class="skill">AWS</li>
               </ul>
             </div>
 
@@ -219,42 +267,8 @@
 
       <div class="footer">
         <hr />
-        <p class="copyright">Copyright (c) 2019 Arthur Lafrance</p>
+        <p class="copyright">Copyright (c) 2020 Arthur Lafrance</p>
       </div>
     </div>
-
-
-    <script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
-
-    <script>
-      function isVisible(element) {        
-        var viewportTop = $('html').scrollTop();
-        var viewportBottom = viewportTop + $(window).height();
-        
-        var elementTop = Math.round($(element).offset().top);
-        var elementBottom = elementTop + $(element).height();
-
-        return ((elementTop < viewportBottom) && (elementBottom < viewportBottom));
-      }
-
-      function triggerAnimations() {
-        var $elements = $('.section');
-
-        $elements.each(function(index, element) {
-          if ($(element).children('.section-content').hasClass('fade-in')) {
-            return;
-          } 
-          else if (isVisible(element)) {
-            $(element).children('.section-title').addClass('fade-right');
-            $(element).children('.section-content').addClass('fade-in');
-          }
-        });
-
-      }
-
-      $(window).scroll(function(){
-        triggerAnimations();
-      });
-    </script>
   </body>
 </html>
