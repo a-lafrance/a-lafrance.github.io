@@ -75,6 +75,14 @@ h3 {
   color: rgb(50, 50, 50);
 }
 
+h4 {
+  margin-top: 2vh;
+}
+
+h5 {
+  margin-bottom: 0;
+}
+
 .title {
   color: rgb(0, 60, 120);
   font-size: 13pt;
@@ -82,8 +90,12 @@ h3 {
 }
 
 .subtitle {
-  margin-top: 0.5vh;
+  margin-top: 0.75vh;
   font-size: 11pt;
+}
+
+.subtitle:last-of-type {
+  margin-bottom: 2vh;
 }
 
 #education .entry .subtitle:first-of-type {
@@ -238,11 +250,11 @@ hr {
 }
 
 ul {
-  list-style: none;
-  padding-left: 0.5vw;
+  margin-top: 0;
 }
 
 .skill-list {
+  list-style: none;
   padding-left: 0;
 }
 
