@@ -8,7 +8,6 @@
     <meta name="description" content="Arthur Lafrance's personal website" />
 
     <link rel="stylesheet" href="index.css" />
-    <link rel="stylesheet" href="animations.css" />
 
     <link rel="icon" href="assets/misc/icon.png" />
     
@@ -23,35 +22,42 @@
       <div class="section" id="intro">
         <div id="bio">
           <h1 class="navy">Hi,</h1>
-          <h3 class="fade-in-staggered-one navy">I'm Arthur Lafrance</h3>
-          <p class="fade-in-staggered-two">Although I was born and raised in Silicon Valley, I currently study computer science within the UC Irvine 
-            Donald Bren School of ICS, as a member of the class of 2023. I have experience in full-stack web and iOS 
-            development and strong knowledge of core computer science fundamentals. From designing elegant, 
-            dynamic UIs to developing robust, powerful backend APIs, I have experience creating apps from
-            start to finish on a variety of platforms, and I'm always looking for new, interesting opportunities 
-            to put these skills to use.
+          <h3 class="navy">I'm Arthur Lafrance</h3>
+
+          <p>Although I was born and raised in Silicon Valley, I currently study computer science 
+            within the UC Irvine Donald Bren School of ICS, as a member of the class of 2023. I'm excited to be taking my first steps 
+            into the world of artificial intelligence & machine learning this academic year; I hope to get involved with the field 
+            academically, practically, and through research. I'm especially interested (broadly) in neural networks/deep learning, 
+            reinforcement learning, natural language processing, and interpretable/explainable machine learning.
+            <br />
+            <br />
+            In addition to my research interests, I have professional experience with full-stack web & iOS development. I'm also 
+            interested in economics, cognitive science, linguistics, & mathematics as "academic hobbies".
           </p>
         </div>
         
-        <div id="contact" class="fade-in-staggered-three">
+        <div id="contact">
           <p>To learn more about me or get in touch, feel free to check out:</p>
 
           <div class="button-group">
-            <a class="button" href="mailto:lafrancearthur@gmail.com">
-              <img id="email" src="assets/intro/mail-icon.png" width="50px" height="35px">
-            </a>
+            <a class="button navy" href="mailto:lafrancearthur@gmail.com">Email</a>
+            <a class="button navy" href="https://www.github.com/arthurlafrance">GitHub</a>
+            <a class="button navy" href="https://www.linkedin.com/in/arthurlafrance">LinkedIn</a>
+            <a class="button navy" href="assets/Arthur_Lafrance_CV.pdf" download>CV</a>
+          </div>
+        </div>
+      </div>
 
-            <a class="button" href="https://www.github.com/arthurlafrance">
-              <img id="github" src="assets/intro/github-logo.png" width="60px" height="60px">
-            </a>
+      <hr />
 
-            <a class="button" href="https://www.linkedin.com/in/arthurlafrance">
-              <img id="linkedin" src="assets/intro/linkedin-logo.png" width="40px" height="40px">
-            </a>
+      <div class="section" id="news">
+        <h2 class="section-title">News</h2>
 
-            <a class="button" href="assets/Arthur_Lafrance_CV.pdf" download>
-              <img id="cv" src="assets/intro/file-icon.jpg" width="40px" height="40px">
-            </a>
+        <div class="section-content">
+          <ul class="entry-list">
+            <li class="list-item">For Fall Quarter 2020, I will be a learning assistant for ICS 31 (Intro to Programming).</li>
+            <li class="list-item">During summer 2020, I interned with Centric Software's mobile app development team.</li>
+            <li class="list-item">At HackUCI 2020, my project, Tapestry, was named Best Entrepreneurial Hack.</li>
           </div>
         </div>
       </div>
@@ -59,56 +65,80 @@
       <hr />
 
       <div class="section" id="experience">
-        <h2 class="section-title">Experience</h2>
+        <h2 class="section-title">Professional Experience</h2>
 
         <div class="section-content">
-          <div class="entry small">
+          <div class="entry">
             <div class="entry-header"> 
                 <div class="entry-title">
-                  <h4 class="title">Software Engineering Intern</h4>
-                  <h5 class="subtitle">Centric Software</h5>
+                  <h4 class="title">Software Engineering Intern, Centric Software</h4>
                   <h5 class="subtitle">June 2020 - September 2020</h5>
                 </div>
               </div>
             
-              <p class="desctiption">Contributed to Centric's industry-leading PLM mobile apps, shipping highly-requested, high-impact 
-                code to clients. Created a custom canvas editor using Swift/Objective-C & Core Graphics,
-                allowing users to render/edit/save custom product mockups in the Sample Review app.
+              <p class="desctiption">During summer 2020, I interned with Centric's mobile app development team, where I created a 
+                product mockup canvas editor for use in Centric's iOS apps. I architected, designed, and developed the editor, 
+                capable of basic shape creation and manipulation (both graphical and physical) using Swift, and integrated it with 
+                Centric's existing infrastructure using mainly Objective-C. I also became more comfortable working in a professional 
+                software engineering environment (particularly remotely), and thoroughly enjoyed my time working with the mobile team.
               </p>
           </div>
 
-          <div class="entry small">
+          <div class="entry">
               <div class="entry-header"> 
                 <div class="entry-title">
-                  <h4 class="title">Software Developer</h4>
-                  <h5 class="subtitle white">UCI Student Center</h5>
+                  <h4 class="title">Software Developer, UCI Student Center</h4>
                   <h5 class="subtitle">February 2020 - present</h5>
                 </div>
-
-                <img class="img-header rounded-img" src="assets/experience/sces-logo.png" width="80vh" height="80vh">
               </div>
             
-              <p class="desctiption">Develop iOS apps in an Agile environment, evaluating stakeholder needs to identify software requirements. 
-                  Maintain backend APIs & databases using Python, SQL (MySQL), & AWS (mainly EC2, Lambda, & DynamoDB). 
-                  Use Swift to write iOS app frontend and backend code using the backend APIs.
+              <p class="desctiption">Throughout my time at UCI (beginning Winter Quarter 2020), I have worked with the Student Center, 
+                maintaining a set of several popular UCI-related iOS apps (UCI students may be particularly interested to hear that 
+                one such app is ZotFinder, the unofficial official choice for on-campus navigation). As part of this, I work mainly 
+                with Swift, Python (using Chalice and AWS Lambda), and various database technologies (AWS DynamoDB & MySQL running on 
+                AWS EC2). Through working with the Student Center, I have honed my skills with backend & full-stack iOS development, 
+                and also learned to better coexist with a team of like-mindedly passionate developers.
               </p>
           </div>
 
-          <div class="entry small">
+          <div class="entry">
             <div class="entry-header"> 
               <div class="entry-title">
-                <h4 class="title">Freelance Software Developer</h4>
-                <h5 class="subtitle eXo">Overdecorative</h5>
+                <h4 class="title">Freelance Software Developer, Overdecorative</h4>
                 <h5 class="subtitle">August 2019 - March 2020</h5>
               </div>
-
-              <!-- Update with correct Overdecorative logo
-              <img class="img-header-low rounded-img" src="assets/experience/exo-logo.png" width="90vh" height="60vh">
-              -->
             </div>
 
-            <p class="description">Developed/maintained a freelance art website allowing clients to commission art projects & track their creation. 
-                Created backend web server with Python/Django & SQLite and frontend with HTML/CSS/JavaScript. 
+            <p class="description">During summer 2019 (and briefly during the following academic year), I developed a website for 
+              Overdecoravite, a local freelance artist. I created a place for them to share their art, as well as to take on 
+              commissions and projects from clients, mainly using Python/Django, HTML/CSS, and JavaScript. The website also doubled 
+              as a simple project management space, allowing the artist to keep track of the projects they've undertaken, and allowing 
+              clients to monitor the progress of their projects' completion.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <hr />
+
+      <div class="section" id="teaching">
+        <h2 class="section-title">Teaching Experience</h2>
+
+        <div class="section-content">
+          <div class="entry">
+            <div class="entry-header">
+              <div class="entry-title">
+                <h4 class="title">Learning Assistant - ICS 31, UCI Donald Bren School of ICS</h4>
+                <h5 class="subtitle">Fall Quarter 2020</h5>
+              </div>
+            </div>
+
+            <p class="description">For Fall Quarter 2020, I serve as a learning assistant for ICS 31 (Intro to Programming). As part 
+              of this, I help facilitate student learning by holding office hours for several hours per week, and by managing a small 
+              group during lecture, where students collaborate to solve participation activities and apply the concepts they learn. 
+              Of course, throughout all of this, I'm available to answer student questions and help guide them toward 
+              understanding and mastering the material at hand, and also to give them guidance about navigating their studies or the 
+              world of computer science in general.
             </p>
           </div>
         </div>
@@ -122,143 +152,29 @@
         <div class="section-content">
           <div class="entry small">
             <h4 class="title">Tapestry</h4>
-            <h5 class="subtitle">Web (full-stack)</h5>
 
-            <p class="description">Lead development of Tapestry (originally created at HackUCI 2020, where it was awarded Best Entrepreneurial Hack), a web-based
-              code visualization application, architecting and developing backend API using Python/Django/SQLite, 
-              and frontend web app using TypeScript/Vue.js.
+            <p class="description">At HackUCI 2020, two friends and I created <a class="navy" href="https://www.tapestrylearn.com">
+              Tapestry</a>, a web-based 
+              code visualization tool inspired by the "ASCII memory diagrams" used by one of our professors (which we were 
+              fortunate enough to be awarded Best Entrepreneurial Hack for). We aimed to create a tool that could generate these 
+              diagrams for arbitrary Python programs, in order to provide an interactive visual learning experience for computer 
+              science students. Since the hackathon, we have expanded our initial proof-of-concept to more fully realize this goal, 
+              creating a frontend website using TypeScript and Vue that provides a minimalist IDE and diagram display, and a 
+              backend API using Python, Django, and SQLite that remotely executes & generates diagrams for Python code snippets.
             </p>
           </div>
 
           <div class="entry small">
               <h4 class="title">Trivia Trek</h4>
-              <h5 class="subtitle">iOS</h5>
               
-              <p class="description">Used Swift, SpriteKit, and Firebase to lead development of an iOS trivia board game for the FBLA Mobile App 
-                Development competition, architecting and developing both backend and frontend. Trivia Trek achieved success 
-                and recognition on both the state and national levels of FBLA competition.
+              <p class="description">For the 2019 FBLA Mobile App Development competition, I worked with 2 other developers to create 
+                Trivia Trek, and iOS trivia board game to help users learn about FBLA trivia. We created the game using Swift, 
+                SpriteKit, and Firebase, where a user answers a series of questions in order to progress along one of our two "maps" 
+                as fast as possible. Particularly, I worked on setting up & managing the cloud infrastructure, rendering and 
+                facilitating the gameplay, integrating the Firebase database with the app. For our work on Trivia Trek, my team was 
+                fortunate enough to receive recognition at both the state & national levels of competition, placing 2nd at the CA 
+                FBLA State Leadership Conference and in the Top 15 at the FBLA National Leadership Conference.
               </p>
-          </div>
-        </div>
-      </div>
-
-      <hr />
-
-      <div class="section" id="awards">
-        <h2 class="section-title">Awards & Honors</h2>
-
-        <div class="section-content">
-          <div class="entry row">
-            <div class="content">
-              <h4 class="title">UC Irvine Dean's Honor List</h4>
-              <h5 class="subtitle">Fall Quarter 2019 - Spring Quarter 2020</h5>
-            </div>
-
-            <img class="img-right" src="assets/education/uci-logo.png" width="90vh" height="90vh">
-          </div>
-
-          <div class="entry row">
-            <div class="content">
-              <h4 class="title">Best Entrepreneurial Hack</h4>
-              <h5 class="subtitle">HackUCI - February 2020</h5>
-            </div>
-
-            <img class="img-right" src="assets/awards/hack-uci-2020-logo.png" width="100vh" height="100vh">
-          </div>
-
-          <div class="entry row">
-            <div class="content">
-              <h4 class="title">Top 15 Finalist, Mobile App Development</h4>
-              <h5 class="subtitle">FBLA National Conference - June 2019</h5>
-            </div>
-
-            <img class="img-right" src="assets/awards/fbla-logo.png" width="100vh" height="80vh">
-          </div>
-
-          <div class="entry row">
-            <div class="content">
-              <h4 class="title">2nd Place, Mobile App Development</h4>
-              <h5 class="subtitle">CA FBLA State Conference - April 2019</h5>
-            </div>
-
-            <img class="img-right" src="assets/awards/ca-fbla-logo.png" width="100vh" height="100vh">
-          </div>
-        </div>
-      </div>
-
-
-      <hr />
-
-      <div class="section" id="skills">
-        <h2 class="section-title">Skills</h2>
-
-        <div class="section-content">
-            <div class="entry fit">
-              <h4 class="title skillset">General</h4>
-    
-              <ul class="skill-list">
-                  <li class="skill">Python</li>
-                  <li class="skill">C++</li>
-                  <li class="skill">Rust</li>
-                  <li class="skill">SQL</li>
-                  <li class="skill">Java</li>
-              </ul>
-            </div>
-
-            <div class="entry fit">
-              <h4 class="title skillset">Web</h4>
-    
-              <ul class="skill-list">
-                  <li class="skill">HTML/CSS</li>
-                  <li class="skill">JavaScript</li>
-                  <li class="skill">TypeScript</li>
-                  <li class="skill">Django</li>
-                  <li class="skill">React</li>
-                  <li class="skill">Vue</li>
-              </ul>
-            </div>
-    
-            <div class="entry fit">
-              <h4 class="title skillset">iOS</h4>
-
-              <ul class="skill-list">
-                <li class="skill">Swift</li>
-                <li class="skill">Objective-C</li>
-                <li class="skill">Xcode</li>
-              </ul>
-            </div>
-
-            <div class="entry fit">
-              <h4 class="title skillset">Infrastructure</h4>
-
-              <ul class="skill-list">
-                  <li class="skill">Git</li>
-                  <li class="skill">AWS</li>
-                  <li class="skill">Docker</li>
-                  <li class="skill">Firebase</li>
-                  <li class="skill">Bash</li>
-              </ul>
-            </div>
-        </div>
-      </div>
-
-      <hr />
-
-      <div class="section" id="education">
-        <h2 class="section-title">Education</h2>
-
-        <div class="section-content">
-          <div class="entry row">
-            <div class="content">
-              <h4 class="title uci">University of California, Irvine</h4>
-              <h5 class="subtitle">B.S. in Computer Science, specializing in Artificial Intelligence</h5>
-              <h5 class="subtitle">2019 - 2023 (expected)</h5>
-              <h5 class="subtitle">Relevant Coursework: Data Structures & Algorithms, 
-                OOP in Python & C++, Software Engineering, Artificial Intelligence & Machine Learning
-              </h5>
-            </div>  
-            
-            <img class="img-low" src="assets/education/uci-logo.png" width="90vh" height="90vh">
           </div>
         </div>
       </div>
