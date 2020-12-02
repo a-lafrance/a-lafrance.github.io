@@ -171,3 +171,11 @@ hr {
 .list-item {
   font-size: 11pt;
 }
+
+.silent {
+  text-decoration: none;
+}
+
+.silent:hover {
+  text-decoration: underline;
+}
