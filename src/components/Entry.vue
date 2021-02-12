@@ -1,8 +1,8 @@
 <template>
   <div class="entry">
     <div class="entry-header">
-      <h4 class="title">
-        <Link v-if="entry.link" :text="entry.title" :href="entry.link" />
+      <h4 class="title navy">
+        <Link class="navy" v-if="entry.link" :text="entry.title" :href="entry.link" />
         <span v-else>{{ entry.title }}</span>
       </h4>
 

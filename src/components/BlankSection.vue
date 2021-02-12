@@ -1,8 +1,9 @@
 <template>
   <div class="section" :id="name">
     <slot></slot>
-    <hr />
   </div>
+
+  <hr />
 </template>
 
 <script>
@@ -36,8 +37,8 @@ export default {
 }
 
 hr {
-  /* margin-left: 3vw;
-  margin-right: 3vw; */
+  margin-left: 3vw;
+  margin-right: 3vw;
 
   background-color: rgb(0, 60, 120);
   border-color: rgb(0, 60, 120);

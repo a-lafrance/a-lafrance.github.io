@@ -44,9 +44,7 @@
 
 <script>
 import List from './components/List.vue'
-// import Link from './components/Link.vue'
 import Button from './components/Button.vue'
-// import Entry from './components/Entry.vue'
 import BlankSection from './components/BlankSection.vue'
 import Section from './components/Section.vue'
 import EntryList from './components/EntryList.vue'
@@ -55,9 +53,7 @@ export default {
   name: 'App',
   components: {
     List,
-    // Link,
     Button,
-    // Entry,
     BlankSection,
     Section,
     EntryList
@@ -81,7 +77,7 @@ export default {
           title: 'Undergraduate Researcher, UC Irvine',
           subtitles: ['January 2021 - present', 'Adviser: Wayne Hayes'],
           description: `Beginning in winter 2021, I've begun research under the direction of Prof. Wayne Hayes. The
-            core problem the group is currently solving is developing classification methods backed by statistical significance.
+            core problem my team is currently solving is developing classification methods backed by statistical significance.
             My work is mostly concerned with the implementation of a novel nearest neighbor distance classifier, implementing components
             of the classifier such as nearest neighbor search, testing infrastructure such as results plotting, and optimizing the classifier to
             scale up well to large datasets.`
@@ -177,13 +173,11 @@ body {
 h1 {
   font-size: 30pt;
   font-weight: normal;
-  color: rgb(50, 50, 50);
 }
 
 h3 {
   font-size: 16pt;
   font-weight: 100;
-  color: rgb(50, 50, 50);
 }
 
 .button-group {
@@ -203,7 +197,7 @@ h3 {
   padding-right: 1vw;
 }
 
-#intro p {
+#intro-content p {
   font-size: 12pt;
 }
 
@@ -218,7 +212,7 @@ h3 {
 
 .copyright {
   padding-left: 3vw;
-  
+
   color: rgb(50, 50, 50);
   font-family: "Helvetica", sans-serif;
   font-weight: 100;

@@ -16,7 +16,7 @@ export default {
 </script>
 
 <style scoped>
-.entry-list {
+.list {
   padding-left: 2vh;
 }
 
