@@ -1,13 +1,12 @@
 <template>
   <div class="entry">
     <div class="entry-header">
-      <!-- TODO: add link -->
       <h4 class="title">
         <Link v-if="entry.link" :text="entry.title" :href="entry.link" />
         <span v-else>{{ entry.title }}</span>
       </h4>
 
-      <h5 class="subtitle" v-for="subtitle in entry.subtitles" :key="subtitle.key">{{ subtitle.text }}</h5>
+      <h5 class="subtitle" v-for="(subtitle, index) in entry.subtitles" :key="index">{{ subtitle }}</h5>
     </div>
 
     <p class="description">{{ entry.description }}</p>
@@ -22,10 +21,6 @@ export default {
   components: { Link },
   props: {
     entry: Object
-    // title: String,
-    // subtitles: Array,
-    // description: String,
-    // link: String
   },
 }
 </script>
@@ -47,7 +42,7 @@ export default {
   color: rgb(30, 30, 30);
 }
 
-.entry p, li {
+.description {
   font-size: 11pt;
   color: rgb(30, 30, 30);
 }

@@ -1,45 +1,35 @@
 <template>
-  <div class="section" :id="name">
-    <slot></slot>
-    <hr />
-  </div>
+  <BlankSection :name="name">
+    <h2 class="section-title">{{ title }}</h2>
+
+    <div class="section-content">
+      <slot></slot>
+    </div>
+  </BlankSection>
 </template>
 
 <script>
+import BlankSection from './BlankSection.vue'
+
 export default {
   name: 'Section',
+  components: { BlankSection },
   props: {
-    name: String
+    name: String,
+    title: String,
   }
 }
 </script>
 
 <style scoped>
-.section {
-  width: 84vw;
-
-  margin-left: 6vw;
-  margin-right: 6vw;
-  margin-top: 2vh;
-  margin-bottom: 2vh;
-
-  padding-top: 2vh;
-  padding-left: 1.5vw;
-  padding-right: 1.5vw;
-  padding-bottom: 2vh;
-
-  border-radius: 20px;
-
-  font-family: "Helvetica", sans-serif;
-  font-weight: 100;
-  line-height: 140%;
+.section-content {
+  display: flex;
+  flex-flow: column;
 }
 
-hr {
-  /* margin-left: 3vw;
-  margin-right: 3vw; */
-
-  background-color: rgb(0, 60, 120);
-  border-color: rgb(0, 60, 120);
+.section-title {
+  color: rgb(0, 60, 120);
+  font-size: 20pt;
+  font-weight: normal;
 }
 </style>

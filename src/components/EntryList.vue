@@ -1,10 +1,6 @@
 <template>
-  <Section :name="name">
-    <h2 class="section-title">{{ title }}</h2>
-
-    <div class="section-content">
-      <Entry v-for="(entry, index) in entries" :key="index" :entry="entry" />
-    </div>
+  <Section :name="name" :title="title">
+    <Entry v-for="(entry, index) in entries" :key="index" :entry="entry" />
   </Section>
 </template>
 
