@@ -7,8 +7,7 @@
 
         <p>Although I was born and raised in Silicon Valley, I currently study computer science
           at the UC Irvine Donald Bren School of ICS, as a member of the class of 2023. I'm very broadly interested in a wide
-          range of subjects: artificial intelligence &amp; machine learning, programming languages/operating systems/distributed systems,
-          and software engineering.
+          range of subjects: artificial intelligence &amp; machine learning and software engineering of various kinds.
 
           <br /><br />
 
@@ -32,10 +31,9 @@
     <List :items="highlights" />
   </Section>
 
+  <EntryList name="projects" title="Projects" :entries="projects" />
   <EntryList name="research" title="Research Experience" :entries="research" />
   <EntryList name="experience" title="Professional Experience" :entries="experience" />
-  <EntryList name="teaching" title="Teaching Experience" :entries="teaching" />
-  <EntryList name="projects" title="Projects" :entries="projects" />
 
   <div class="footer">
     <p class="copyright navy">Copyright (c) 2021 Arthur Lafrance</p>
@@ -72,15 +70,48 @@ export default {
         "During summer 2020, I interned with Centric Software's iOS development team.",
         "At HackUCI 2020, my project, Tapestry, was named Best Entrepreneurial Hack."
       ],
+      projects: [
+        {
+          title: "Pensiv",
+          subtitles: [],
+          description: `Pensiv is an artificial intelligence & machine learning library written in Rust that I'm currently in the early stages of
+          developing. Two things happened recently that led to the creation of this project: I (finally) started pursuing my interest in AI/ML in both
+          academics and free time, and I became interested in Rust. Outside of its compile-time safety guarantees & great type system, I gravitated toward
+          Rust for its untapped potential for AI/ML -- it provides C-like performance with runtime-less memory safety, which is an unmatched combo as far as I've seen.
+          While it does come at the cost of a steep learning curve, which I'm admittedly still grappling with, I've been eager to explore what's largely been
+          uncharted (or at least not-as-charted) territory for Rust development. Anyway, on the subject of the actual project, at this point I'm basically
+          playing catchup with a growing laundry list of AI/ML techniques that I'm meaning to implement. I'll also be doing lots of benchmarking and optimization
+          when the baseline implementations are done. To date, I've completed basic probability/statistics functionality, and adversarial search is very nearly done.
+          After that I'll be shifting my attention to foundational techniques for classification, regression/optimization, and clustering, at which point I'll branch out
+          into further areas of AI/ML-related interest. Overall, Pensiv has so far been a fascinating combination of software engineering and mathematical/computational
+          challenges, and I'm looking forward to continuing to expand it.`,
+          link: "https://github.com/arthurlafrance/pensiv"
+        },
+        {
+          title: "Tapestry",
+          subtitles: [],
+          description: `The context required to fully understand this project traces back to the experience two of my friends and I had in ICS 33, the third class
+          in the UCI introductory CS series (but the second class we took for... reasons). Anyway, in the early parts of that class Professor Pattis (the one and only) used
+          "ASCII memory diagrams" for visual demonstrations of the content we were learning. These diagrams were basically ASCII art-like representations of
+          a program's state, so the Python variable assignment \`x = 1\` would have a "box" enclosing x, an "ellipse" enclosing 1, and an "arrow" linking them.
+          We figured that these diagrams were very useful for students who wanted a visual representation of what was happening in their programs, so we created Tapestry
+          at HackUCI 2020, which generates these "memory diagrams" dynamically during the runtime of arbitrary Python code. Granted, we used SVGs rather than ASCII art
+          to render our diagrams, but we tried to infuse Tapestry with as much of Prof. Pattis's minimalist flavor as possible. After being fortunate enough to win Best
+          Entrepreneurial Hack at HackUCI, we continued expanding Tapestry until it could, for the most part, generate an appropriate diagram for any arbitrary Python program,
+          appropriately sandboxed of course. To date, Tapestry is probably the most complex piece of software I've built from scratch, so needless to say I've had a great time
+          technically and personally working with my good friends on this project.`,
+          link: "https://www.tapestrylearn.com"
+        },
+      ],
       research: [
         {
           title: 'Undergraduate Researcher, UC Irvine',
           subtitles: ['January 2021 - present', 'Adviser: Wayne Hayes'],
-          description: `Beginning in winter 2021, I've begun research under the direction of Prof. Wayne Hayes. The
-            core problem my team is currently solving is developing classification methods backed by statistical significance.
-            My work is mostly concerned with the implementation of a novel nearest neighbor distance classifier, implementing components
-            of the classifier such as nearest neighbor search, testing infrastructure such as results plotting, and optimizing the classifier to
-            scale up well to large datasets.`
+          description: `I'm currently conducting research under the direction of Prof. Wayne Hayes, concerned with the development of
+          classification methods backed by statistical significance. My work mostly involves the implementation of a
+          novel nearest neighbor distance classifier; I've worked on implementing result visualization, and I'm currently focusing on implementing
+          optimized nearest neighbor search so that the classifier scales up better to large datasets. To do all this, I've pretty consistently used
+          Python, Numpy, Matplotlib, and scikit-learn.`
         }
       ],
       experience: [
@@ -89,70 +120,21 @@ export default {
           subtitles: ['June 2020 - September 2020'],
           description: `During summer 2020, I interned with Centric's mobile app development team, where I created a
             product mockup canvas editor for use in Centric's iOS apps. I architected, designed, and developed the editor,
-            capable of basic shape creation and manipulation (both graphical and physical) using Swift, and integrated it with
-            Centric's existing infrastructure using mainly Objective-C. I also became more comfortable working in a professional
+            capable of standard shape creation/manipulation using Swift, and integrated it with
+            Centric's existing infrastructure & apps using mainly Objective-C. I also became more comfortable working in a professional
             software engineering environment (particularly remotely), and thoroughly enjoyed my time working with the mobile team.`
         },
         {
           title: 'Software Developer, UCI Student Center & Event Services',
           subtitles: ['February 2020 - present'],
-          description: `Throughout my time at UCI (beginning Winter Quarter 2020), I have worked with the Student Center,
-            maintaining a set of several popular UCI-related iOS apps (UCI students may be particularly interested to hear that
+          description: `Throughout my time at UCI (beginning Winter Quarter 2020), I've worked with the Student Center,
+            maintaining a set of several UCI-related iOS apps (UCI students may be particularly interested to hear that
             one such app is ZotFinder, the unofficial official choice for on-campus navigation). As part of this, I work mainly
-            with Swift, Python (using Chalice and AWS Lambda), and various database technologies (AWS DynamoDB & MySQL running on
-            AWS EC2). Through working with the Student Center, I have honed my skills with backend & full-stack iOS development,
-            and also learned to better coexist with a team of like-mindedly passionate developers.`
+            with Swift, Python (running on AWS Lambda), and various database technologies (AWS DynamoDB & EC2-based MySQL).
+            Through working with the Student Center, I have honed my skills with full-stack iOS development,
+            and also learned to better coexist with a team of cross-functional developers.`
         },
       ],
-      teaching: [
-        {
-          title: 'Learning Assistant - ICS 31, UC Irvine',
-          subtitles: ['Fall 2020 & Winter 2021'],
-          description: `For Fall 2020 & Winter 2021, I serve as a learning assistant for ICS 31 (Intro to Programming). As part
-            of this, I hold office hours for several hours per week and manage a small
-            group during lecture, where students collaborate to solve participation activities and apply the concepts they learn, all
-            with the goal of facilitating student learning and guiding them toward mastery of the material.`
-        }
-      ],
-      projects: [
-        {
-          title: "Pensiv",
-          subtitles: [],
-          description: `Recently, I've become interested in Rust for its compile-time memory safety, ergonomic syntax,
-            and high performance. This has coincided with my (continuing) introduction to AI and machine learning, so I reasoned that
-            a great way to combine the two would be to create Pensiv,
-            a Rust library (crate) providing my own implementations of various AI & machine learning techniques. To date, I've implemented basic probability & statistics, and adversarial search is actively
-            in development; I have no doubt that this project will continue to grow as I become more experienced and thus have more
-            knowledge and abilities to share through the crate. In the near future, I'm hoping to expand to basic classification,
-            regression, and clustering techniques, and I'll probably toy with the implementation of neural networks and graphical models
-            in the future as well. Overall, I'm grateful to have the opportunity to further my passions for Rust & machine learning through
-            continued development of Pensiv.`,
-          link: "https://github.com/arthurlafrance/pensiv"
-        },
-        {
-          title: "Tapestry",
-          subtitles: [],
-          description: `At HackUCI 2020, two good friends and I created Tapestry, a web-based
-            code visualization tool inspired by the "ASCII memory diagrams" used by one of our professors (which we were
-            fortunate enough to be awarded Best Entrepreneurial Hack for). We aimed to create a tool that could generate these
-            diagrams for arbitrary Python programs, in order to provide an interactive visual learning experience for computer
-            science students. Since the hackathon, we have expanded our initial proof-of-concept to more fully realize this goal,
-            creating a frontend website using TypeScript and Vue that provides a minimalist IDE and diagram display, and a
-            backend API using Python, Django, and SQLite that remotely executes & generates diagrams for Python code snippets.`,
-          link: "https://www.tapestrylearn.com"
-        },
-        {
-          title: "Trivia Trek",
-          subtitles: [],
-          description: `For the 2019 FBLA Mobile App Development competition, I worked with 2 other developers to create
-            Trivia Trek, and iOS trivia board game to help users learn about FBLA trivia. We created the game using Swift,
-            SpriteKit, and Firebase, where a user answers a series of questions in order to progress along one of two "maps"
-            as fast as possible. Particularly, I worked on the app's frontend (gameplay) & backend (integration with Firebase),
-            and was also in charge of maintaining the backend infrastructure (i.e. Firebase database). For our work on Trivia Trek, my team was
-            fortunate enough to receive recognition at both the state & national levels of competition, placing 2nd at the CA
-            FBLA State Leadership Conference and in the Top 15 at the FBLA National Leadership Conference.`
-        }
-      ]
     }
   }
 }
