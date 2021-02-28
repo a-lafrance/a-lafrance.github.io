@@ -1,7 +1,6 @@
 #!/bin/bash
 
-npm run build
-echo "arthurlafrance.com" > dist/CNAME
+./build
 
 git add .
 git commit -m "deploy"
