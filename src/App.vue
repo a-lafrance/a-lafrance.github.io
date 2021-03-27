@@ -11,9 +11,8 @@
 
           <br /><br />
 
-          Whether through personal projects, professional experience, or academics, I'm always furthering these interests -- in my free time, I can almost
-          always be found coding, reading, &amp; learning. My personal favorite thing I'm learning right now is the Rust programming language; although the learning curve is steep,
-          its compile-time memory &amp; concurrency safety guarantees are fascinating.
+          In my free time, I'm usually working on one of the several projects I have going on at any given time. If I'm not coding, I'm probably reading,
+          playing video games (basically just Smash Ultimate), or watching "Friends" for the n-th time.
         </p>
       </div>
 
@@ -32,6 +31,11 @@
   </Section>
 
   <EntryList name="projects" title="Projects" :entries="projects" />
+
+  <EntryList name="learning" title="Learning" :entries="learning">
+    <p class="description">I love learning new things, so I thought I'd share some of my current favorite things I'm learning:</p>
+  </EntryList>
+
   <EntryList name="research" title="Research Experience" :entries="research" />
   <EntryList name="experience" title="Professional Experience" :entries="experience" />
 
@@ -66,7 +70,6 @@ export default {
       ],
       highlights: [
         "This coming summer (summer 2021), I'll be working as a software engineering intern at Facebook.",
-        "For Fall 2020 & Winter 2021, I serve as a learning assistant for ICS 31 (Intro to Programming).",
         "During summer 2020, I interned with Centric Software's iOS development team.",
         "At HackUCI 2020, my project, Tapestry, was named Best Entrepreneurial Hack."
       ],
@@ -103,15 +106,35 @@ export default {
           link: "https://www.tapestrylearn.com"
         },
       ],
+      learning: [
+        {
+          title: "Rust",
+          subtitles: [],
+          description: `Quite possibly my favorite thing I'm currently learning about; I'll put it simply: Rust is a great programming language. I'm a big fan of
+          its zero cost abstractions, ergonomic syntax, and expressive type system, which have all contributed to a great programming experience so far. Even though
+          I sometimes find myself fighting the borrow checker, to me it's like bitter medicine: it might not always taste great, but it's good for you in the end. Either way,
+          it's tough for me to pick against Rust when it comes to my favorite programming language; given the opportunity to use it in my work, I'll always take that opportunity.`,
+          link: "https://www.rust-lang.org"
+        },
+        {
+          title: "Rocket",
+          subtitles: [],
+          description: `Tangent to my positive experience learning Rust is my similarly positive experience learning Rocket, a popular Rust web development framework
+          that I also enjoy working with. Having never done web development in a strongly-typed language, I was blown away with how much functionality the Rust type system
+          could pack into something as simple as a function signature, and I'm a huge fan of the compile-time validation guarantees Rocket makes through things like request & data guards.
+          It just feels so much easier doing web development in Rocket after getting a feel for it; everything just seems to make such elegant sense to me as a developer.`,
+          link: "https://rocket.rs"
+        },
+      ],
       research: [
         {
           title: 'Undergraduate Researcher, UC Irvine',
           subtitles: ['January 2021 - present', 'Adviser: Wayne Hayes'],
           description: `I'm currently conducting research under the direction of Prof. Wayne Hayes, concerned with the development of
           classification methods backed by statistical significance. My work mostly involves the implementation of a
-          novel nearest neighbor distance classifier; I've worked on implementing result visualization, and I'm currently focusing on implementing
-          optimized nearest neighbor search so that the classifier scales up better to large datasets. To do all this, I've pretty consistently used
-          Python, Numpy, Matplotlib, and scikit-learn.`
+          novel nearest neighbor distance classifier; currently, I'm working on scaling up the classifier through highly optimized nearest neighbor search.
+          I've spent time researching existing methods (like space-partitioning trees), approximate methods (like LSH), and even spent time developing my
+          own methods, which may or may not pan out (jury's still out on that). In order to accomplish this, I've worked with Python, Numpy, Matplotlib, and scikit-learn.`
         }
       ],
       experience: [

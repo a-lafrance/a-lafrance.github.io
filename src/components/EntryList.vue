@@ -1,5 +1,6 @@
 <template>
   <Section :name="name" :title="title">
+    <slot></slot>
     <Entry v-for="(entry, index) in entries" :key="index" :entry="entry" />
   </Section>
 </template>
