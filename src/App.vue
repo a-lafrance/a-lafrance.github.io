@@ -7,12 +7,7 @@
 
         <p>Although I was born and raised in Silicon Valley, I currently study computer science
           at the UC Irvine Donald Bren School of ICS, as a member of the class of 2023. I'm very broadly interested in a wide
-          range of subjects: artificial intelligence &amp; machine learning and software engineering of various kinds.
-
-          <br /><br />
-
-          In my free time, I'm usually working on one of the several projects I have going on at any given time. If I'm not coding, I'm probably reading,
-          playing video games (basically just Smash Ultimate), or watching "Friends" for the n-th time.
+          range of subjects: AI/machine learning, data management, programming languages, &amp; software engineering of various kinds.
         </p>
       </div>
 
@@ -78,23 +73,23 @@ export default {
           title: "Pensiv",
           subtitles: [],
           description: `Pensiv is an artificial intelligence & machine learning library written in Rust that I'm currently in the early stages of
-          developing. Two things happened recently that led to the creation of this project: I (finally) started pursuing my interest in AI/ML in both
+          developing. Two things happened that led to the creation of this project: I (finally) started pursuing my interest in AI/ML in both
           academics and free time, and I became interested in Rust. Outside of its compile-time safety guarantees & great type system, I gravitated toward
-          Rust for its untapped potential for AI/ML -- it provides C-like performance with runtime-less memory safety, which is an unmatched combo as far as I've seen.
+          Rust for its untapped potential for AI/ML -- it provides C-like performance with runtime-less memory safety, which is unheard of as far as I've seen.
           While it does come at the cost of a steep learning curve, which I'm admittedly still grappling with, I've been eager to explore what's largely been
           uncharted (or at least not-as-charted) territory for Rust development. Anyway, on the subject of the actual project, at this point I'm basically
           playing catchup with a growing laundry list of AI/ML techniques that I'm meaning to implement. I'll also be doing lots of benchmarking and optimization
-          when the baseline implementations are done. To date, I've completed basic probability/statistics functionality, and adversarial search is very nearly done.
+          when the baseline implementations are done. To date, I've completed basic probability/statistics functionality and adversarial search is very nearly done.
           After that I'll be shifting my attention to foundational techniques for classification, regression/optimization, and clustering, at which point I'll branch out
           into further areas of AI/ML-related interest. Overall, Pensiv has so far been a fascinating combination of software engineering and mathematical/computational
           challenges, and I'm looking forward to continuing to expand it.`,
-          link: "https://github.com/arthurlafrance/pensiv"
+          link: "https://github.com/arthurlafrance/Pensiv"
         },
         {
           title: "Tapestry",
           subtitles: [],
           description: `The context required to fully understand this project traces back to the experience two of my friends and I had in ICS 33, the third class
-          in the UCI introductory CS series (but the second class we took for... reasons). Anyway, in the early parts of that class Professor Pattis (the one and only) used
+          in the UCI introductory CS series (but the second class we took for... reasons). Anyway, in the early parts of that class Prof. Pattis (the one and only) used
           "ASCII memory diagrams" for visual demonstrations of the content we were learning. These diagrams were basically ASCII art-like representations of
           a program's state, so the Python variable assignment \`x = 1\` would have a "box" enclosing x, an "ellipse" enclosing 1, and an "arrow" linking them.
           We figured that these diagrams were very useful for students who wanted a visual representation of what was happening in their programs, so we created Tapestry
@@ -103,7 +98,7 @@ export default {
           Entrepreneurial Hack at HackUCI, we continued expanding Tapestry until it could, for the most part, generate an appropriate diagram for any arbitrary Python program,
           appropriately sandboxed of course. To date, Tapestry is probably the most complex piece of software I've built from scratch, so needless to say I've had a great time
           technically and personally working with my good friends on this project.`,
-          link: "https://www.tapestrylearn.com"
+          link: "https://www.github.com/tapestrylearn"
         },
       ],
       learning: [
@@ -113,7 +108,7 @@ export default {
           description: `Quite possibly my favorite thing I'm currently learning about; I'll put it simply: Rust is a great programming language. I'm a big fan of
           its zero cost abstractions, ergonomic syntax, and expressive type system, which have all contributed to a great programming experience so far. Even though
           I sometimes find myself fighting the borrow checker, to me it's like bitter medicine: it might not always taste great, but it's good for you in the end. Either way,
-          it's tough for me to pick against Rust when it comes to my favorite programming language; given the opportunity to use it in my work, I'll always take that opportunity.`,
+          it's tough for me to pick against Rust when it comes to my favorite programming language; given the opportunity to use it in my work, I'll almost always take that opportunity.`,
           link: "https://www.rust-lang.org"
         },
         {
@@ -129,12 +124,12 @@ export default {
       research: [
         {
           title: 'Undergraduate Researcher, UC Irvine',
-          subtitles: ['January 2021 - present', 'Adviser: Wayne Hayes'],
-          description: `I'm currently conducting research under the direction of Prof. Wayne Hayes, concerned with the development of
-          classification methods backed by statistical significance. My work mostly involves the implementation of a
-          novel nearest neighbor distance classifier; currently, I'm working on scaling up the classifier through highly optimized nearest neighbor search.
-          I've spent time researching existing methods (like space-partitioning trees), approximate methods (like LSH), and even spent time developing my
-          own methods, which may or may not pan out (jury's still out on that). In order to accomplish this, I've worked with Python, Numpy, Matplotlib, and scikit-learn.`
+          subtitles: ['January 2021 - April 2021', 'Adviser: Wayne Hayes'],
+          description: `I conducted research under the direction of Prof. Wayne Hayes, concerned with the development of
+          classification methods backed by statistical significance. My work mostly involved the implementation of a
+          novel nearest neighbor distance classifier; currently, I worked on scaling up the classifier through highly optimized nearest neighbor search.
+          I spent time researching existing methods (like space-partitioning trees), approximate methods (like LSH), and even spent time developing my
+          own methods, even though they didn't pan out as much as I'd hoped. In order to accomplish this, I worked with Python, Numpy, Matplotlib, and scikit-learn.`
         }
       ],
       experience: [
