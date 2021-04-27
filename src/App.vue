@@ -5,17 +5,19 @@
         <h1 class="navy">Hi,</h1>
         <h3 class="navy">I'm Arthur Lafrance</h3>
 
-        <p>Although I was born and raised in Silicon Valley, I currently study computer science
-          at the UC Irvine Donald Bren School of ICS, as a member of the class of 2023. I'm very broadly interested in a wide
-          range of subjects: AI/machine learning, data management, programming languages, &amp; software engineering of various kinds.
-        </p>
-      </div>
+        <div id="bottom">
+          <p>Although I was born and raised in Silicon Valley, I currently study computer science
+            at the UC Irvine Donald Bren School of ICS, as a member of the class of 2023. I'm very broadly interested in a wide
+            range of subjects: AI/machine learning, programming languages, data management, &amp; software engineering of various kinds.
+          </p>
 
-      <div id="contact">
-        <p>To learn more about me or get in touch, feel free to check out:</p>
+          <div id="contact">
+            <p>To learn more about me or get in touch, feel free to check out:</p>
 
-        <div class="button-group">
-          <Button class="navy" v-for="(method, index) in contactMethods" :key="index" :title="method.name" :destination="method.link" />
+            <div class="button-group">
+              <Button class="navy" v-for="(method, index) in contactMethods" :key="index" :title="method.name" :destination="method.link" />
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -64,7 +66,7 @@ export default {
         { name: "CV", link: "assets/Arthur_Lafrance_CV.pdf" },
       ],
       highlights: [
-        "This coming summer (summer 2021), I'll be working as a software engineering intern at Facebook.",
+        "This coming summer (summer 2021), I'll be working as a software engineering intern on the Pika team at Facebook.",
         "During summer 2020, I interned with Centric Software's iOS development team.",
         "At HackUCI 2020, my project, Tapestry, was named Best Entrepreneurial Hack."
       ],
@@ -182,10 +184,14 @@ h3 {
 
 .button-group {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
 
-  padding-left: 3vw;
-  padding-right: 0;
+  padding-left: 0.5vw;
+}
+
+#bottom {
+  display: flex;
+  flex-direction: row;
 }
 
 #intro-content {
@@ -193,7 +199,6 @@ h3 {
 }
 
 #bio {
-  width: 50%;
   padding-right: 1vw;
 }
 
@@ -202,8 +207,7 @@ h3 {
 }
 
 #contact {
-  padding-left: 1vw;
-  padding-top: 4%;
+  margin-left: 2vw;
 }
 
 #contact p {
