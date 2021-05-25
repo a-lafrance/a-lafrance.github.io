@@ -7,8 +7,8 @@
 
         <div id="bottom">
           <p>Although I was born and raised in Silicon Valley, I currently study computer science
-            at the UC Irvine Donald Bren School of ICS, as a member of the class of 2023. I'm very broadly interested in a wide
-            range of subjects: AI/machine learning, programming languages, data management, &amp; software engineering of various kinds.
+            at the UC Irvine Donald Bren School of ICS, as a member of the class of 2023. I'm very broadly interested in
+            computer architecture &amp; systems, programming languages, and AI/machine learning.
           </p>
 
           <div id="contact">
