@@ -50,7 +50,7 @@ import List from './components/List.vue'
 import Button from './components/Button.vue'
 import BlankSection from './components/BlankSection.vue'
 import Section from './components/Section.vue'
-import EntryList from './components/EntryList.vue'
+// import EntryList from './components/EntryList.vue'
 
 export default {
   name: 'App',
@@ -58,8 +58,8 @@ export default {
     List,
     Button,
     BlankSection,
-    Section,
-    EntryList
+    Section//,
+    // EntryList
   },
   data: function() {
     return {
