@@ -1,8 +1,14 @@
 <template>
   <ul class="list">
-    <li class="list-item" v-for="(item, index) in items" :key="index">
-      {{ item }}
-    </li>
+    <div v-for="(item, i) in items" :key="i">
+      <li class="list-item" :key="i">
+        {{ item.text }}
+      </li>
+
+      <li class="list-item list-subitem" v-for="(subitem, j) in item.subitems" :key="j">
+        {{ subitem }}
+      </li>
+    </div>
   </ul>
 </template>
 
@@ -22,5 +28,9 @@ export default {
 
 .list-item {
   font-size: 11pt;
+}
+
+.list-subitem {
+  margin-left: 2vw;
 }
 </style>
