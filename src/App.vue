@@ -50,7 +50,7 @@ import List from './components/List.vue'
 import Button from './components/Button.vue'
 import BlankSection from './components/BlankSection.vue'
 import Section from './components/Section.vue'
-// import EntryList from './components/EntryList.vue'
+import EntryList from './components/EntryList.vue'
 
 export default {
   name: 'App',
@@ -58,8 +58,8 @@ export default {
     List,
     Button,
     BlankSection,
-    Section//,
-    // EntryList
+    Section,
+    EntryList
   },
   data: function() {
     return {
@@ -83,6 +83,11 @@ export default {
           It's an interesting technical challenge to design idiomatic Rust interfaces for AI/ML concepts while also trying not to get locked in a death match with the
           borrow checker. So far I've gotten some basic probability & adversarial search functionality done, with more to come soon.`,
           link: "https://www.github.com/arthurlafrance/Pensiv"
+        },
+        {
+          title: "???",
+          subtitles: [],
+          description: `Check back later after the big reveal 👀`
         }
       ],
       pastWork: [
