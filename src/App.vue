@@ -70,7 +70,7 @@ export default {
         { name: "CV", link: "assets/Arthur_Lafrance_CV.pdf" },
       ],
       highlights: [
-        { text: "This coming summer (summer 2021), I'll be working as a software engineering intern on the Pika team at Facebook.", subitems: [] },
+        { text: "I'm spending summer 2021 at Facebook, working on code profiling & profile-guided compiler optimization.", subitems: [] },
         { text: "During summer 2020, I interned with Centric Software's iOS development team.", subitems: [] },
         { text: "At HackUCI 2020, my project, Tapestry, was named Best Entrepreneurial Hack.", subitems: [] }
       ],
