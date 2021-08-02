@@ -8,7 +8,7 @@
         <div id="bottom">
           <p>Although I was born and raised in Silicon Valley, I currently study computer science
             at the UC Irvine Bren School of ICS, as a member of the class of 2023. I'm very broadly interested in
-            computer architecture &amp; systems, programming languages, and AI/machine learning.
+            computer architecture &amp; systems, programming languages, and compilers.
           </p>
 
           <div id="contact">
@@ -70,7 +70,7 @@ export default {
         { name: "CV", link: "assets/Arthur_Lafrance_CV.pdf" },
       ],
       highlights: [
-        { text: "I'm spending summer 2021 at Facebook, working on code profiling & profile-guided compiler optimization.", subitems: [] },
+        { text: "I'm spending summer 2021 at Facebook, working on compilers, profiling & instrumentation, and profile-guided optimization.", subitems: [] },
         { text: "During summer 2020, I interned with Centric Software's iOS development team.", subitems: [] },
         { text: "At HackUCI 2020, my project, Tapestry, was named Best Entrepreneurial Hack.", subitems: [] }
       ],
@@ -81,7 +81,7 @@ export default {
           description: `My interests in Rust and AI/ML coincided to create Pensiv: my attempt at a Rust-based AI/ML library. I felt
           like it would be a great way to get experience in both domains while exploring an area that's not oversaturated (see: the thousands of Python AI libraries).
           It's an interesting technical challenge to design idiomatic Rust interfaces for AI/ML concepts while also trying not to get locked in a death match with the
-          borrow checker. So far I've gotten some basic probability & adversarial search functionality done, with more to come soon.`,
+          borrow checker. So far I've gotten some basic probability & adversarial search functionality done, with more to come in the future.`,
           link: "https://www.github.com/arthurlafrance/Pensiv"
         },
         {
@@ -94,7 +94,7 @@ export default {
         {
           title: "Tapestry",
           subtitles: [],
-          description: `The context to fully appreciate this project goes back to ICS 33, when Prof. Pattis (the one and only) created ASCII art diagrams
+          description: `The context to fully appreciate this project goes back to ICS 33 (the last part of our UCI intro CS series), when Prof. Pattis (the one and only) created ASCII art diagrams
           to visually demonstrate how Python objects are organized in memory. Later, my two good friends & I were searching for project ideas at HackUCI 2020
           when we decided to create a website that could dynamically generate these "Pattis diagrams" for arbitrary Python code. We got a decent proof-of-concept
           going at the hackathon, for which we were fortunate enough to win Best Entrepreneurial Hack, and we then spent the next 6 months or so fully bringing
@@ -106,11 +106,11 @@ export default {
       ],
       resumeDump: [
         {
-          text: "Software Developer, Blueprint at UCI, February 2021 - present",
+          text: "Software Engineering Intern, Facebook, June 2021 - present",
           subitems: [
-            `As a developer at Blueprint, I've been building a volunteer portal for Our City Forest, a Bay Area sustainability nonprofit,
-            allowing them to coordinate and manage volunteer signups online. I've designed & implemented the relational DB using MySQL and
-            turned mockups into code using React & Express.`
+            `At Facebook, I've been working on an internal compiler toolchain, implementing runtime instrumentation for a custom profiling system using
+            C, C++, LLVM, and even a little bit of x86 assembly. Tangent to this work, I've also been investigating the effectiveness of the custom profiling
+            relative to an existing LLVM IR-based alterntaive; encouragingly, initial benchmarking has revealed big wins in instrumented binary size.`
           ]
         },
         {
