@@ -110,7 +110,9 @@ export default {
           subitems: [
             `At Facebook, I've been working on an internal compiler toolchain, implementing runtime instrumentation for a custom profiling system using
             C, C++, LLVM, and even a little bit of x86 assembly. Tangent to this work, I've also been investigating the effectiveness of the custom profiling
-            relative to an existing LLVM IR-based alterntaive; encouragingly, initial benchmarking has revealed big wins in instrumented binary size.`
+            relative to an existing LLVM IR-based alterntaive, where I found that my custom instrumentation is much more lightweight, producing binaries that
+            are about 60% smaller, and which carry ~95% less instrumentation data. I've also spent some time working on tooling & infrastructure to support
+            toolchain users by reporting and tracking profile health across builds, so they can effectively monitor the effectiveness of the instrumentation over time.`
           ]
         },
         {
@@ -118,7 +120,8 @@ export default {
           subitems: [
             `At the Student Center I've gotten a chance to work on some pretty cool apps (UCI students might recognize ZotFinder & UCI Now among them) and
             grow significantly as a developer. I was originally hired as an iOS developer, working full-stack with Swift & Python/AWS; recently I've been
-            transitioning into a web development role as well, so I've been picking up C# in addition to my work on iOS.`
+            transitioning into a web development role as well, so I've been picking up C# in addition to my work on iOS. In addition to the technical work, my enthusiasm for which
+            is a given, I really enjoy the opportunity to make a positive impact on the UCI community through my work.`
           ]
         },
         {
