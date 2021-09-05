@@ -8,7 +8,8 @@
         <div id="bottom">
           <p>Although I was born and raised in Silicon Valley, I currently study computer science
             at the UC Irvine Bren School of ICS, as a member of the class of 2023. I'm very broadly interested in
-            computer architecture &amp; systems, programming languages, and compilers.
+            computer architecture &amp; systems, programming languages, and compilers. And as a completely irrelevant side note, Madvillainy
+            is the greatest collection of music I've ever heard in case anyone was curious.
           </p>
 
           <div id="contact">
