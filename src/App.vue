@@ -8,8 +8,7 @@
         <div id="bottom">
           <p>Although I was born and raised in Silicon Valley, I currently study computer science
             at the UC Irvine Bren School of ICS, as a member of the class of 2023. I'm very broadly interested in
-            computer architecture &amp; systems, programming languages, and compilers. And as a completely irrelevant side note, Madvillainy
-            is the greatest collection of music I've ever heard in case anyone was curious.
+            compilers, programming language design, &amp; computer architecture.
           </p>
 
           <div id="contact">
@@ -71,7 +70,8 @@ export default {
         { name: "CV", link: "assets/Arthur_Lafrance_CV.pdf" },
       ],
       highlights: [
-        { text: "I'm spending summer 2021 at Facebook, working on compilers, profiling & instrumentation, and profile-guided optimization.", subitems: [] },
+        { text: "I'll be returning to Facebook for summer 2022, likely (hopefully) to continue working with PLs & compilers.", subitems: [] },
+        { text: "I spent summer 2021 at Facebook, where I worked on compilers, profiling, & infrastructure.", subitems: [] },
         { text: "During summer 2020, I interned with Centric Software's iOS development team.", subitems: [] },
         { text: "At HackUCI 2020, my project, Tapestry, was named Best Entrepreneurial Hack.", subitems: [] }
       ],
@@ -107,13 +107,12 @@ export default {
       ],
       resumeDump: [
         {
-          text: "Software Engineering Intern, Facebook, June 2021 - present",
+          text: "Software Engineering Intern, Facebook, June 2021 - September 2021",
           subitems: [
-            `At Facebook, I've been working on an internal compiler toolchain, implementing runtime instrumentation for a custom profiling system using
-            C, C++, LLVM, and even a little bit of x86 assembly. Tangent to this work, I've also been investigating the effectiveness of the custom profiling
-            relative to an existing LLVM IR-based alterntaive, where I found that my custom instrumentation is much more lightweight, producing binaries that
-            are about 60% smaller, and which carry ~95% less instrumentation data. I've also spent some time working on tooling & infrastructure to support
-            toolchain users by reporting and tracking profile health across builds, so they can effectively monitor the effectiveness of the instrumentation over time.`
+            `At Facebook, I worked on an internal compiler toolchain, where I implemented runtime instrumentation for a new custom profiling system, which
+            was found to produce binaries that were ~60% smaller & that carried ~95% less instrumentation data. To support toolchain users, I extended existing
+            tooling surrounding the profiling system and created new tools as well, both with the goal of assessing profile health. Overall, I really enjoyed my summer
+            and I'm excited to be back for summer 2022!`
           ]
         },
         {
@@ -121,8 +120,7 @@ export default {
           subitems: [
             `At the Student Center I've gotten a chance to work on some pretty cool apps (UCI students might recognize ZotFinder & UCI Now among them) and
             grow significantly as a developer. I was originally hired as an iOS developer, working full-stack with Swift & Python/AWS; recently I've been
-            transitioning into a web development role as well, so I've been picking up C# in addition to my work on iOS. In addition to the technical work, my enthusiasm for which
-            is a given, I really enjoy the opportunity to make a positive impact on the UCI community through my work.`
+            transitioning into a web development role as well, so I've been picking up C# in addition to my work on iOS.`
           ]
         },
         {
