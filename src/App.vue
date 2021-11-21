@@ -7,8 +7,8 @@
 
         <div id="bottom">
           <p>Born &amp; raised in Silicon Valley; currently studying computer science at UC Irvine, class of 2023. Also
-             in between summers at Facebook. I'm broadly interested in compilers, programming language design, &amp; computer
-             architecture.
+             in between summers at <span class="strikethrough">Facebook</span> Meta (lol). I'm broadly interested in compilers, programming language design, &amp; computer
+             architecture. Operating systems, networking, &amp; electrical/computer engineering are also cool.
           </p>
 
           <div id="contact">
@@ -79,8 +79,7 @@ export default {
             subtitles: [],
             description: `To be brutally honest, C doesn't give you much out of the box. That's part of the reason I enjoy using it, but I can already
             foresee that it'll be annoying to write the same set of utilities 50 different times per-project. So, lfc is my personal solution to that problem, point
-            being to basically fill any niche I need that the C (and POSIX I guess) standard library doesn't adequately provide. Some days it's really cool, and
-            others it feels like I'm writing the code equivalent of bitter medicine, where I just have to finish it because I know it's good for me.`
+            being to basically fill any niche I need that the C standard library doesn't adequately provide. Most of the time it's pretty cool stuff.`
         },
         {
             title: "Mustang",
@@ -232,5 +231,9 @@ h3 {
   color: rgb(50, 50, 50);
   font-family: "Helvetica", sans-serif;
   font-weight: 100;
+}
+
+.strikethrough {
+    text-decoration: line-through;
 }
 </style>
