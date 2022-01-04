@@ -3,11 +3,11 @@
     <div id="intro-content">
       <div id="bio">
         <h1 class="navy">Hi,</h1>
-        <h3 class="navy">I'm Arthur Lafrance</h3>
+        <h3 class="navy">I'm Arthur</h3>
 
         <div id="bottom">
           <p>Born &amp; raised in Silicon Valley; currently studying computer science at UC Irvine, class of 2023. Also
-             in between summers at <span class="strikethrough">Facebook</span> Meta (lol). I'm broadly interested in compilers, programming language design, &amp; computer
+             in between summers at <span class="strikethrough">Facebook</span> Meta. I'm broadly interested in compilers, programming language design, &amp; computer
              architecture. Operating systems, networking, &amp; electrical/computer engineering are also cool.
           </p>
 
@@ -39,7 +39,7 @@
   </Section>
 
   <div class="footer">
-    <p class="copyright navy">Copyright (c) 2021 Arthur Lafrance</p>
+    <p class="copyright navy">Copyright (c) 2022 Arthur Lafrance</p>
   </div>
 </template>
 
@@ -65,104 +65,108 @@ export default {
         { name: "Email", link: "mailto:lafrancearthur@gmail.com" },
         { name: "GitHub", link: "https://www.github.com/arthurlafrance" },
         { name: "LinkedIn", link: "https://www.linkedin.com/in/arthurlafrance" },
-        { name: "CV", link: "assets/Arthur_Lafrance_CV.pdf" },
       ],
       highlights: [
         { text: "I'll be returning to Facebook for summer 2022, likely (hopefully) to continue working with PLs & compilers.", subitems: [] },
+        { text: "I've started research with Prof. Burtsev's Mars Group, exploring Rust as a mechanism for enforcing OS safety invariants.", subitems: [] },
         { text: "I spent summer 2021 at Facebook, where I worked on compilers, profiling, & infrastructure.", subitems: [] },
         { text: "During summer 2020, I interned with Centric Software's iOS development team.", subitems: [] },
         { text: "At HackUCI 2020, my project, Tapestry, was named Best Entrepreneurial Hack.", subitems: [] }
       ],
       currentWork: [
         {
-            title: "lfc",
-            subtitles: [],
-            description: `To be brutally honest, C doesn't give you much out of the box. That's part of the reason I enjoy using it, but I can already
-            foresee that it'll be annoying to write the same set of utilities 50 different times per-project. So, lfc is my personal solution to that problem, point
-            being to basically fill any niche I need that the C standard library doesn't adequately provide. Most of the time it's pretty cool stuff.`
-        },
-        {
-            title: "Mustang",
-            subtitles: [],
-            description: `Recently I've been experimenting with the idea of writing a C toolchain (in C of course). I figure it'll probably be useful when I
-            start writing more and more C projects, because who wants to set up the same Makefile and directory structure and manually build everything all the time. Instead,
-            it seems more fun to write the stuff I need myself, much the same as with lfc. Who knows whether or not it'll pan out or turn out as useful as it seems, but it's
-            worth a shot.`
-        },
-        {
-          title: "???",
+          title: "Foodpool",
           subtitles: [],
-          description: `Check back later after the big reveal 👀`
+          description: `My roommates and I recently started Foodpool, a food delivery startup aiming to increase the efficiency of delivery
+          by pooling multiple orders into a single trip. For the past few months, we've been working out the kinks in the idea, testing the
+          system ourselves, and (of course) writing lots of code; we're looking forward to all of our work coming to fruition in the near future.
+          Specifically, I've spent my time architecting the tech required to support our system, and writing code in Swift (iOS) and Rust, with
+          Tokio & Axum (backend). It's been a pleasure to finally be able to use Rust in a production environment.`,
+          link: "https://www.foodpool.app"
+        },
+        {
+          title: "lfc",
+          subtitles: [],
+          description: `Let's face it: C doesn't give you much out of the box. If you need to use most of the conveniences provided by
+          modern languages, you have to write them yourself. To that end, lfc is where I write them myself: it almost feels like a running
+          "standard library" that I maintain on an as-need basis. Honestly, that's one of the fun parts about C: not only the ability, but the
+          need to think about manually implementing this stuff that you can usually take for granted.`,
+          link: "https://www.github.com/arthurlafrance/lfc.git"
+        },
+        {
+          title: "...and others",
+          subtitles: [],
+          description: `As has always been the case for me, there are a couple projects taking up my spare time, that may or may not end up
+          seeing the light of day. If they do, great! They'll make it onto this list. If not, good thing I didn't put them here prematurely.`
         }
       ],
       pastWork: [
         {
           title: "Tapestry",
           subtitles: [],
-          description: `The context to fully appreciate this project goes back to ICS 33 (the last part of our UCI intro CS series), when Prof. Pattis (the one and only) created ASCII art diagrams
-          to visually demonstrate how Python objects are organized in memory. Later, my two good friends & I were searching for project ideas at HackUCI 2020
-          when we decided to create a website that could dynamically generate these "Pattis diagrams" for arbitrary Python code. We got a decent proof-of-concept
-          going at the hackathon, for which we were fortunate enough to win Best Entrepreneurial Hack, and we then spent the next 6 months or so fully bringing
-          the idea to life. We went through several full rewrites of the app, learned a ton about Python, Django, and software design, and eventually did end up with
-          a functional website that did what we originally intended. To date I think it's the most complex piece of software I've built from scratch, so needless to say
-          I had a great technical and personal experience building it with my team.`, // TODO: insert links to ryan/patrick sites
+          description: `In ICS 33, the last UCI intro to CS class, Prof. Pattis used "memory diagrams" drawn with ASCII art to teach us
+          about the internal memory representations of certain Python data structures. Inspired by this technique, my two good friends and I
+          decided to create a tool that dynamically generates these diagrams at HackUCI 2020. We created Tapestry, a web-based code visualization
+          tool capable of generating these memory diagrams for arbitrary Python programs. We even spent the next few months further developing
+          the tool, and who knows, it might make its way into the "Current Work" section at some point.`,
           link: "https://www.github.com/tapestrylearn/Diagrammer"
         }
       ],
       resumeDump: [
         {
-            text: "Lab Tutor, UC Irvine, September 2021 - present",
-            subitems: [
-                `Working as an ICS lab tutor this fall, I've been supporting students in ICS 53 (Principles in System Design) by supervising open lab hours.
-                On a daily basis, I help students understand course concepts, debug their systems-level C programs, & gain proficiency with essential Unix tools like GDB.`
-            ]
+          text: "Undergraduate Researcher, UC Irvine, November 2021 - present",
+          subitems: [
+            `With Prof. Burtsev and the Mars Group on RedLeaf, I'm exploring the use of Rust language features to enforce safety & fault isolation invariants in
+            operating system design; specifically, Rust's memory safety and linear type system allow us to do some interesting things in OS design.`
+          ]
         },
         {
-            text: "Undergraduate Researcher, UC Irvine, September 2021 - present",
-            subitems: [
-                `During Fall 2021, I've been working on network databases & graph alignment with Prof. Wayne Hayes. My group is mainly concerned with
-                developing ways to find good seeds for graph alignment, mainly useful for applications in computational biology.`
-            ]
+          text: "Engineering Lead, UCI Student Center & Event Services, November 2021 - present",
+          subitems: [
+            `After transitioning into less of a developer role, my day-to-day consists mostly of software architecture, code review, and developer mentorship, focusing on the big
+            picture processes that facilitate developer success and bridging the gap between developers and non-technical stakeholders.`
+          ]
+        },
+        {
+          text: "Co-Founder & CTO, Foodpool, September 2021 - present",
+          subitems: [
+            `As I mentioned above, my roommates and I started Foodpool, our food delivery startup, recently. In the interest of avoiding redundancy, I won't rehash
+            the same information as I've already provided above. Suffice it to say, it's been a great experience, hopefully with big things to come.`
+          ]
+        },
+        {
+          text: "Lab Tutor, UC Irvine, September 2021 - present",
+          subitems: [
+              `Working as an ICS lab tutor this fall, I've been supporting students in ICS 53 (Principles in System Design) by supervising open lab hours.
+              On a daily basis, I help students understand course concepts & debug their C programs.`
+          ]
+        },
+        {
+          text: "Undergraduate Researcher, UC Irvine, September 2021 - December 2021",
+          subitems: [
+              `During Fall 2021, I worked on network databases & graph alignment with Prof. Wayne Hayes. My group was mainly concerned with
+              developing ways to find good seeds for graph alignment, especially for applications in computational biology.`
+          ]
         },
         {
           text: "Software Engineering Intern, Facebook, June 2021 - September 2021",
           subitems: [
-            `At Facebook, I worked on an internal compiler toolchain, where I implemented runtime instrumentation for a new custom profiling system, which
-            was found to produce binaries that were ~60% smaller & that carried ~95% less instrumentation data. To support toolchain users, I extended existing
-            tooling surrounding the profiling system and created new tools as well, both with the goal of assessing profile health. Overall, I really enjoyed my summer
-            and I'm excited to be back for summer 2022!`
+            `At Facebook, I worked on an internal compiler toolchain, where I implemented runtime instrumentation for a new custom profiling system, and
+            tooling around the new profiling system to assess & monitor profile health. Overall, I really enjoyed my summer and I'm excited to be back for summer 2022!`
           ]
         },
         {
           text: "Software Developer, UCI Student Center & Event Services, February 2020 - present",
           subitems: [
-            `At the Student Center I've gotten a chance to work on some pretty cool apps (UCI students might recognize ZotFinder & UCI Now among them) and
-            grow significantly as a developer. As a full-stack iOS developer, I've worked with Swift, Python, AWS, & MySQL. I've really enjoyed getting the
-            chance to make an impact on the campus community through my work.`
-          ]
-        },
-        {
-          text: "Undergraduate Researcher, UC Irvine, January 2021 - April 2021",
-          subitems: [
-            `In winter 2021, I spent the quarter with Prof. Wayne Hayes's group investigating machine learning methods with statistically-backed results.
-            I did some initial prototyping & investigated fast nearest neighbor search methods to scale up the classifier; I researched, prototyped, & benchmarked
-            several tree-based methods (k-d and ball trees).`
-          ]
-        },
-        {
-          text: "ICS 31 Learning Assistant, UC Irvine, Fall 2020 & Winter 2021",
-          subitems: [
-            `As a learning assistant for ICS 31, I spent 2 quarters helping students in UCI's intro to programming class (in Python) by holding office hours
-            several times a week and by facilitating breakout rooms during lecture, answering questions about lecture material & assignments.`
+            `As a software engineer at the Student Center, I worked full-stack on iOS apps used by thousands of UCI students and staff on a daily basis (UCI students may
+            recognize ZotFinder and UCI Now among them).`
           ]
         },
         {
           text: "Software Engineering Intern, Centric Software, June 2020 - September 2020",
           subitems: [
-            `I spent summer 2020 as an intern with Centric's mobile development team. Specifically, I developed a canvas editor for their suite of
-            PLM apps on iOS, creating a basic working canvas editor from the ground up using Swift and Core Graphics, and I also spent some time later on
-            integrating it into the Sample Review app using Objective-C. Overall, it was a great learning experience taking a set of
-            system requirements, architecting the system from scratch, and developing the system from start to finish.`
+            `I spent summer 2020 as an intern with Centric's mobile development team, working with Swift & Core Graphics to create a canvas editor
+            for Centric's suite of PLM iOS apps.`
           ]
         }
       ]
@@ -197,7 +201,7 @@ h3 {
   display: flex;
   flex-direction: row;
 
-  padding-left: 0.5vw;
+  padding-left: 2vw;
 }
 
 #bottom {
