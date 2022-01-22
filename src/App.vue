@@ -2,13 +2,12 @@
   <BlankSection name="intro">
     <div id="intro-content">
       <div id="bio">
-        <h1 class="navy">Hi,</h1>
-        <h3 class="navy">I'm Arthur</h3>
+        <h1 class="navy">Hi, <span id="name-small">I'm Arthur</span></h1>
 
         <div id="bottom">
           <p>Born &amp; raised in Silicon Valley; currently studying computer science at UC Irvine, class of 2023. Also
-             in between summers at <span class="strikethrough">Facebook</span> Meta. I'm broadly interested in compilers, programming language design, &amp; computer
-             architecture. Operating systems, networking, &amp; electrical/computer engineering are also cool.
+             in between summers at <span class="strikethrough">Facebook</span> Meta. I'm broadly interested in programming language design &amp; implementation. Among other things,
+             operating systems, networking, computer architecture, &amp; security are also cool.
           </p>
 
           <div id="contact">
@@ -116,14 +115,14 @@ export default {
         {
           text: "Undergraduate Researcher, UC Irvine, November 2021 - present",
           subitems: [
-            `With Prof. Burtsev and the Mars Group on RedLeaf, I'm exploring the use of Rust language features to enforce safety & fault isolation invariants in
+            `Working with Prof. Burtsev and the Mars Group on RedLeaf, I'm exploring the use of Rust language features to enforce safety & fault isolation invariants in
             operating system design; specifically, Rust's memory safety and linear type system allow us to do some interesting things in OS design.`
           ]
         },
         {
           text: "Engineering Lead, UCI Student Center & Event Services, November 2021 - present",
           subitems: [
-            `After transitioning into less of a developer role, my day-to-day consists mostly of software architecture, code review, and developer mentorship, focusing on the big
+            `After transitioning into less of a developer role, my day-to-day consists mostly of software architecture and code review, focusing on the big
             picture processes that facilitate developer success and bridging the gap between developers and non-technical stakeholders.`
           ]
         },
@@ -135,23 +134,23 @@ export default {
           ]
         },
         {
+          text: "Undergraduate Researcher, UC Irvine, September 2021 - present",
+          subitems: [
+              `Since Fall 2021, I've been working on network databases & graph alignment with Prof. Wayne Hayes. In the fall, I worked on extending
+              an algorithm to find good seeds for graph alignment; I'm currently working on a more efficient implementation of the local alignment algorithm.`
+          ]
+        },
+        {
           text: "Lab Tutor, UC Irvine, September 2021 - present",
           subitems: [
-              `Working as an ICS lab tutor this fall, I've been supporting students in ICS 53 (Principles in System Design) by supervising open lab hours.
+              `Working as an ICS lab tutor this year, I've been supporting students in ICS 53 (Principles in System Design) by supervising open lab hours.
               On a daily basis, I help students understand course concepts & debug their C programs.`
           ]
         },
         {
-          text: "Undergraduate Researcher, UC Irvine, September 2021 - December 2021",
+          text: "Software Engineering Intern, Meta, June 2021 - September 2021",
           subitems: [
-              `During Fall 2021, I worked on network databases & graph alignment with Prof. Wayne Hayes. My group was mainly concerned with
-              developing ways to find good seeds for graph alignment, especially for applications in computational biology.`
-          ]
-        },
-        {
-          text: "Software Engineering Intern, Facebook, June 2021 - September 2021",
-          subitems: [
-            `At Facebook, I worked on an internal compiler toolchain, where I implemented runtime instrumentation for a new custom profiling system, and
+            `At Meta, I worked on an internal compiler toolchain, where I implemented runtime instrumentation for a new custom profiling system, and
             tooling around the new profiling system to assess & monitor profile health. Overall, I really enjoyed my summer and I'm excited to be back for summer 2022!`
           ]
         },
@@ -192,9 +191,9 @@ h1 {
   font-weight: normal;
 }
 
-h3 {
-  font-size: 16pt;
-  font-weight: 100;
+#name-small {
+  font-size: 24pt;
+  /* font-weight: 100; */
 }
 
 .button-group {
@@ -223,10 +222,6 @@ h3 {
 
 #contact {
   margin-left: 2vw;
-}
-
-#contact p {
-  padding-left: 2vw;
 }
 
 .copyright {
