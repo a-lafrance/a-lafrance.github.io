@@ -6,8 +6,8 @@
 
         <div id="bottom">
           <p>Born &amp; raised in Silicon Valley; currently studying computer science at UC Irvine, class of 2023. Also
-             in between summers at <span class="strikethrough">Facebook</span> Meta. I'm broadly interested in programming language design &amp; implementation. Among other things,
-             operating systems, networking, computer architecture, &amp; security are also cool.
+             in between summers at <span class="strikethrough">Facebook</span> Meta. I'm broadly interested in programming language design &amp; implementation, operating systems,
+             and systems security. Among other things, networking, computer architecture, and electrical/computer engineering are also cool.
           </p>
 
           <div id="contact">
@@ -66,9 +66,9 @@ export default {
         { name: "LinkedIn", link: "https://www.linkedin.com/in/arthurlafrance" },
       ],
       highlights: [
-        { text: "I'll be returning to Facebook for summer 2022, likely (hopefully) to continue working with PLs & compilers.", subitems: [] },
-        { text: "I've started research with Prof. Burtsev's Mars Group, exploring Rust as a mechanism for enforcing OS safety invariants.", subitems: [] },
-        { text: "I spent summer 2021 at Facebook, where I worked on compilers, profiling, & infrastructure.", subitems: [] },
+        { text: "I'll be returning to Meta for summer 2022, where I'm hoping to continue working with PLs & compilers.", subitems: [] },
+        { text: "As of late 2021, I've been exploring the use of Rust to encourage safety in OS design with Prof. Burtsev's Mars Group.", subitems: [] },
+        { text: "I spent summer 2021 at Meta, where I worked on compilers, profiling, & infrastructure.", subitems: [] },
         { text: "During summer 2020, I interned with Centric Software's iOS development team.", subitems: [] },
         { text: "At HackUCI 2020, my project, Tapestry, was named Best Entrepreneurial Hack.", subitems: [] }
       ],
@@ -192,7 +192,7 @@ h1 {
 }
 
 #name-small {
-  font-size: 24pt;
+  font-size:  /*24*/30pt;
   /* font-weight: 100; */
 }
 
