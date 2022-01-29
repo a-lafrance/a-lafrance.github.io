@@ -67,7 +67,7 @@ export default {
       ],
       highlights: [
         { text: "I'll be returning to Meta for summer 2022, where I'm hoping to continue working with PLs & compilers.", subitems: [] },
-        { text: "As of late 2021, I've been exploring the use of Rust to encourage safety in OS design with Prof. Burtsev's Mars Group.", subitems: [] },
+        { text: "As of late 2021, I've been exploring the use of Rust to enforce safety in OS design with Prof. Burtsev's Mars Group.", subitems: [] },
         { text: "I spent summer 2021 at Meta, where I worked on compilers, profiling, & infrastructure.", subitems: [] },
         { text: "During summer 2020, I interned with Centric Software's iOS development team.", subitems: [] },
         { text: "At HackUCI 2020, my project, Tapestry, was named Best Entrepreneurial Hack.", subitems: [] }
