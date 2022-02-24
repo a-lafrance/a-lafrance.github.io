@@ -62,7 +62,7 @@ export default {
     return {
       contactMethods: [
         { name: "Email", link: "mailto:lafrancearthur@gmail.com" },
-        { name: "GitHub", link: "https://www.github.com/arthurlafrance" },
+        { name: "GitHub", link: "https://www.github.com/a-lafrance" },
         { name: "LinkedIn", link: "https://www.linkedin.com/in/arthurlafrance" },
       ],
       highlights: [
