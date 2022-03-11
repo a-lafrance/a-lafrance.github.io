@@ -27,13 +27,13 @@
   </Section>
 
   <EntryList name="current-work" title="Things I'm Working On" :entries="currentWork">
-      <p class="description">Given the volatile nature of my projects at this point, I'm sure this list will be in a pretty constant state of flux.</p>
+      <p class="description">I tend to switch gears pretty frequently, so this section will tend to change just as frequently</p>
   </EntryList>
 
   <EntryList name="past-work" title="Things I've Worked On" :entries="pastWork" />
 
   <Section name="resume-dump" title="Resume Dump">
-    <p class="description">A giant wall of text more or less regurgitated from my resume</p>
+    <p class="description">A wall of text (somewhat) repurposed from my resume</p>
     <List :items="resumeDump" />
   </Section>
 
@@ -66,6 +66,7 @@ export default {
         { name: "LinkedIn", link: "https://www.linkedin.com/in/arthurlafrance" },
       ],
       highlights: [
+        { text: "Foodpool launched in closed alpha in March 2022!", subitems: [] },
         { text: "I'll be returning to Meta for summer 2022, where I'm hoping to continue working with PLs & compilers.", subitems: [] },
         { text: "As of late 2021, I've been exploring the use of Rust to enforce safety in OS design with Prof. Burtsev's Mars Group.", subitems: [] },
         { text: "I spent summer 2021 at Meta, where I worked on compilers, profiling, & infrastructure.", subitems: [] },
@@ -76,11 +77,10 @@ export default {
         {
           title: "Foodpool",
           subtitles: [],
-          description: `My roommates and I recently started Foodpool, a food delivery startup aiming to increase the efficiency of delivery
-          by pooling multiple orders into a single trip. For the past few months, we've been working out the kinks in the idea, testing the
-          system ourselves, and (of course) writing lots of code; we're looking forward to all of our work coming to fruition in the near future.
-          Specifically, I've spent my time architecting the tech required to support our system, and writing code in Swift (iOS) and Rust, with
-          Tokio & Axum (backend). It's been a pleasure to finally be able to use Rust in a production environment.`,
+          description: `Foodpool is a food delivery startup my roommates and I created to make food delivery affordable for everyone,
+          centered around the idea of "foodpooling": carpooling, but with food delivery. Over the last 6 months or so, we've been ironing
+          out the kinks in the system and writing tons of code (Swift for iOS and Rust for our backend stack). It's great to see our work
+          start to pay off too: we just launched in closed alpha in March 2022!`,
           link: "https://www.foodpool.app"
         },
         {
@@ -113,59 +113,20 @@ export default {
       ],
       resumeDump: [
         {
-          text: "Undergraduate Researcher, UC Irvine, November 2021 - present",
+          text: "I write quite a bit of systems code, including:",
           subitems: [
-            `Working with Prof. Burtsev and the Mars Group on RedLeaf, I'm exploring the use of Rust language features to enforce safety & fault isolation invariants in
-            operating system design; specifically, Rust's memory safety and linear type system allow us to do some interesting things in OS design.`
+            "I've used Rust for static analysis, and to write operating systems, web servers, and personal projects–I've even contributed to Rust in Rust.",
+            "I've used C and C++ for compiler development, graph alignment research, and (of course) personal projects",
+            "I'd also like to pick up, among other things: Golang, Zig, RISC-V"
           ]
         },
         {
-          text: "Engineering Lead, UCI Student Center & Event Services, November 2021 - present",
+          text: "I've taken lots of cool classes, but my favorites include:",
           subitems: [
-            `After transitioning into less of a developer role, my day-to-day consists mostly of software architecture and code review, focusing on the big
-            picture processes that facilitate developer success and bridging the gap between developers and non-technical stakeholders.`
-          ]
-        },
-        {
-          text: "Co-Founder & CTO, Foodpool, September 2021 - present",
-          subitems: [
-            `As I mentioned above, my roommates and I started Foodpool, our food delivery startup, recently. In the interest of avoiding redundancy, I won't rehash
-            the same information as I've already provided above. Suffice it to say, it's been a great experience, hopefully with big things to come.`
-          ]
-        },
-        {
-          text: "Undergraduate Researcher, UC Irvine, September 2021 - present",
-          subitems: [
-              `Since Fall 2021, I've been working on network databases & graph alignment with Prof. Wayne Hayes. In the fall, I worked on extending
-              an algorithm to find good seeds for graph alignment; I'm currently working on a more efficient implementation of the local alignment algorithm.`
-          ]
-        },
-        {
-          text: "Lab Tutor, UC Irvine, September 2021 - present",
-          subitems: [
-              `Working as an ICS lab tutor this year, I've been supporting students in ICS 53 (Principles in System Design) by supervising open lab hours.
-              On a daily basis, I help students understand course concepts & debug their C programs.`
-          ]
-        },
-        {
-          text: "Software Engineering Intern, Meta, June 2021 - September 2021",
-          subitems: [
-            `At Meta, I worked on an internal compiler toolchain, where I implemented runtime instrumentation for a new custom profiling system, and
-            tooling around the new profiling system to assess & monitor profile health. Overall, I really enjoyed my summer and I'm excited to be back for summer 2022!`
-          ]
-        },
-        {
-          text: "Software Developer, UCI Student Center & Event Services, February 2020 - present",
-          subitems: [
-            `As a software engineer at the Student Center, I worked full-stack on iOS apps used by thousands of UCI students and staff on a daily basis (UCI students may
-            recognize ZotFinder and UCI Now among them).`
-          ]
-        },
-        {
-          text: "Software Engineering Intern, Centric Software, June 2020 - September 2020",
-          subitems: [
-            `I spent summer 2020 as an intern with Centric's mobile development team, working with Swift & Core Graphics to create a canvas editor
-            for Centric's suite of PLM iOS apps.`
+            "ICS 53: Principles in System Design",
+            "CS 142A: Compilers & Interpreters",
+            "CS 143A: Principles of Operating Systems",
+            "CS 162: Formal Languages & Automata"
           ]
         }
       ]
