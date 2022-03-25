@@ -1,1 +1,38 @@
-<!DOCTYPE html><html lang=""><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="/favicon.png"><title>Arthur Lafrance</title><link href="/css/app.0dea8a04.css" rel="preload" as="style"><link href="/js/app.9a11ce3a.js" rel="preload" as="script"><link href="/js/chunk-vendors.cd5b04c4.js" rel="preload" as="script"><link href="/css/app.0dea8a04.css" rel="stylesheet"></head><body><noscript><strong>We're sorry but this site doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><div id="app"></div><script src="/js/chunk-vendors.cd5b04c4.js"></script><script src="/js/app.9a11ce3a.js"></script></body></html>
+<!DOCTYPE html><html><head>
+        <meta charset="utf-8">
+        <title>Arthur Lafrance</title>
+        
+
+        <link rel="stylesheet" href="/app-97e11c088c72d434.css">
+        <link rel="stylesheet" href="/base-10f9c51404b7a542.css">
+    
+<link rel="preload" href="/index-ca885efe48dfcaad_bg.wasm" as="fetch" type="application/wasm" crossorigin="">
+<link rel="modulepreload" href="/index-ca885efe48dfcaad.js"></head>
+<body>
+<script type="module">import init from '/index-ca885efe48dfcaad.js';init('/index-ca885efe48dfcaad_bg.wasm');</script><script>(function () {
+    var url = 'ws://' + window.location.host + '/_trunk/ws';
+    var poll_interval = 5000;
+    var reload_upon_connect = () => {
+        window.setTimeout(
+            () => {
+                // when we successfully reconnect, we'll force a
+                // reload (since we presumably lost connection to
+                // trunk due to it being killed, so it will have
+                // rebuilt on restart)
+                var ws = new WebSocket(url);
+                ws.onopen = () => window.location.reload();
+                ws.onclose = reload_upon_connect;
+            },
+            poll_interval);
+    };
+
+    var ws = new WebSocket(url);
+    ws.onmessage = (ev) => {
+        const msg = JSON.parse(ev.data);
+        if (msg.reload) {
+            window.location.reload();
+        }
+    };
+    ws.onclose = reload_upon_connect;
+})()
+</script></body></html>
