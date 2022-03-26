@@ -1,9 +1,0 @@
-#!/bin/bash
-
-./build
-
-git add .
-git commit -m "deploy"
-
-git push origin --delete deploy
-git subtree push --prefix dist origin deploy

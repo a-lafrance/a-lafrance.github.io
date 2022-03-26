@@ -1,8 +1,0 @@
-#!/bin/bash
-
-npm run build
-
-echo "arthurlafrance.com" > dist/CNAME
-
-mkdir dist/assets
-cp src/assets/Arthur_Lafrance_CV.pdf dist/assets/Arthur_Lafrance_CV.pdf
