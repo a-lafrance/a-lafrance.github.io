@@ -1,6 +1,9 @@
 mod components;
 
-use crate::components::{Button, Entry, Link};
+use crate::components::{
+    list::ListItem,
+    Button, Entry, Link, List,
+};
 use yew::{html};
 
 #[yew::function_component(App)]
@@ -13,6 +16,15 @@ fn app() -> Html {
             <Entry title="This is an entry"
                    subtitles={ vec!["This is a subtitle".to_string(), "And a second one".to_string()] }
                    description="As I mentioned, this is an entry"
+            />
+            <List
+                items={ vec![
+                    ListItem { text: "List Item 1".to_string(), subitems: vec![] },
+                    ListItem {
+                        text: "List Item 2, w/ subitems".to_string(),
+                        subitems: vec!["List Item 2.1".to_string(), "List Item 2.2".to_string()],
+                    }
+                ] }
             />
 
             <div class="footer">
