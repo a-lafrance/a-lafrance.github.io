@@ -1,0 +1,11 @@
+.list {
+  padding-left: 2vh;
+}
+
+.list-item {
+  font-size: 11pt;
+}
+
+.list-subitem {
+  margin-left: 2vw;
+}

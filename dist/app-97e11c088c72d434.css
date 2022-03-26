@@ -1,0 +1,49 @@
+h1 {
+  font-size: 30pt;
+  font-weight: normal;
+}
+
+#name-small {
+  font-size:  /*24*/30pt;
+  /* font-weight: 100; */
+}
+
+.button-group {
+  display: flex;
+  flex-direction: row;
+
+  padding-left: 2vw;
+}
+
+#bottom {
+  display: flex;
+  flex-direction: row;
+}
+
+#intro-content {
+  display: flex;
+}
+
+#bio {
+  padding-right: 1vw;
+}
+
+#intro-content p {
+  font-size: 12pt;
+}
+
+#contact {
+  margin-left: 2vw;
+}
+
+.copyright {
+  padding-left: 3vw;
+
+  color: rgb(50, 50, 50);
+  font-family: "Helvetica", sans-serif;
+  font-weight: 100;
+}
+
+.strikethrough {
+    text-decoration: line-through;
+}

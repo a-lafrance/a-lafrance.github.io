@@ -1,0 +1,8 @@
+.section-content {
+  display: flex;
+  flex-flow: column;
+}
+
+.section-title {
+  color: rgb(0, 60, 120);
+}
