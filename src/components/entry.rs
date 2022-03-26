@@ -5,7 +5,7 @@ pub struct Entry;
 
 impl Component for Entry {
     type Message = ();
-    type Properties = EntryProps;
+    type Properties = EntryData;
 
     fn create(_: &Context<Self>) -> Self {
         Entry
@@ -42,7 +42,7 @@ impl Component for Entry {
 
 
 #[derive(Clone, Debug, PartialEq, Properties)]
-pub struct EntryProps {
+pub struct EntryData {
     pub link: Option<String>,
     pub title: String,
     #[prop_or_default] pub subtitles: Vec<String>,

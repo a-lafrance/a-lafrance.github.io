@@ -1,4 +1,4 @@
-use super::{entry::EntryProps, section::Section, Entry};
+use super::{entry::EntryData, section::Section, Entry};
 use yew::{html, Children, Component, Context, Html, Properties};
 
 pub struct List;
@@ -90,6 +90,6 @@ impl Component for EntryList {
 pub struct EntryListProps {
     pub name: String,
     pub title: String,
-    pub entries: Vec<EntryProps>,
+    pub entries: Vec<EntryData>,
     #[prop_or_default] pub children: Children,
 }
