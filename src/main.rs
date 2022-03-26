@@ -59,7 +59,7 @@ fn app() -> Html {
                 </p>
             </EntryList>
 
-            <EntryList name="past-work" title="Things I've Worked On" entries={ content.past_work } />
+            <EntryList name="past-work" title="Things I've Have Worked On" entries={ content.past_work } />
 
             <Section name="resume-dump" title="Resume Dump">
                 <p class="description">{ "A wall of text (somewhat) repurposed from my resume" }</p>
