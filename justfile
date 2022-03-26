@@ -13,4 +13,4 @@ deploy MSG:
 	git add .
 	git commit -m "deploy: { MSG }"
 	git push origin master
-	git subtree push -f --prefix dist origin deploy
+	git subtree push --prefix=dist origin deploy
