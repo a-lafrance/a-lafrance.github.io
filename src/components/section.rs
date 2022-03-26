@@ -14,7 +14,7 @@ impl Component for BlankSection {
         html! {
             <>
                 <div class="section" id={ ctx.props().name.clone() }>
-                    { for ctx.props().body.iter() }
+                    { for ctx.props().children.iter() }
                 </div>
             </>
         }
@@ -24,5 +24,36 @@ impl Component for BlankSection {
 #[derive(Clone, Debug, PartialEq, Properties)]
 pub struct BlankSectionProps {
     pub name: String,
-    #[prop_or_default] pub body: Children,
+    #[prop_or_default] pub children: Children,
+}
+
+
+pub struct Section;
+
+impl Component for Section {
+    type Message = ();
+    type Properties = SectionProps;
+
+    fn create(_: &Context<Self>) -> Self {
+        Section
+    }
+
+    fn view(&self, ctx: &Context<Self>) -> Html {
+        html! {
+            <BlankSection name={ ctx.props().name.clone() }>
+                <h2 class="section-title">{ ctx.props().title.clone() }</h2>
+
+                <div class="section-title">
+                    { for ctx.props().children.iter() }
+                </div>
+            </BlankSection>
+        }
+    }
+}
+
+#[derive(Clone, Debug, PartialEq, Properties)]
+pub struct SectionProps {
+    pub name: String,
+    pub title: String,
+    #[prop_or_default] pub children: Children,
 }

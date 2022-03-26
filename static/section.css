@@ -1,0 +1,10 @@
+.section-content {
+  display: flex;
+  flex-flow: column;
+}
+
+.section-title {
+  color: rgb(0, 60, 120);
+  font-size: 20pt;
+  font-weight: normal;
+}
