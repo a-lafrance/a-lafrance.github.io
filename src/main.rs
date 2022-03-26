@@ -2,9 +2,9 @@ mod components;
 mod content;
 
 use components::{
-    list::{EntryList, List, ListItem},
+    list::{EntryList, List},
     section::{BlankSection, Section},
-    Button, Entry, Link,
+    Button,
 };
 use content::Content;
 
@@ -40,7 +40,7 @@ fn app() -> Html {
                             <div id="contact">
                               <p>{ "To learn more about me or get in touch, feel free to check out:" }</p>
 
-                              <div class="button-group navy">
+                              <div class="button-group">
                                   { for contact_buttons }
                               </div>
                             </div>

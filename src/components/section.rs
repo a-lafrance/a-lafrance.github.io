@@ -16,6 +16,8 @@ impl Component for BlankSection {
                 <div class="section" id={ ctx.props().name.clone() }>
                     { for ctx.props().children.iter() }
                 </div>
+
+                <hr />
             </>
         }
     }
@@ -43,7 +45,7 @@ impl Component for Section {
             <BlankSection name={ ctx.props().name.clone() }>
                 <h2 class="section-title">{ ctx.props().title.clone() }</h2>
 
-                <div class="section-title">
+                <div class="section-content">
                     { for ctx.props().children.iter() }
                 </div>
             </BlankSection>
