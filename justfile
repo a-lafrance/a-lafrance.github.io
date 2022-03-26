@@ -9,6 +9,7 @@ deploy MSG:
 	fi
 
 	trunk build --release
+	cp CNAME dist
 
 	git add .
 	git commit -m "deploy: {{ MSG }}"
