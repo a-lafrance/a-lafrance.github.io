@@ -1,4 +1,5 @@
-use yew::{html, Component, Context, Html, Properties};
+use super::{entry::EntryProps, section::Section, Entry};
+use yew::{html, Children, Component, Context, Html, Properties};
 
 pub struct List;
 
@@ -11,34 +12,31 @@ impl Component for List {
     }
 
     fn view(&self, ctx: &Context<Self>) -> Html {
-        // NOTE: the giant iterator htmlgen chain might look a bit ugly lol
+        let items = ctx.props().items.iter()
+            .cloned()
+            .enumerate()
+            .map(|(i, item)| html! {
+                <div key={ i }>
+                    <li class="list-item" key={ i }>
+                        { item.text }
+                    </li>
+
+                    {
+                        for item.subitems.iter()
+                            .cloned()
+                            .enumerate()
+                            .map(|(j, subitem)| html! {
+                                <li class="list-item list-subitem" key={ j }>
+                                    { subitem }
+                                </li>
+                            })
+                    }
+                </div>
+            });
+
         html! {
             <ul class="list">
-                {
-                    ctx.props().items.iter()
-                        .cloned()
-                        .enumerate()
-                        .map(|(i, item)| html! {
-                            <div key={ i }>
-                                <li class="list-item" key={ i }>
-                                    { item.text }
-                                </li>
-
-                                {
-                                    item.subitems.iter()
-                                        .cloned()
-                                        .enumerate()
-                                        .map(|(j, subitem)| html! {
-                                            <li class="list-item list-subitem" key={ j }>
-                                                { subitem }
-                                            </li>
-                                        })
-                                        .collect::<Html>()
-                                }
-                            </div>
-                        })
-                        .collect::<Html>()
-                }
+                { for items }
             </ul>
         }
     }
@@ -53,4 +51,45 @@ pub struct ListProps {
 pub struct ListItem {
     pub text: String,
     pub subitems: Vec<String>,
+}
+
+
+pub struct EntryList;
+
+impl Component for EntryList {
+    type Message = ();
+    type Properties = EntryListProps;
+
+    fn create(_: &Context<Self>) -> Self {
+        EntryList
+    }
+
+    fn view(&self, ctx: &Context<Self>) -> Html {
+        let entries = ctx.props().entries.iter()
+            .cloned()
+            .enumerate()
+            .map(|(i, entry)| html! {
+                <Entry key={ i }
+                       link={ entry.link }
+                       title={ entry.title }
+                       subtitles={ entry.subtitles }
+                       description={ entry.description }
+                />
+            });
+
+        html! {
+            <Section name={ ctx.props().name.clone() } title={ ctx.props().title.clone() }>
+                { for ctx.props().children.iter() }
+                { for entries }
+            </Section>
+        }
+    }
+}
+
+#[derive(Clone, Debug, PartialEq, Properties)]
+pub struct EntryListProps {
+    pub name: String,
+    pub title: String,
+    pub entries: Vec<EntryProps>,
+    #[prop_or_default] pub children: Children,
 }

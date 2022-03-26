@@ -22,17 +22,16 @@ impl Component for Entry {
             },
         };
 
-        let subtitles: Vec<Html> = ctx.props().subtitles.iter()
+        let subtitles = ctx.props().subtitles.iter()
             .cloned()
             .enumerate()
-            .map(|(i, st)| html! { <h5 key={ i }>{ st }</h5> })
-            .collect();
+            .map(|(i, st)| html! { <h5 key={ i }>{ st }</h5> });
 
         html! {
             <div class="entry">
                 <div class="entry-header">
                     <h4 class="title navy">{ title_content }</h4>
-                    { subtitles }
+                    { for subtitles }
                 </div>
 
                 <p class="description">{ ctx.props().description.clone() }</p>
@@ -46,6 +45,6 @@ impl Component for Entry {
 pub struct EntryProps {
     pub link: Option<String>,
     pub title: String,
-    pub subtitles: Vec<String>,
+    #[prop_or_default] pub subtitles: Vec<String>,
     pub description: String,
 }
