@@ -1,8 +1,8 @@
 mod components;
 
 use crate::components::{
-    list::ListItem,
-    Button, Entry, Link, List,
+    list::{List, ListItem},
+    Button, Entry, Link,
 };
 use yew::{html};
 
