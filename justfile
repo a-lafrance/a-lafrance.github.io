@@ -1,4 +1,4 @@
-deploy:
+deploy MSG:
 	#!/usr/bin/env sh
 	CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
 
@@ -9,4 +9,9 @@ deploy:
 	fi
 
 	trunk build --release
-	git subtree push --prefix=dist origin deploy
+
+	git add .
+	git commit -m "{{ MSG }}"
+	git push origin master
+	# git subtree push --prefix=dist origin deploy
+	git push origin `git subtree split --prefix=dist master`:deploy --force
