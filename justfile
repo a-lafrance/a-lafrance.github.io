@@ -1,4 +1,4 @@
-deploy MSG:
+deploy:
 	#!/usr/bin/env sh
 	CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
 
@@ -9,9 +9,4 @@ deploy MSG:
 	fi
 
 	trunk build --release
-	cp CNAME dist
-
-	git add .
-	git commit -m "deploy: {{ MSG }}"
-	git push origin master
 	git subtree push --prefix=dist origin deploy
