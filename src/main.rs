@@ -13,12 +13,9 @@ use yew::{html};
 #[yew::function_component(App)]
 fn app() -> Html {
     let content = Content::build();
-    let bio_pt1 = "
+    let bio = "
         Born & raised in Silicon Valley; currently studying computer science at UC Irvine, class of 2023.
-        Also in between summers at
-    ";
-    let bio_pt2 = "
-        Meta. I'm broadly interested in programming language design & implementation, operating systems,
+        Also in between summers at Meta. I'm broadly interested in programming language design & implementation, operating systems,
         and systems security. Among other things, networking, computer architecture, and electrical/computer
         engineering are also cool.
     ";
@@ -35,7 +32,7 @@ fn app() -> Html {
                         <h1 class="navy">{ "Hi, " }<span id="name-small">{ "I'm Arthur" }</span></h1>
 
                         <div id="bottom">
-                            <p>{ bio_pt1 } <span class="strikethrough">{ "Facebook" }</span> { bio_pt2 }</p>
+                            <p>{ bio }</p>
 
                             <div id="contact">
                               <p>{ "To learn more about me or get in touch, feel free to check out:" }</p>
