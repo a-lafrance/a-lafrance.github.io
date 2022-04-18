@@ -11,7 +11,7 @@ deploy MSG:
 	trunk build --release
 
 	git add .
-	git commit -m "{{ MSG }}"
+	git commit -m "deploy: {{ MSG }}"
 	git push origin master
 	# git subtree push --prefix=dist origin deploy
 	git push origin `git subtree split --prefix=dist master`:deploy --force

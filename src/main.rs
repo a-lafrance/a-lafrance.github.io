@@ -16,8 +16,7 @@ fn app() -> Html {
     let bio = "
         Born & raised in Silicon Valley; currently studying computer science at UC Irvine, class of 2023.
         Also in between summers at Meta. I'm broadly interested in programming language design & implementation, operating systems,
-        and systems security. Among other things, networking, computer architecture, and electrical/computer
-        engineering are also cool.
+        systems security, and Rust.
     ";
     let contact_buttons = content.contact_methods.iter()
         .map(|m| html! {
@@ -59,7 +58,7 @@ fn app() -> Html {
             <EntryList name="past-work" title="Things I've Worked On" entries={ content.past_work } />
 
             <Section name="resume-dump" title="Resume Dump">
-                <p class="description">{ "A wall of text (somewhat) repurposed from my resume" }</p>
+                <p class="description">{ "My resume, but bite-sized" }</p>
                 <List items={ content.resume_dump } />
             </Section>
 

@@ -18,7 +18,6 @@ impl Content {
             ],
 
             highlights: vec![
-                ListItem { text: "Foodpool launched in closed alpha in March 2022!".to_string(), subitems: vec![] },
                 ListItem {
                     text: "I'll be returning to Meta for summer 2022, where I'm hoping to continue working with PLs & compilers.".to_string(),
                     subitems: vec![]
@@ -43,24 +42,28 @@ impl Content {
 
             current_work: vec![
                 EntryData {
-                    link: Some("https://foodpool.app".to_string()),
-                    title: "Foodpool".to_string(),
+                    link: None,
+                    title: "RedCC".to_string(),
                     subtitles: vec![],
                     description: "
-                        About 6 months ago, my roommates and I started Foodpool, a food delivery startup that's building affordable delivery through \"foodpooling\"
-                        (think carpooling, but with food delivery). At this point we're iterating on our initial project to validate our business model & iron out the kinks with it. We
-                        write Swift for our iOS app and our backend stack is done in Rust, so it's been really cool to work with both languages and platforms in a 0-to-100
-                        production setting. In recent news, we launched in closed alpha (the \"initial product\" I mentioned); hopefully there are more exciting things to come!
+                        RedCC is the research project I'm currently working on, where I'm augmenting the Rust compiler to transparently uphold a special invariant about
+                        RedLeaf's shared heap. This is just a fancy technical way to say that I'm hacking my own MIR pass into a custom fork of the Rust compiler that
+                        will enforce a rule about ownership in RedLeaf's shared heap, without users of the compiler even knowing about it. Well, I guess that was still
+                        pretty technical, but whatever. Anyway, what this means is that I've basically been diving deep into how the Rust compiler works to implement
+                        the pass myself, after some brainstorming & design with the rest of the team. Having such autonomy to add a pretty big piece to a
+                        really complex piece of software has been a great technical challenge so far.
                     ".to_string(),
                 },
                 EntryData {
-                    link: Some("https://github.com/a-lafrance/lfc".to_string()),
-                    title: "lfc".to_string(),
+                    link: None,
+                    title: "tinyc (CS 142B)".to_string(),
                     subtitles: vec![],
                     description: "
-                        Relative to most (all?) modern languages, C doesn't give you much out of the box. Most of what I'd consider part of a language's standard library aren't
-                        really there, save for whatever systems utilities libc gives you. I tend to need that stuff in some form when I write C, so I decided to write all of it
-                        once so that I can use it anywhere I need to by compiling it into this handy library of miscellaneous C utilities.
+                        In CS 142B the quarter-long goal is basically to write your own compiler from scratch, given a toy language called \"tiny\" and a general outline of how
+                        the compiler should work. We're given more or less complete freedom for the actual implementation of the compiler (e.g. language, design of the actual
+                        compiler software), which is a great challenge because it lets me think through tough architecture problems firsthand, implement the designs I come up with,
+                        and even iterate on them when the requirements for those APIs change. It's turning out to be one of the most complex systems I've ever built,
+                        so that's pretty cool. Oh, and of course I chose to do it in Rust.
                     ".to_string(),
                 },
                 EntryData {
@@ -68,8 +71,7 @@ impl Content {
                     title: "...and others".to_string(),
                     subtitles: vec![],
                     description: "
-                        As has always been the case for me, there are a couple projects taking up my spare time, that may or may not end up
-                        seeing the light of day. If they do, great! They'll make it onto this list. If not, good thing I didn't put them here prematurely.
+                        One of these days maybe I'll finally find time to work on my personal projects so I have more stuff to put here.
                     ".to_string(),
                 },
             ],
@@ -91,7 +93,7 @@ impl Content {
 
             resume_dump: vec![
                 ListItem {
-                    text: "My background and goals in 4 sentences:".to_string(),
+                    text: "A bit about my background & interests in 4 sentences:".to_string(),
                     subitems: vec![
                         "I've used Rust for static analysis, and to write compilers, operating systems, web servers, and more–I've even contributed to Rust in Rust.".to_string(),
                         "I've used C and C++ for compiler development, graph alignment research, and (of course) personal projects".to_string(),
