@@ -19,7 +19,7 @@ impl Content {
 
             highlights: vec![
                 ListItem {
-                    text: "I'll be returning to Meta for summer 2022, where I'm hoping to continue working with PLs & compilers.".to_string(),
+                    text: "I'll be returning to Meta for summer 2022, where I'll be working on compilers & code generation.".to_string(),
                     subitems: vec![]
                 },
                 ListItem {
