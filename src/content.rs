@@ -95,9 +95,9 @@ impl Content {
                 ListItem {
                     text: "A bit about my background & interests in 4 sentences:".to_string(),
                     subitems: vec![
-                        "I've used Rust for static analysis, and to write compilers, operating systems, web servers, and more–I've even contributed to Rust in Rust.".to_string(),
+                        "I've used Rust for static analysis, and to write compilers, operating systems, web backends, and more–I've even contributed to Rust in Rust.".to_string(),
                         "I've used C and C++ for compiler development, graph alignment research, and (of course) personal projects".to_string(),
-                        "I've used Python mostly for task automation, and also for graph alignment research, web servers, and school stuff".to_string(),
+                        "I've used Python mostly for task automation, and also for graph alignment research, web backends, and school stuff".to_string(),
                         "I'd also like to pick up/get involved with, among other things: Haskell/OCaml, Wasm, RISC-V".to_string(),
                     ],
                 },
