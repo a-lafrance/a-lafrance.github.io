@@ -23,7 +23,7 @@ impl Content {
                     subitems: vec![]
                 },
                 ListItem {
-                    text: "As of late 2021, I've been working on operating systems & security in Rust with Prof. Anton Burtsev's Mars Group.".to_string(),
+                    text: "As of late 2021, I joined Prof. Anton Burtsev's Mars Group, working on research in operating systems & security.".to_string(),
                     subitems: vec![]
                 },
                 ListItem {

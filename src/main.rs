@@ -49,13 +49,13 @@ fn app() -> Html {
                 <List items={ content.highlights } />
             </Section>
 
-            <EntryList name="current-work" title="Things I'm Working On" entries={ content.current_work }>
-                <p class="description">
-                    { "I tend to switch gears pretty frequently, so this section will tend to change just as frequently" }
-                </p>
-            </EntryList>
-
-            <EntryList name="past-work" title="Things I've Worked On" entries={ content.past_work } />
+            // <EntryList name="current-work" title="Things I'm Working On" entries={ content.current_work }>
+            //     <p class="description">
+            //         { "I tend to switch gears pretty frequently, so this section will tend to change just as frequently" }
+            //     </p>
+            // </EntryList>
+            //
+            // <EntryList name="past-work" title="Things I've Worked On" entries={ content.past_work } />
 
             <Section name="resume-dump" title="Resume Dump">
                 <p class="description">{ "My resume, but bite-sized" }</p>
