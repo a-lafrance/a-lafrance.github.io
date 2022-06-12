@@ -2,7 +2,7 @@ mod components;
 mod content;
 
 use components::{
-    list::{EntryList, List},
+    list::List,
     section::{BlankSection, Section},
     Button,
 };
@@ -13,11 +13,6 @@ use yew::{html};
 #[yew::function_component(App)]
 fn app() -> Html {
     let content = Content::build();
-    let bio = "
-        Born & raised in Silicon Valley; currently studying computer science at UC Irvine, class of 2023.
-        Also in between summers at Meta. I'm broadly interested in programming language design & implementation, operating systems,
-        systems security, and Rust.
-    ";
     let contact_buttons = content.contact_methods.iter()
         .map(|m| html! {
             <Button title={ m.name } dest={ m.link }/>
@@ -31,11 +26,9 @@ fn app() -> Html {
                         <h1 class="navy">{ "Hi, " }<span id="name-small">{ "I'm Arthur" }</span></h1>
 
                         <div id="bottom">
-                            <p>{ bio }</p>
+                            <p>{ content.bio }</p>
 
                             <div id="contact">
-                              <p>{ "To learn more about me or get in touch, feel free to check out:" }</p>
-
                               <div class="button-group">
                                   { for contact_buttons }
                               </div>

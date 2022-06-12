@@ -1,6 +1,7 @@
 use crate::components::{entry::EntryData, list::ListItem};
 
 pub struct Content {
+    pub bio: &'static str,
     pub contact_methods: Vec<ContactMethod>,
     pub highlights: Vec<ListItem>,
     pub current_work: Vec<EntryData>,
@@ -11,19 +12,29 @@ pub struct Content {
 impl Content {
     pub fn build() -> Content {
         Content {
+            bio: "
+                Born & raised in Silicon Valley. Currently studying computer science at UC Irvine ('23) where I'm fortunate enough to
+                work with Prof. Anton Burtsev. Also in between summers working on compilers @ Meta. I'm broadly interested in
+                programming language design & implementation, operating systems, and security. I also enjoy messing around with Rust,
+                both as a user and as a contributor to the ecosystem.
+            ",
+
             contact_methods: vec![
-                ContactMethod { name: "Email", link: "mailto:lafrancearthur@gmail.com" },
                 ContactMethod { name: "GitHub", link: "https://github.com/a-lafrance" },
                 ContactMethod { name: "LinkedIn", link: "https://linkedin.com/in/arthurlafrance" },
             ],
 
             highlights: vec![
                 ListItem {
-                    text: "I'll be returning to Meta for summer 2022, where I'll be working on compilers & code generation.".to_string(),
+                    text: "I'll be returning to Meta for summer 2022, where I'll be working on cross-language compilers & code generation.".to_string(),
                     subitems: vec![]
                 },
                 ListItem {
-                    text: "As of late 2021, I joined Prof. Anton Burtsev's Mars Group, working on research in operating systems & security.".to_string(),
+                    text: "Foodpool was accepted into the Blackstone LaunchPad summer 2022 cohort & placed 2nd in the UCI Butterworth Competition.".to_string(),
+                    subitems: vec![]
+                },
+                ListItem {
+                    text: "Since late 2021, I work with Prof. Anton Burtsev's group on research in security-focused operating system design.".to_string(),
                     subitems: vec![]
                 },
                 ListItem {
@@ -92,21 +103,29 @@ impl Content {
             ],
 
             resume_dump: vec![
-                ListItem {
-                    text: "A bit about my background & interests in 4 sentences:".to_string(),
+                ListItem{
+                    text: "Some of my work, in brief:".to_string(),
                     subitems: vec![
-                        "I've used Rust for static analysis, and to write compilers, operating systems, web backends, and more–I've even contributed to Rust in Rust.".to_string(),
-                        "I've used C and C++ for compiler development, graph alignment research, and (of course) personal projects".to_string(),
-                        "I've used Python mostly for task automation, and also for graph alignment research, web backends, and school stuff".to_string(),
-                        "I'd also like to pick up/get involved with, among other things: Haskell/OCaml, Wasm, RISC-V".to_string(),
+                        "I'm working on a startup, Foodpool, that provides affordable food delivery to college students.".to_string(),
+                        "I wrote a pretty cool compiler, tinyc, for CS 142B (and of course I used Rust).".to_string(),
+                        "My tiny contribution to the Rust ecosystem is a small enum ergonimics crate, discrim.".to_string(),
                     ],
                 },
                 ListItem {
-                    text: "I've taken lots of cool classes, but my favorites include:".to_string(),
+                    text: "A bit about my background & interests:".to_string(),
                     subitems: vec![
-                        "ICS 53: Principles in System Design".to_string(),
-                        "CS 142B: Language Processor Construction (so far)".to_string(),
+                        "I've used Rust to write compilers, operating systems, web backends, and more–I've even contributed to Rust in Rust.".to_string(),
+                        "I've used C and C++ for compiler development, general systems development, and (of course) personal projects.".to_string(),
+                        "I've used Python mostly for task automation, and also for web backends and school stuff.".to_string(),
+                        "I'd also like to pick up/get involved with, among other things: Haskell/OCaml, Wasm, RISC-V.".to_string(),
+                    ],
+                },
+                ListItem {
+                    text: "A few of my favorite classes:".to_string(),
+                    subitems: vec![
+                        "CS 142B: Language Processor Construction".to_string(),
                         "CS 162: Formal Languages & Automata".to_string(),
+                        "ICS 53: Principles in System Design".to_string(),
                     ],
                 },
             ],
