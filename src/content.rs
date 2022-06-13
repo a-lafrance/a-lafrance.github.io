@@ -13,10 +13,9 @@ impl Content {
     pub fn build() -> Content {
         Content {
             bio: "
-                Born & raised in Silicon Valley. Currently studying computer science at UC Irvine ('23) where I'm fortunate enough to
-                work with Prof. Anton Burtsev. Also in between summers working on compilers @ Meta. I'm broadly interested in
-                programming language design & implementation, operating systems, and security. I also enjoy messing around with Rust,
-                both as a user and as a contributor to the ecosystem.
+                I'm a CS student at UC Irvine ('23), where I'm fortunate to work with Prof. Anton Burtsev. I've also spent two summers working on compilers at Meta.
+                My primary interests are in developer infrastructure and systems software: I enjoy creating tools that help people make great software,
+                especially programming languages, compilers, and operating systems. To that end, I'm a frequent user of and contributor to the Rust ecosystem.
             ",
 
             contact_methods: vec![
@@ -115,9 +114,9 @@ impl Content {
                     text: "A bit about my background & interests:".to_string(),
                     subitems: vec![
                         "I've used Rust to write compilers, operating systems, web backends, and more–I've even contributed to Rust in Rust.".to_string(),
-                        "I've used C and C++ for compiler development, general systems development, and (of course) personal projects.".to_string(),
+                        "I've used C and C++ for compiler and general high-performance systems/infrastructure development.".to_string(),
                         "I've used Python mostly for task automation, and also for web backends and school stuff.".to_string(),
-                        "I'd also like to pick up/get involved with, among other things: Haskell/OCaml, Wasm, RISC-V.".to_string(),
+                        "I'd also like to pick up, among other things: Haskell, Wasm, RISC-V, and type theory.".to_string(),
                     ],
                 },
                 ListItem {
