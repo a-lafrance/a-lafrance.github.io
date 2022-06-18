@@ -20,7 +20,7 @@ impl Content {
 
             contact_methods: vec![
                 ContactMethod { name: "GitHub", link: "https://github.com/a-lafrance" },
-                ContactMethod { name: "LinkedIn", link: "https://linkedin.com/in/arthurlafrance" },
+                ContactMethod { name: "LinkedIn", link: "https://linkedin.com/in/a-lafrance" },
             ],
 
             highlights: vec![
