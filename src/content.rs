@@ -25,7 +25,7 @@ impl Content {
 
             highlights: vec![
                 ListItem {
-                    text: "I'll be returning to Meta for summer 2022, where I'll be working on cross-language compilers & code generation.".to_string(),
+                    text: "I'm currently at Meta for summer 2022, working on a polyglot cross-language compiler project.".to_string(),
                     subitems: vec![]
                 },
                 ListItem {
