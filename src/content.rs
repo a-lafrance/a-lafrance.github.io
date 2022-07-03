@@ -114,9 +114,10 @@ impl Content {
                     text: "A bit about my background & interests:".to_string(),
                     subitems: vec![
                         "I've used Rust to write compilers, operating systems, web backends, and more–I've even contributed to Rust in Rust.".to_string(),
-                        "I've used C and C++ for compiler and general high-performance systems/infrastructure development.".to_string(),
+                        "I've used C and C++ general high-performance systems/infrastructure development, particularly compilers.".to_string(),
                         "I've used Python mostly for task automation, and also for web backends and school stuff.".to_string(),
-                        "I'd also like to pick up, among other things: Haskell, Wasm, RISC-V, and type theory.".to_string(),
+                        "I'd also like to pick up, among other things: functional programming, Wasm, RISC-V, and type theory.".to_string(),
+                        "In my spare time, I'm reading \"Learn You a Haskell for Great Good\" and listening to lots of 60's rock.".to_string(),
                     ],
                 },
                 ListItem {
