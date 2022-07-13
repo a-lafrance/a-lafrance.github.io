@@ -108,6 +108,7 @@ impl Content {
                         "I'm working on a startup, Foodpool, that provides affordable food delivery to college students.".to_string(),
                         "I wrote a pretty cool compiler, tinyc, for CS 142B (and of course I used Rust).".to_string(),
                         "My tiny contribution to the Rust ecosystem is a small enum ergonimics crate, discrim.".to_string(),
+                        "With Prof. Anton Burtsev's Mars group, I'm working on a modified Rustc toolchain to support the RedLeaf architecture.".to_string(),
                     ],
                 },
                 ListItem {
