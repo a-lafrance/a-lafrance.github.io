@@ -8,55 +8,33 @@ use components::{
 };
 use content::Content;
 
-use yew::{html};
+use yew::html;
 
 #[yew::function_component(App)]
 fn app() -> Html {
     let content = Content::build();
-    let contact_buttons = content.contact_methods.iter()
-        .map(|m| html! {
-            <Button title={ m.name } dest={ m.link }/>
-        });
+    let contact_methods = content
+        .contact_methods
+        .into_iter()
+        .map(|method| {
+            html! {
+                <a href={ method.link } class="link navy">{ method.name }</a>
+            }
+        })
+        .collect::<Vec<_>>();
 
     html! {
-        <div>
-            <BlankSection name="intro">
-                <div id="intro-content">
-                    <div id="bio">
-                        <h1 class="navy">{ "Hi, " }<span id="name-small">{ "I'm Arthur" }</span></h1>
-
-                        <div id="bottom">
-                            <p>{ content.bio }</p>
-
-                            <div id="contact">
-                              <div class="button-group">
-                                  { for contact_buttons }
-                              </div>
-                            </div>
-                        </div>
-                    </div>
+        <div class="root">
+            <div class="bio">
+                <h1 class="title navy">{ "Arthur Lafrance" }</h1>
+                <h2 class="headline">{ content.headline }</h2>
+                <div class="contact-methods">
+                    { contact_methods }
                 </div>
-            </BlankSection>
+            </div>
 
-            <Section name="highlights" title="Highlights">
-                <List items={ content.highlights } />
-            </Section>
-
-            // <EntryList name="current-work" title="Things I'm Working On" entries={ content.current_work }>
-            //     <p class="description">
-            //         { "I tend to switch gears pretty frequently, so this section will tend to change just as frequently" }
-            //     </p>
-            // </EntryList>
-            //
-            // <EntryList name="past-work" title="Things I've Worked On" entries={ content.past_work } />
-
-            <Section name="resume-dump" title="Resume Dump">
-                <p class="description">{ "My resume, but bite-sized" }</p>
-                <List items={ content.resume_dump } />
-            </Section>
-
-            <div class="footer">
-                <p class="copyright navy">{ "Copyright (c) 2022 Arthur Lafrance" }</p>
+            <div class="content">
+                <p>{ "Stuff will be here soon" }</p>
             </div>
         </div>
     }

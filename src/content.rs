@@ -1,5 +1,5 @@
 use crate::components::{entry::EntryData, list::ListItem};
-
+/*
 pub struct Content {
     pub bio: &'static str,
     pub contact_methods: Vec<ContactMethod>,
@@ -128,6 +128,30 @@ impl Content {
                         "CS 162: Formal Languages & Automata".to_string(),
                         "ICS 53: Principles in System Design".to_string(),
                     ],
+                },
+            ],
+        }
+    }
+}
+*/
+
+pub struct Content {
+    pub headline: &'static str,
+    pub contact_methods: Vec<ContactMethod>,
+}
+
+impl Content {
+    pub fn build() -> Content {
+        Content {
+            headline: "This is my headline",
+            contact_methods: vec![
+                ContactMethod {
+                    name: "GitHub",
+                    link: "https://github.com/a-lafrance",
+                },
+                ContactMethod {
+                    name: "LinkedIn",
+                    link: "https://linkedin.com/in/a-lafrance",
                 },
             ],
         }
