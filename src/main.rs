@@ -3,6 +3,7 @@ mod content;
 
 use components::{
     list::List,
+    link::Link,
     section::{BlankSection, Section},
     Button,
 };
@@ -26,7 +27,17 @@ fn app() -> Html {
                         <h1 class="navy">{ "Hi, " }<span id="name-small">{ "I'm Arthur" }</span></h1>
 
                         <div id="bottom">
-                            <p>{ content.bio }</p>
+                            <p>{ "
+                            Current CS undergrad at UC Irvine ('23), where I'm fortunate to work with Profs. Anton Burtsev and Michael Franz. I've spent two summers working on compilers @ Meta, and I'm hoping to get involved 
+                            with compilers full-time post-grad. Huge Rust nerd; will shill about it at any time given the opportunity." }
+                            <br /><br />
+                            { "Outside of technical stuff, I've been getting pretty deep into music lately. My taste spans pretty much anything from the 60s onward, but I have a soft spot for 60s classic rock, 90s/00s indie,
+                            and 00s hip hop. To that end, I've been known to offer a music opinion or two " }
+                            <Link text="here" href="https://instagram.com/goodvibrations._" />
+                            { "." }
+                            <br /><br />
+                            { "I'm also in the process of sprucing up this site, if I can ever get around to finishing it." }
+                            </p>
 
                             <div id="contact">
                               <div class="button-group">
@@ -51,7 +62,7 @@ fn app() -> Html {
             // <EntryList name="past-work" title="Things I've Worked On" entries={ content.past_work } />
 
             <Section name="resume-dump" title="Resume Dump">
-                <p class="description">{ "My resume, but bite-sized" }</p>
+                <p class="description">{ "My resume, but bite-sized (with links if I can ever get Yew to cooperate)" }</p>
                 <List items={ content.resume_dump } />
             </Section>
 

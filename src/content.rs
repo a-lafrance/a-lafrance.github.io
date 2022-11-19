@@ -1,7 +1,6 @@
 use crate::components::{entry::EntryData, list::ListItem};
 
 pub struct Content {
-    pub bio: &'static str,
     pub contact_methods: Vec<ContactMethod>,
     pub highlights: Vec<ListItem>,
     pub current_work: Vec<EntryData>,
@@ -12,12 +11,6 @@ pub struct Content {
 impl Content {
     pub fn build() -> Content {
         Content {
-            bio: "
-                I'm a CS student at UC Irvine ('23), where I'm fortunate to work with Prof. Anton Burtsev. I've also spent two summers working on compilers at Meta.
-                My primary interests are in developer infrastructure and systems software: I enjoy creating tools that help people make great software,
-                especially programming languages, compilers, and operating systems. To that end, I'm a frequent user of and contributor to the Rust ecosystem.
-            ",
-
             contact_methods: vec![
                 ContactMethod { name: "GitHub", link: "https://github.com/a-lafrance" },
                 ContactMethod { name: "LinkedIn", link: "https://linkedin.com/in/a-lafrance" },
@@ -25,11 +18,11 @@ impl Content {
 
             highlights: vec![
                 ListItem {
-                    text: "I'm currently at Meta for summer 2022, working on a polyglot cross-language compiler project.".to_string(),
-                    subitems: vec![]
+                    text: "Starting fall 2022, I've been working with Prof. Michael Franz's Secure Systems Lab on LLVM-based compilers & static analysis.".to_string(),
+                    subitems: vec![],
                 },
                 ListItem {
-                    text: "Foodpool was accepted into the Blackstone LaunchPad summer 2022 cohort & placed 2nd in the UCI Butterworth Competition.".to_string(),
+                    text: "I interned at Meta during summer 2022, where I worked on a polyglot cross-language compiler project.".to_string(),
                     subitems: vec![]
                 },
                 ListItem {
@@ -102,31 +95,21 @@ impl Content {
             ],
 
             resume_dump: vec![
-                ListItem{
-                    text: "Some of my work, in brief:".to_string(),
-                    subitems: vec![
-                        "I'm working on a startup, Foodpool, that provides affordable food delivery to college students.".to_string(),
-                        "I wrote a pretty cool compiler, tinyc, for CS 142B (and of course I used Rust).".to_string(),
-                        "My tiny contribution to the Rust ecosystem is a small enum ergonimics crate, discrim.".to_string(),
-                        "With Prof. Anton Burtsev's Mars group, I'm working on a modified Rustc toolchain to support the RedLeaf architecture.".to_string(),
-                    ],
-                },
                 ListItem {
                     text: "A bit about my background & interests:".to_string(),
                     subitems: vec![
-                        "I've used Rust to write compilers, operating systems, web backends, and more–I've even contributed to Rust in Rust.".to_string(),
-                        "I've used C and C++ general high-performance systems/infrastructure development, particularly compilers.".to_string(),
-                        "I've used Python mostly for task automation, and also for web backends and school stuff.".to_string(),
-                        "I'd also like to pick up, among other things: functional programming, Wasm, RISC-V, and type theory.".to_string(),
-                        "In my spare time, I'm reading \"Learn You a Haskell for Great Good\" and listening to lots of 60's rock.".to_string(),
+                        "I've been exposed to a variety of systems disciplines (especially compilers) in both a research and industry capacity.".to_string(),
+                        "I've been writing a ton of Rust recently, and keeping my C, C++, Python, and Swift skills sharp too (among others).".to_string(),
+                        "I'm vaguely interested in the use of compilers for AI acceleration, which I'd like to learn more about.".to_string(),
+                        "In my spare time, I'm reading \"Learn You a Haskell for Great Good\" and listening to too much music.".to_string(),
                     ],
                 },
                 ListItem {
                     text: "A few of my favorite classes:".to_string(),
                     subitems: vec![
                         "CS 142B: Language Processor Construction".to_string(),
-                        "CS 162: Formal Languages & Automata".to_string(),
                         "ICS 53: Principles in System Design".to_string(),
+                        "MUSIC 8: The Beatles & the 60s".to_string(),
                     ],
                 },
             ],
