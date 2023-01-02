@@ -98,7 +98,7 @@ impl Content {
                 ListItem {
                     text: "A bit about my background & interests:".to_string(),
                     subitems: vec![
-                        "I've been exposed to a variety of systems disciplines (especially compilers) in both a research and industry capacity.".to_string(),
+                        "I've worked with a variety of systems disciplines (especially compilers) in both research and industry.".to_string(),
                         "I've been writing a ton of Rust recently, and keeping my C, C++, Python, and Swift skills sharp too (among others).".to_string(),
                         "I'm vaguely interested in the use of compilers for AI acceleration, which I'd like to learn more about.".to_string(),
                         "In my spare time, I'm reading \"Learn You a Haskell for Great Good\" and listening to too much music.".to_string(),
