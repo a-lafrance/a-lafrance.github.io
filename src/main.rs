@@ -24,7 +24,7 @@ fn app() -> Html {
             <BlankSection name="intro">
                 <div id="intro-content">
                     <div id="bio">
-                        <h1 class="navy">{ "Hi, " }<span id="name-small">{ "I'm Arthur" }</span></h1>
+                        <h1>{ "Hi, " }<span id="name-small">{ "I'm Arthur" }</span></h1>
 
                         <div id="bottom">
                             <p>
@@ -68,7 +68,7 @@ fn app() -> Html {
             </Section>
 
             <div class="footer">
-                <p class="copyright navy">{ "Copyright (c) 2022 Arthur Lafrance" }</p>
+                <p class="copyright">{ "Copyright (c) 2022 Arthur Lafrance" }</p>
             </div>
         </div>
     }

@@ -18,7 +18,7 @@ impl Content {
 
             highlights: vec![
                 ListItem {
-                    text: "Starting fall 2022, I've been working with Prof. Michael Franz's Secure Systems Lab on LLVM-based compilers & static analysis.".to_string(),
+                    text: "Starting fall 2022, I've been working with Prof. Michael Franz on dataflow & alias analysis in compilers.".to_string(),
                     subitems: vec![],
                 },
                 ListItem {
@@ -26,7 +26,7 @@ impl Content {
                     subitems: vec![]
                 },
                 ListItem {
-                    text: "Since late 2021, I work with Prof. Anton Burtsev's group on research in security-focused operating system design.".to_string(),
+                    text: "Since late 2021, I work with Prof. Anton Burtsev on research in security-focused operating system design.".to_string(),
                     subitems: vec![]
                 },
                 ListItem {

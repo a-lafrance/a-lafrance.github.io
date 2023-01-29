@@ -13,7 +13,7 @@ impl Component for Link {
     fn view(&self, ctx: &Context<Self>) -> Html {
         // FIXME: clone bad
         html! {
-            <a class="link navy" href={ ctx.props().href.clone() }>{ &ctx.props().text }</a>
+            <a class="link" href={ ctx.props().href.clone() }>{ &ctx.props().text }</a>
         }
     }
 }
