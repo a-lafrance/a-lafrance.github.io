@@ -28,9 +28,7 @@ fn app() -> Html {
 
                         <div id="bottom">
                             <p>
-                            { "I do stuff in art and software." }
-                            <br /><br />
-                            { "I'm a current CS undergrad at UC Irvine, where I'm fortunate to work with Profs. Anton Burtsev and Michael Franz. I've spent two summers working on compilers @ Meta; I'll be working on [redacted] @ TikTok post-grad. I'm also a huge Rust nerd, and will shill about it at any time given the opportunity." }
+                            { "I'm a current CS undergrad at UC Irvine, where I'm fortunate to work with Profs. Michael Franz & Anton Burtsev. After two summers working on compilers @ Meta; I'll be working on [redacted] @ TikTok post-grad. I'm also a huge Rust nerd, and will shill about it at any time given the opportunity." }
                             <br /><br />
                             { "Outside of technical stuff, I've been getting pretty deep into music lately. My taste spans pretty much anything from the 60s onward, with a soft spot for 60s classic rock, 90s/00s indie,
                             and 00s hip hop. To that end, I've been known to offer a music opinion or two " }
