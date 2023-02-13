@@ -13,13 +13,14 @@ h1 {
   display: flex;
   flex-direction: row;
 
-  padding-left: 2vw;
+  /* padding-left: 2vw; */
 }
 
 #bottom {
-  display: flex;
-  flex-direction: row;
+  /* display: flex;
+  flex-direction: row; */
   color: rgb(250, 250, 250);
+  margin-top: 3vh;
 }
 
 #intro-content {
@@ -34,8 +35,8 @@ h1 {
   font-size: 12pt;
 }
 
-#contact {
-  margin-left: 2vw;
+#media {
+  margin-top: 3vh;
 }
 
 .copyright {
@@ -133,7 +134,7 @@ hr {
 
 .link {
   text-decoration: none;
-  color: rgb(40, 67, 200);
+  color: #2d72e1;
 }
 
 .link:hover {

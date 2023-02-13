@@ -37,12 +37,12 @@ fn app() -> Html {
                             <br /><br />
                             { "I'm also in the process of sprucing up this site, if I can ever get around to finishing it." }
                             </p>
+                        </div>
 
-                            <div id="contact">
-                              <div class="button-group">
-                                  { for contact_buttons }
-                              </div>
-                            </div>
+                        <div id="media">
+                          <div class="button-group">
+                              { for contact_buttons }
+                          </div>
                         </div>
                     </div>
                 </div>
