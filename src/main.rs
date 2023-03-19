@@ -28,10 +28,9 @@ fn app() -> Html {
 
                         <div id="bottom">
                             <p>
-                            { "I'm a current CS undergrad at UC Irvine, where I'm fortunate to work with Profs. Michael Franz & Anton Burtsev. After two summers working on compilers @ Meta; I'll be working on [redacted] @ TikTok post-grad. I'm also a huge Rust nerd, and will shill about it at any time given the opportunity." }
+                            { "I'm a current CS undergrad at UC Irvine, where I'm fortunate to work with Profs. Michael Franz & Anton Burtsev. After two summers working on compilers @ Meta, I'll be working on [redacted] @ TikTok post-grad. I also enjoy working with Rust, maybe a little too much." }
                             <br /><br />
-                            { "Outside of technical stuff, I've been getting pretty deep into music lately. My taste spans pretty much anything from the 60s onward, with a soft spot for 60s classic rock, 90s/00s indie,
-                            and 00s hip hop. To that end, I've been known to offer a music opinion or two " }
+                            { "Outside of technical stuff, I enjoy listening to all kinds of music, and have been known to share an opinion or two " }
                             <Link text="here" href="https://instagram.com/goodvibrations._" />
                             { "." }
                             <br /><br />
@@ -65,9 +64,9 @@ fn app() -> Html {
                 <List items={ content.resume_dump } />
             </Section>
 
-            <div class="footer">
+            /*<div class="footer">
                 <p class="copyright">{ "Copyright (c) 2022 Arthur Lafrance" }</p>
-            </div>
+            </div>*/
         </div>
     }
 }

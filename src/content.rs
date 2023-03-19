@@ -18,7 +18,7 @@ impl Content {
 
             highlights: vec![
                 ListItem {
-                    text: "Starting fall 2022, I've been working with Prof. Michael Franz on dataflow & alias analysis in compilers.".to_string(),
+                    text: "Starting fall 2022, I've been working with Prof. Michael Franz's group on dataflow & alias analysis.".to_string(),
                     subitems: vec![],
                 },
                 ListItem {
@@ -26,11 +26,11 @@ impl Content {
                     subitems: vec![]
                 },
                 ListItem {
-                    text: "Since late 2021, I work with Prof. Anton Burtsev on research in security-focused operating system design.".to_string(),
+                    text: "Since late 2021, I work with Prof. Anton Burtsev's group on security-focused operating system design.".to_string(),
                     subitems: vec![]
                 },
                 ListItem {
-                    text: "I spent summer 2021 at Meta, where I worked on compilers, profiling, & infrastructure.".to_string(),
+                    text: "I spent summer 2021 at Meta, where I worked on profiling in mobile compiler infrastructure.".to_string(),
                     subitems: vec![]
                 },
                 ListItem {
@@ -98,10 +98,10 @@ impl Content {
                 ListItem {
                     text: "A bit about my background & interests:".to_string(),
                     subitems: vec![
-                        "I've worked with a variety of systems disciplines (especially compilers) in both research and industry.".to_string(),
-                        "I've been writing a ton of Rust recently, and keeping my C, C++, Python, and Swift skills sharp too (among others).".to_string(),
-                        "I'm vaguely interested in the use of compilers for AI acceleration, which I'd like to learn more about.".to_string(),
-                        "In my spare time, I'm reading \"Learn You a Haskell for Great Good\" and listening to too much music.".to_string(),
+                        "I've built a background working with compilers in both research and industry.".to_string(),
+                        "Nothing beats writing Rust, but I keep my C, C++, Python, & Swift skills sharp too (among others).".to_string(),
+                        "Programming language design is a quasi-artistic passion of mine.".to_string(),
+                        "In my spare time, I'm playing guitar quite poorly and keeping the Strokes on repeat.".to_string(),
                     ],
                 },
                 ListItem {
