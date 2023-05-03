@@ -1,19 +1,30 @@
 mod components;
 mod content;
 
-use components::{
-    list::List,
-    link::Link,
-    section::{BlankSection, Section},
-    Button,
-};
+use components::{Bio, Divider, Section};
 use content::Content;
 
-use yew::{html};
+use yew::html;
 
 #[yew::function_component(App)]
 fn app() -> Html {
-    let content = Content::build();
+    let content = Content::new();
+
+    html! {
+        <div class="root">
+            <Bio tagline={ content.tagline } links={ content.bio_links } />
+
+            <Section id="these-days" title="These Days" items={ content.current_work } />
+            <Divider />
+            <Section id="prev" title="Previously" items={ content.past_work } />
+            <Divider />
+            <Section id="projects" title="Some Projects" items={ content.projects } />
+            <Divider />
+            <Section id="resume-dump" title="Resume Dump" items={ content.resume_dump } />
+        </div>
+    }
+
+/*
     let contact_buttons = content.contact_methods.iter()
         .map(|m| html! {
             <Button title={ m.name } dest={ m.link }/>
@@ -69,6 +80,7 @@ fn app() -> Html {
             </div>*/
         </div>
     }
+*/
 }
 
 fn main() {
