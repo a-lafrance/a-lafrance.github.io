@@ -1,0 +1,104 @@
+body {
+  margin: 0;
+  background-color: rgb(50, 50, 50);
+}
+
+.root {
+  color: rgb(250, 250, 250);
+  font-family: monospace;
+  font-weight: 100;
+  line-height: 140%;
+
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 20px;
+}
+
+.bio-title {
+  font-size: 30pt;
+  font-weight: normal;
+}
+
+.tagline {
+  font-size: 12pt;
+  padding-left: 20px;
+}
+
+.divider {
+  margin-left: 20px;
+  margin-right: 20px;
+
+  background-color: rgb(250, 250, 250);
+  border-color: rgb(250, 250, 250);
+}
+
+.button-group {
+  display: flex;
+  flex-direction: row;
+}
+
+.bio-links {
+  margin-top: 15px;
+}
+
+.strikethrough {
+    text-decoration: line-through;
+}
+
+.button {
+  margin-right: 30px;
+  font-size: 11pt;
+}
+
+.pane-base {
+  padding-left: 20px;
+}
+
+.section-base {
+  display: grid;
+  grid-template-columns: 240px 1000px;
+
+  padding-left: 20px;
+
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.section-left {
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+
+.section-right {
+  padding-top: 10px;
+
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+
+.section-title {
+  font-size: 18pt;
+}
+
+.link {
+  text-decoration: none;
+  color: rgb(250, 250, 250);
+}
+
+.link-text {
+  color: rgb(70, 140, 180);
+}
+
+.link-text:hover {
+  text-decoration: underline;
+}
+
+.list {
+  padding-left: 2vw;
+}
+
+.list-item {
+  font-size: 11pt;
+  margin-bottom: 15px;
+}
+
