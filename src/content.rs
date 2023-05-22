@@ -10,7 +10,7 @@ pub struct Content {
 impl Content {
     pub fn new() -> Content {
         Content {
-            tagline: "CS undergrad @ UCI. Thinking about PLs, compilers, & systems eng. Mildly annoying Rust nerd.",
+            tagline: "CS @ UCI. Thinking about PLs, compilers, & systems eng. Mildly annoying Rust nerd.",
             bio_links: vec![
                 BioLink { name: "GitHub", link: "https://github.com/a-lafrance" },
                 BioLink { name: "LinkedIn", link: "https://linkedin.com/in/a-lafrance" },
@@ -36,7 +36,7 @@ impl Content {
             ],
             projects: vec![
                 Item(vec![
-                    Token::Text("tinyc: A toy compiler made with Rust "),
+                    Token::Text("tinyc: A toy compiler made with Rust (for UCI CS 142A) "),
                     Token::Media("source", "https://github.com/a-lafrance/tinyc"),
                 ]),
                 Item(vec![
