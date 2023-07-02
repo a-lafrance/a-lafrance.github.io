@@ -31,7 +31,7 @@ impl Content {
                 Item(vec![
                     Token::Text("Making food delivery affordable with "),
                     Token::Media("Foodpool", "https://foodpool.app"),
-                    Token::Text(" as co-founder & CTO "),
+                    Token::Text(" as cofounder & CTO "),
                     Token::Media("in the news", "https://www.ics.uci.edu/community/news/view_news?id=2170"),
                 ]),
             ],
