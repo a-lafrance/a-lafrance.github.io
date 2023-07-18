@@ -41,8 +41,8 @@ impl Content {
                     Token::Media("source", "https://github.com/a-lafrance/tinyc"),
                 ]),
                 Item(vec![
-                    Token::Text("discrim: Reducing Rust enum conversion boilerplate "),
-                    Token::Media("source", "https://github.com/a-lafrance/discrim"),
+                    Token::Text("soccer: Associated constants for Rust enums "),
+                    Token::Media("source", "https://github.com/a-lafrance/soccer"),
                 ]),
                 Item(vec![
                     Token::Text("Small but cool contributions to Rust "),
