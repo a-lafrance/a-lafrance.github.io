@@ -16,10 +16,7 @@ impl Content {
                 BioLink { name: "LinkedIn", link: "https://linkedin.com/in/a-lafrance" },
             ],
             current_work: vec![
-                Item::from("Dataflow & alias analysis research w/ Prof. Michael Franz"),
-                Item::from("Operating systems & security research w/ Prof. Anton Burtsev"),
-                Item::from("Exploring safety, expressiveness, & performance in scripting languages"),
-                Item::from("Getting ready to work on product & systems eng @ TikTok this fall"),
+                Item::from("Product & systems eng @ TikTok starting in the fall"),
                 Item(vec![
                     Token::Media("Writing about music", "https://instagram.com/goodvibrations._"),
                     Token::Text(" that inspires me (and some that doesn't)"),
@@ -27,12 +24,13 @@ impl Content {
                 Item::from("Playing Neutral Milk Hotel & more on guitar quite poorly"),
             ],
             past_work: vec![
+                Item::from("Undergrad systems research w/ Profs. Michael Franz & Anton Burtsev"),
                 Item::from("Compilers & infra @ Meta, summers 2021 & 2022"),
                 Item(vec![
                     Token::Text("Making food delivery affordable with "),
                     Token::Media("Foodpool", "https://foodpool.app"),
                     Token::Text(" as cofounder & CTO "),
-                    Token::Media("in the news", "https://www.ics.uci.edu/community/news/view_news?id=2170"),
+                    Token::Media("media", "https://www.ics.uci.edu/community/news/view_news?id=2170"),
                 ]),
             ],
             projects: vec![
@@ -52,10 +50,9 @@ impl Content {
                 ]),
             ],
             resume_dump: vec![
+                Item::from("Vaguely interested in research in compilers & program analysis for optimization & security"),
                 Item::from("Nothing beats writing Rust, but I keep my C, C++, Python, & Swift skills sharp too"),
-                Item::from("I've built a background working with compilers in both research and industry"),
                 Item::from("I've worked with core compiler technologies (LLVM & MLIR) as a user and contributor"),
-                Item::from("Interested in research at the intersection of compilers, program analysis, and systems"),
             ],
         }
     }
