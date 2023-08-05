@@ -24,6 +24,7 @@ impl Content {
                 Item::from("Playing Neutral Milk Hotel & more on guitar quite poorly"),
             ],
             past_work: vec![
+                Item::from("Got a BS in CS from UCI, class of 2023"),
                 Item::from("Undergrad systems research w/ Profs. Michael Franz & Anton Burtsev"),
                 Item::from("Compilers & infra @ Meta, summers 2021 & 2022"),
                 Item(vec![
