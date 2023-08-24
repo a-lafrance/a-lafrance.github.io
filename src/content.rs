@@ -10,7 +10,7 @@ pub struct Content {
 impl Content {
     pub fn new() -> Content {
         Content {
-            tagline: "Software engineer. Thinking about PLs, compilers, & systems eng. Mildly annoying Rust nerd.",
+            tagline: "Software engineer. Thinking about PLs, compilers, dev infra, & systems eng. Mildly annoying Rust nerd.",
             bio_links: vec![
                 BioLink { name: "GitHub", link: "https://github.com/a-lafrance" },
                 BioLink { name: "LinkedIn", link: "https://linkedin.com/in/a-lafrance" },
@@ -51,8 +51,8 @@ impl Content {
                 ]),
             ],
             resume_dump: vec![
-                Item::from("Vaguely interested in research in compilers & program analysis for optimization & security"),
-                Item::from("Nothing beats writing Rust, but I keep my C, C++, Python, & Swift skills sharp too"),
+                Item::from("Vaguely interested in research in compilers & program analysis for software reliability"),
+                Item::from("Languages I'm most comfortable with: Rust, C, C++, Python, & Swift"),
                 Item::from("I've worked with core compiler technologies (LLVM & MLIR) as a user and contributor"),
             ],
         }
