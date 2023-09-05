@@ -18,6 +18,7 @@ impl Content {
             ],
             current_work: vec![
                 Item::from("Product & systems eng @ TikTok"),
+                Item::from("Exploring safety, expressiveness, & performance in scripting languages"),
                 Item(vec![
                     Token::Media("Writing about music", "https://instagram.com/goodvibrations._"),
                     Token::Text(" that inspires me (and some that doesn't)"),
@@ -31,7 +32,7 @@ impl Content {
                 ]),
             ],
             past_work: vec![
-                Item::from("Got a BS in CS from UCI, class of 2023"),
+                Item::from("Got a BS in CS at UCI, class of 2023"),
                 Item::from("Undergrad systems research w/ Profs. Michael Franz & Anton Burtsev"),
                 Item::from("Compilers & infra @ Meta, summers 2021 & 2022"),
                 Item(vec![
