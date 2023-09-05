@@ -2,6 +2,7 @@ pub struct Content {
     pub tagline: &'static str,
     pub bio_links: Vec<BioLink>,
     pub current_work: Vec<Item>,
+    pub research: Vec<Item>,
     pub past_work: Vec<Item>,
     pub projects: Vec<Item>,
     pub resume_dump: Vec<Item>,
@@ -22,6 +23,12 @@ impl Content {
                     Token::Text(" that inspires me (and some that doesn't)"),
                 ]),
                 Item::from("Playing Neutral Milk Hotel & more on guitar quite poorly"),
+            ],
+            research: vec![
+                Item(vec![
+                    Token::Text("Extending Rust for Software Fault Isolation "),
+                    Token::Media("PLOS '23", "https://plos-workshop.org/2023"),
+                ]),
             ],
             past_work: vec![
                 Item::from("Got a BS in CS from UCI, class of 2023"),
