@@ -3,7 +3,6 @@ mod content;
 
 use components::{Bio, Divider, Section};
 use content::Content;
-
 use yew::html;
 
 #[yew::function_component(App)]

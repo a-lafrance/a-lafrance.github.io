@@ -1,3 +1,10 @@
+default:
+    just -l
+
+fmt:
+    #!/usr/bin/env sh
+    cargo +nightly fmt -- -l
+
 deploy MSG:
 	#!/usr/bin/env sh
 	CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)

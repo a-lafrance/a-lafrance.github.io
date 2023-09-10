@@ -1,11 +1,11 @@
 use yew::{html, Children, Component, Context, Html, Properties};
+
 use crate::content::{BioLink, Item, Token};
 
 #[yew::function_component(Divider)]
 pub fn divider() -> Html {
     html! { <hr class="divider" /> }
 }
-
 
 pub struct Bio;
 
@@ -18,8 +18,10 @@ impl Component for Bio {
     }
 
     fn view(&self, ctx: &Context<Self>) -> Html {
-        let link_buttons = ctx.props().links.iter().map(|ln| html! {
-            <Button title={ ln.name } dest={ ln.link } />
+        let link_buttons = ctx.props().links.iter().map(|ln| {
+            html! {
+                <Button title={ ln.name } dest={ ln.link } />
+            }
         });
 
         html! {
@@ -40,7 +42,6 @@ pub struct BioProps {
     pub tagline: &'static str,
     pub links: Vec<BioLink>,
 }
-
 
 pub struct Section;
 
@@ -77,7 +78,6 @@ pub struct SectionProps {
     pub items: Vec<Item>,
 }
 
-
 pub struct Pane;
 
 impl Component for Pane {
@@ -99,9 +99,9 @@ impl Component for Pane {
 
 #[derive(Debug, PartialEq, Properties)]
 pub struct PaneProps {
-    #[prop_or_default] pub children: Children,
+    #[prop_or_default]
+    pub children: Children,
 }
-
 
 // TODO: make buttons just be links, make links just look like this: [text]
 pub struct Button;
@@ -129,7 +129,6 @@ pub struct ButtonProps {
     pub dest: &'static str,
 }
 
-
 pub struct Link;
 
 impl Component for Link {
@@ -142,7 +141,9 @@ impl Component for Link {
 
     fn view(&self, ctx: &Context<Self>) -> Html {
         html! {
-            <a class="link" href={ ctx.props().href.clone() }>{ "[" }<span class="link-text">{ ctx.props().text.clone() }</span>{ "]" }</a>
+            <a class="link" href={ ctx.props().href.clone() }>
+                { "[" }<span class="link-text">{ ctx.props().text.clone() }</span>{ "]" }
+            </a>
         }
     }
 }
@@ -152,7 +153,6 @@ pub struct LinkProps {
     pub text: String,
     pub href: String,
 }
-
 
 pub struct List;
 
@@ -165,9 +165,11 @@ impl Component for List {
     }
 
     fn view(&self, ctx: &Context<Self>) -> Html {
-        let items = ctx.props().items.iter().map(|it| html! {
-            // FIXME: clone bad
-            <ListItem item={ it.clone() } />
+        let items = ctx.props().items.iter().map(|it| {
+            html! {
+                // FIXME: clone bad
+                <ListItem item={ it.clone() } />
+            }
         });
 
         html! {
@@ -183,7 +185,6 @@ pub struct ListProps {
     pub items: Vec<Item>,
 }
 
-
 pub struct ListItem;
 
 impl Component for ListItem {
@@ -195,11 +196,11 @@ impl Component for ListItem {
     }
 
     fn view(&self, ctx: &Context<Self>) -> Html {
-        let text = ctx.props().item.0.iter().map(|tok| {
-            match tok {
-                Token::Text(txt) => html! { { txt } },
-                Token::Media(txt, link) => html! { <Link text={ txt.to_string() } href={ link.to_string() } /> },
-            }
+        let text = ctx.props().item.0.iter().map(|tok| match tok {
+            Token::Text(txt) => html! { { txt } },
+            Token::Media(txt, link) => {
+                html! { <Link text={ txt.to_string() } href={ link.to_string() } /> }
+            },
         });
 
         html! {
