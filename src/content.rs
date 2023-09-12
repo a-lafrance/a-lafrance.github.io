@@ -17,7 +17,7 @@ impl Content {
                 BioLink { name: "LinkedIn", link: "https://linkedin.com/in/a-lafrance" },
             ],
             current_work: vec![
-                Item::from("Exploring safety, expressiveness, & performance in scripting languages"),
+                Item::from("Experimenting with a variety of (you guessed it, mostly PL-related) projects"),
                 Item(vec![
                     Token::Media("Writing about music", "https://instagram.com/goodvibrations._"),
                     Token::Text(" that inspires me (and some that doesn't)"),
@@ -58,7 +58,7 @@ impl Content {
                 ]),
             ],
             resume_dump: vec![
-                Item::from("Interested in research in compilers & program analysis for ensuring software reliability"),
+                Item::from("Interested in research in compilers & program analysis for software reliability"),
                 Item::from("Languages I'm most comfortable with: Rust, C, C++, Python, & Swift"),
             ],
         }
