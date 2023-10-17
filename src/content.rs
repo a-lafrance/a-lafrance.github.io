@@ -53,6 +53,8 @@ impl Content {
                 Item(vec![
                     Token::Text("Small but cool contributions to Rust "),
                     Token::Media("iterator_try_collect", "https://github.com/rust-lang/rust/issues/94047"),
+                    Token::Text(" "),
+                    Token::Media("#116787", "https://github.com/rust-lang/rust/pull/116787"),
                     Token::Text(" & LLVM "),
                     Token::Media("D142337", "https://reviews.llvm.org/D142337"),
                 ]),
