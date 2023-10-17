@@ -11,28 +11,28 @@ pub struct Content {
 impl Content {
     pub fn new() -> Content {
         Content {
-            tagline: "Software engineer. Thinking about PLs, compilers, dev infra, & systems eng. Mildly annoying Rust nerd.",
+            tagline: "Software engineer. Mildly annoying Rust nerd. Thinking about too many things at once.",
             bio_links: vec![
                 BioLink { name: "GitHub", link: "https://github.com/a-lafrance" },
                 BioLink { name: "LinkedIn", link: "https://linkedin.com/in/a-lafrance" },
             ],
             current_work: vec![
-                Item::from("Experimenting with a variety of (you guessed it, mostly PL-related) projects"),
+                Item::from("Returning to Meta to work on polyglot FFI compiler infra (again)"),
+                Item::from("Trying to contribute to Rust more regularly"),
                 Item(vec![
                     Token::Media("Writing about music", "https://instagram.com/goodvibrations._"),
                     Token::Text(" that inspires me (and some that doesn't)"),
                 ]),
-                Item::from("Playing Neutral Milk Hotel & more on guitar quite poorly"),
             ],
             research: vec![
                 Item(vec![
-                    Token::Text("Extending Rust for Software Fault Isolation "),
-                    Token::Media("PLOS '23", "https://plos-workshop.org/2023"),
+                    Token::Text("Extending Rust with Support for Zero-Copy Communication "),
+                    Token::Media("PLOS '23", "assets/plos23-ext-rust.pdf"),
                 ]),
             ],
             past_work: vec![
-                Item::from("Got a BS in CS at UCI, class of 2023"),
-                Item::from("Undergrad systems research w/ Profs. Michael Franz & Anton Burtsev"),
+                Item::from("BS in CS, UCI class of 2023"),
+                Item::from("Undergrad research w/ Profs. Michael Franz & Anton Burtsev"),
                 Item::from("Compilers & infra @ Meta, summers 2021 & 2022"),
                 Item(vec![
                     Token::Text("Making food delivery affordable with "),

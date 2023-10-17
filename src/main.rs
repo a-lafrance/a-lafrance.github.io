@@ -15,13 +15,13 @@ fn app() -> Html {
 
             <Section id="these-days" title="These Days" items={ content.current_work } />
             <Divider />
-            { /* <Section id="research" title="Research" items={ content.research } />
-            <Divider /> */ "" }
             <Section id="prev" title="Previously" items={ content.past_work } />
             <Divider />
-            <Section id="projects" title="Some Projects" items={ content.projects } />
+            <Section id="research" title="Research" items={ content.research } />
             <Divider />
-            <Section id="resume-dump" title="Resume Dump" items={ content.resume_dump } />
+            <Section id="projects" title="Some Projects" items={ content.projects } />
+            { "" /* <Divider />
+            <Section id="resume-dump" title="Resume Dump" items={ content.resume_dump } /> */ }
         </div>
     }
 }
