@@ -17,11 +17,9 @@ fn app() -> Html {
             <Divider />
             <Section id="prev" title="Previously" items={ content.past_work } />
             <Divider />
-            <Section id="research" title="Research" items={ content.research } />
-            <Divider />
             <Section id="projects" title="Some Projects" items={ content.projects } />
-            { "" /* <Divider />
-            <Section id="resume-dump" title="Resume Dump" items={ content.resume_dump } /> */ }
+            <Divider />
+            <Section id="about" title="About Me" items={ content.about_me } />
         </div>
     }
 }

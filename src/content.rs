@@ -2,10 +2,9 @@ pub struct Content {
     pub tagline: &'static str,
     pub bio_links: Vec<BioLink>,
     pub current_work: Vec<Item>,
-    pub research: Vec<Item>,
     pub past_work: Vec<Item>,
     pub projects: Vec<Item>,
-    pub resume_dump: Vec<Item>,
+    pub about_me: Vec<Item>,
 }
 
 impl Content {
@@ -24,12 +23,6 @@ impl Content {
                     Token::Text(" that inspires me (and some that doesn't)"),
                 ]),
             ],
-            research: vec![
-                Item(vec![
-                    Token::Text("Extending Rust with Support for Zero-Copy Communication "),
-                    Token::Media("PLOS '23", "assets/plos23-ext-rust.pdf"),
-                ]),
-            ],
             past_work: vec![
                 Item::from("BS in CS, UCI class of 2023"),
                 Item::from("Undergrad research w/ Profs. Michael Franz & Anton Burtsev"),
@@ -42,6 +35,10 @@ impl Content {
                 ]),
             ],
             projects: vec![
+                Item(vec![
+                    Token::Text("Paper: Extending Rust with Support for Zero-Copy Communication "),
+                    Token::Media("PLOS '23", "assets/plos23-ext-rust.pdf"),
+                ]),
                 Item(vec![
                     Token::Text("tinyc: A toy compiler made with Rust (for UCI CS 142B) "),
                     Token::Media("source", "https://github.com/a-lafrance/tinyc"),
@@ -59,9 +56,9 @@ impl Content {
                     Token::Media("D142337", "https://reviews.llvm.org/D142337"),
                 ]),
             ],
-            resume_dump: vec![
-                Item::from("Interested in research in compilers & program analysis for software reliability"),
-                Item::from("Languages I'm most comfortable with: Rust, C, C++, Python, & Swift"),
+            about_me: vec![
+                Item::from("Interested in systems engineering, particularly compilers & dev infra at scale"),
+                Item::from("Most comfortable writing Rust, C, C++, Python, & Swift"),
             ],
         }
     }
