@@ -36,8 +36,10 @@ impl Content {
             ],
             projects: vec![
                 Item(vec![
-                    Token::Text("Paper: Extending Rust with Support for Zero-Copy Communication "),
-                    Token::Media("PLOS '23", "assets/plos23-ext-rust.pdf"),
+                    Token::Text("In "),
+                    Token::Media("PLOS '23", "https://plos-workshop.org/2023/program.php"),
+                    Token::Text(": Extending Rust with Support for Zero-Copy Communication "),
+                    Token::Media("paper", "assets/plos23-ext-rust.pdf"),
                 ]),
                 Item(vec![
                     Token::Text("tinyc: A toy compiler made with Rust (for UCI CS 142B) "),
