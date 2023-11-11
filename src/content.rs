@@ -16,7 +16,7 @@ impl Content {
                 BioLink { name: "LinkedIn", link: "https://linkedin.com/in/a-lafrance" },
             ],
             current_work: vec![
-                Item::from("Working on polyglot FFI compiler infra (again) at Meta"),
+                Item::from("Solving the polyglot problem with compilers at Meta"),
                 Item::from("Trying to contribute to Rust more regularly"),
                 Item(vec![
                     Token::Media("Writing about music", "https://instagram.com/goodvibrations._"),
@@ -59,7 +59,7 @@ impl Content {
                 ]),
             ],
             about_me: vec![
-                Item::from("Interested in systems engineering, particularly compilers & dev infra at scale"),
+                Item::from("Interested in systems engineering, (dev) infra at scale, and compilers")
                 Item::from("Most comfortable writing Rust, C, C++, Python, & Swift"),
             ],
         }
