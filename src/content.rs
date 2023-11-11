@@ -59,7 +59,7 @@ impl Content {
                 ]),
             ],
             about_me: vec![
-                Item::from("Interested in systems engineering, (dev) infra at scale, and compilers")
+                Item::from("Interested in systems engineering, (dev) infra at scale, and compilers"),
                 Item::from("Most comfortable writing Rust, C, C++, Python, & Swift"),
             ],
         }
