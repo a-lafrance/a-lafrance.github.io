@@ -16,7 +16,7 @@ impl Content {
                 BioLink { name: "LinkedIn", link: "https://linkedin.com/in/a-lafrance" },
             ],
             current_work: vec![
-                Item::from("Infra @ Meta"),
+                Item::from("Polyglot infra @ Meta"),
                 Item::from("Trying to contribute to Rust more regularly"),
                 Item(vec![
                     Token::Media("Writing about music", "https://instagram.com/goodvibrations._"),
