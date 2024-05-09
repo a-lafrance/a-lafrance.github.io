@@ -16,12 +16,8 @@ impl Content {
                 BioLink { name: "LinkedIn", link: "https://linkedin.com/in/a-lafrance" },
             ],
             current_work: vec![
-                Item::from("Polyglot infra @ Meta"),
-                Item::from("Trying to contribute to Rust more regularly"),
-                Item(vec![
-                    Token::Media("Writing about music", "https://instagram.com/goodvibrations._"),
-                    Token::Text(" that inspires me (and some that doesn't)"),
-                ]),
+                Item::from("Core infra @ Meta: powering polyglot libraries"),
+                Item::from("Possibly maybe hopefully contributing to open source more"),
             ],
             past_work: vec![
                 Item::from("BS in CS, UCI class of 2023"),
@@ -42,20 +38,14 @@ impl Content {
                     Token::Media("paper", "assets/plos23-ext-rust.pdf"),
                 ]),
                 Item(vec![
-                    Token::Text("tinyc: A toy compiler made with Rust (for UCI CS 142B) "),
-                    Token::Media("source", "https://github.com/a-lafrance/tinyc"),
+                    Token::Text("The occasional Rust utility crate "),
+                    Token::Media("soccer", "https://github.com/a-lafrance/soccer"),
                 ]),
                 Item(vec![
-                    Token::Text("soccer: Associated constants for Rust enums "),
-                    Token::Media("source", "https://github.com/a-lafrance/soccer"),
-                ]),
-                Item(vec![
-                    Token::Text("Small but cool contributions to Rust "),
+                    Token::Text("Some contributions to Rust too "),
                     Token::Media("iterator_try_collect", "https://github.com/rust-lang/rust/issues/94047"),
                     Token::Text(" "),
                     Token::Media("#116787", "https://github.com/rust-lang/rust/pull/116787"),
-                    Token::Text(" & LLVM "),
-                    Token::Media("D142337", "https://reviews.llvm.org/D142337"),
                 ]),
             ],
             about_me: vec![
