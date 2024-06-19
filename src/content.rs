@@ -40,6 +40,8 @@ impl Content {
                 Item(vec![
                     Token::Text("The occasional Rust utility crate "),
                     Token::Media("soccer", "https://github.com/a-lafrance/soccer"),
+                    Token::Text(" "),
+                    Token::Media("dollars", "https://github.com/a-lafrance/dollars"),
                 ]),
                 Item(vec![
                     Token::Text("Some contributions to Rust too "),
