@@ -17,7 +17,7 @@ impl Content {
             ],
             current_work: vec![
                 Item::from("Core infra @ Meta: powering polyglot libraries"),
-                Item::from("Possibly maybe hopefully contributing to open source more"),
+                Item::from("Fermenting grains and fruits"),
             ],
             past_work: vec![
                 Item::from("BS in CS, UCI class of 2023"),
@@ -51,7 +51,7 @@ impl Content {
                 ]),
             ],
             about_me: vec![
-                Item::from("Interested in systems engineering & (dev) infra at scale"),
+                Item::from("Interested in systems engineering & infra at scale"),
                 Item::from("Most comfortable writing Rust, C, C++, Python, & Swift"),
             ],
         }
